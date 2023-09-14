@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup Label="Configurações">
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>10</LangVersion>
+        <Title>Lensophy.Domain</Title>
+        <Authors>Raphael Moreira</Authors>
+        <Description>Estrutura de dados.</Description>
+        <Copyright>Lensophy® - 2023</Copyright>
+        <Company>Moreira | Arquiteto de soluções</Company>
+        <Product>Lensophy</Product>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>false</ImplicitUsings>
+        <IsPackable>false</IsPackable>
+        <AssemblyVersion>0.0.0</AssemblyVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Documentação" Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>Doc\Lensophy.Domain.xml</DocumentationFile>
+    </PropertyGroup>
+
+</Project>

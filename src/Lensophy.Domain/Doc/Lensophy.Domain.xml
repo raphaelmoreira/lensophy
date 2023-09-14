@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lensophy.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:Lensophy.Domain.Dto.MessageResult">
+            <summary>
+            Resultado da análise do teor da mensagem.
+            </summary>
+        </member>
+    </members>
+</doc>

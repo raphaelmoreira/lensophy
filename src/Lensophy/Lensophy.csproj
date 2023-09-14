@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
+    <PropertyGroup Label="Configurações">
         <TargetFramework>net6.0</TargetFramework>
         <LangVersion>10</LangVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -19,7 +19,16 @@
         <Version>0.0.0-beta</Version>
         <PackageVersion>0.0.0-beta</PackageVersion>
         <Nullable>enable</Nullable>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <ImplicitUsings>false</ImplicitUsings>
+        <LicenseUrl>https://github.com/raphaelmoreira/lensophy/blob/main/LICENSE</LicenseUrl>
     </PropertyGroup>
+
+    <PropertyGroup Label="Documentação" Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>Doc\Lensophy.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup Label="Lensophy">
+      <ProjectReference Include="..\Lensophy.Domain\Lensophy.Domain.csproj" />
+    </ItemGroup>
 
 </Project>
