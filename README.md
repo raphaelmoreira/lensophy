@@ -1,7 +1,7 @@
 # Lensophy
-Lensophy é uma ferramenta inovadora projetada para promover uma comunicação online positiva e respeitosa. Baseada em princípios filosóficos de ética e virtude, Lensophy atua como uma lente de observação, oferecendo aos usuários a oportunidade de repensar e reformular mensagens que possam conter agressividade verbal, antes de enviá-las.
+Lensophy é uma biblioteca projetada para promover uma comunicação online positiva e respeitosa. Baseada em princípios filosóficos de ética e virtude, Lensophy atua como uma lente de observação, oferecendo aos usuários a oportunidade de repensar e reformular mensagens que possam conter agressividade verbal, antes de enviá-las.
 
-A partir do contexto do assunto e comentário relacionado, Lensophy revela se há potencial agressivo, bem como uma sugere reformulação branda da mensagem, deixando a critério do desenvolvedor o que fazer com ela.
+A partir do contexto do assunto e comentário relacionado, Lensophy revela se há potencial negativo, bem como sugere reformulação branda da mensagem, sem censura, deixando a critério do desenvolvedor o que fazer com ela.
 
 # Filosofia
 Os princípio que balizam a ferramenta consideram as seguintes abordagens:
