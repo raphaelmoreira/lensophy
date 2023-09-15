@@ -4,9 +4,50 @@
         <name>Lensophy.Domain</name>
     </assembly>
     <members>
-        <member name="T:Lensophy.Domain.Dto.MessageResult">
+        <member name="T:Lensophy.Domain.Dto.MessageAnalyse">
             <summary>
-            Resultado da análise do teor da mensagem.
+            Estrutura de envio ao LLM.
+            </summary>
+        </member>
+        <member name="T:Lensophy.Domain.Dto.MessageAnalysed">
+            <summary>
+            Estrutura de resposta do LLM.
+            </summary>
+        </member>
+        <member name="T:Lensophy.Domain.Dto.OpenAiRequest">
+            <summary>
+            Estrutura de requisição do OpenAI.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Domain.Dto.OpenAiRequest.Model">
+            <summary>
+            Modelo de linguagem a ser utilizado.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Domain.Dto.OpenAiRequest.Temperature">
+            <summary>
+            Temperatura da saída gerada. Temperaturas altas e baixas indicam, respectivamente, aleatoriedade e previsibilidade.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Domain.Dto.OpenAiRequest.MaxTokens">
+            <summary>
+            Limita a quantidade de saída gerada pelo modelo.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Dto.OpenAiRequest.Prompt">
+            <summary>
+            A mensagem que deseja enviar ao modelo de linguagem.
+            </summary>
+        </member>
+        <member name="M:Lensophy.Domain.Dto.OpenAiRequest.#ctor(System.String)">
+            <summary>
+            Constrói uma estrutura de requisição a partir de um prompt.
+            </summary>
+            <param name="prompt">Prompt.</param>
+        </member>
+        <member name="T:Lensophy.Domain.Dto.OpenAiResponse">
+            <summary>
+            Estrutura de resposta do OpenAI.
             </summary>
         </member>
     </members>

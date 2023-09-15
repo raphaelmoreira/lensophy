@@ -1,7 +1,7 @@
 ﻿namespace Lensophy;
 
 /// <summary>
-/// Classe principal.
+/// Cada instância configura e inicia a biblioteca para avaliação e sugestão de comentários.
 /// </summary>
 public class Lensophy
 {

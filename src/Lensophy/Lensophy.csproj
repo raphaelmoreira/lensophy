@@ -5,19 +5,24 @@
         <LangVersion>10</LangVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Lensophy</PackageId>
-        <Title>Lensophy</Title>
+        <Title>Lensophy®</Title>
         <Authors>Raphael Moreira</Authors>
-        <Description>Lensophy promove uma comunicação online positiva e respeitosa, avaliando comentários através da ética e virtude.</Description>
+        <Description>Lensophy é uma biblioteca que promove uma comunicação online positiva e respeitosa, avaliando
+ através do ChatGPT da OpenAI, se o comentário contempla a ética e virtude. Essa API dá ao desenvolvedor a
+ possibilidade de melhorar seu sistema de comentários (fóruns, blogs ou sites), analisando, filtrando e incentivando 
+ a boa conduta por meio de sugestões de respostas que orientam a uma perspectiva amigável, ao invés de censurá-la. 
+ É necessário uma conta na OpenAI para usá-lo.</Description>
         <Copyright>Lensophy® - 2023</Copyright>
         <PackageProjectUrl>https://github.com/raphaelmoreira/lensophy</PackageProjectUrl>
         <RepositoryUrl>https://github.com/raphaelmoreira/lensophy</RepositoryUrl>
-        <RepositoryType>GIT</RepositoryType>
-        <PackageTags>EthicsCommunication ContentFiltering ConstructiveCommunication</PackageTags>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>OpenAI AI API ChatGPT LLM Word Filter ContentFiltering ConstructiveCommunication</PackageTags>
         <PackageReleaseNotes>Alpha</PackageReleaseNotes>
         <Company>Moreira | Arquiteto de soluções</Company>
         <Product>Lensophy</Product>
         <Version>0.0.0-beta</Version>
         <PackageVersion>0.0.0-beta</PackageVersion>
+        <AssemblyVersion>0.0.0</AssemblyVersion>
         <Nullable>enable</Nullable>
         <ImplicitUsings>false</ImplicitUsings>
         <LicenseUrl>https://github.com/raphaelmoreira/lensophy/blob/main/LICENSE</LicenseUrl>
@@ -28,7 +33,8 @@
     </PropertyGroup>
 
     <ItemGroup Label="Lensophy">
-      <ProjectReference Include="..\Lensophy.Domain\Lensophy.Domain.csproj" />
+        <Using Include="Lensophy.Domain.Dto" />
+        <ProjectReference Include="..\Lensophy.Domain\Lensophy.Domain.csproj" />
     </ItemGroup>
 
 </Project>
