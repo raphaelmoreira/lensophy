@@ -4,51 +4,27 @@
         <name>Lensophy.Domain</name>
     </assembly>
     <members>
-        <member name="T:Lensophy.Domain.Dto.MessageAnalyse">
+        <member name="T:Lensophy.Domain.Dto.ContentAnalyse">
             <summary>
-            Estrutura de envio ao LLM.
+            Estrutura de envio do conteúdo a ser analisado.
             </summary>
         </member>
-        <member name="T:Lensophy.Domain.Dto.MessageAnalysed">
+        <member name="T:Lensophy.Domain.Dto.ContentAnalysed">
             <summary>
-            Estrutura de resposta do LLM.
+            Estrutura de retorno do conteúdo analisado.
             </summary>
         </member>
-        <member name="T:Lensophy.Domain.Dto.OpenAiRequest">
+        <member name="T:Lensophy.Domain.Interface.ILensophyLanguageModel">
             <summary>
-            Estrutura de requisição do OpenAI.
+            Interface do modelo de linguagem do Lensophy.
             </summary>
         </member>
-        <member name="F:Lensophy.Domain.Dto.OpenAiRequest.Model">
+        <member name="M:Lensophy.Domain.Interface.ILensophyLanguageModel.Analyse(Lensophy.Domain.Dto.ContentAnalyse)">
             <summary>
-            Modelo de linguagem a ser utilizado.
+            Analisa um conteúdo baseado nas diretivas filosóficas de Sócrates, Siddharta Gautama e Confúcio.
             </summary>
-        </member>
-        <member name="F:Lensophy.Domain.Dto.OpenAiRequest.Temperature">
-            <summary>
-            Temperatura da saída gerada. Temperaturas altas e baixas indicam, respectivamente, aleatoriedade e previsibilidade.
-            </summary>
-        </member>
-        <member name="F:Lensophy.Domain.Dto.OpenAiRequest.MaxTokens">
-            <summary>
-            Limita a quantidade de saída gerada pelo modelo.
-            </summary>
-        </member>
-        <member name="P:Lensophy.Domain.Dto.OpenAiRequest.Prompt">
-            <summary>
-            A mensagem que deseja enviar ao modelo de linguagem.
-            </summary>
-        </member>
-        <member name="M:Lensophy.Domain.Dto.OpenAiRequest.#ctor(System.String)">
-            <summary>
-            Constrói uma estrutura de requisição a partir de um prompt.
-            </summary>
-            <param name="prompt">Prompt.</param>
-        </member>
-        <member name="T:Lensophy.Domain.Dto.OpenAiResponse">
-            <summary>
-            Estrutura de resposta do OpenAI.
-            </summary>
+            <param name="contentAnalyse">Ver <see cref="T:Lensophy.Domain.Dto.ContentAnalyse"/></param>
+            <returns>Ver <see cref="T:Lensophy.Domain.Dto.ContentAnalysed"/></returns>
         </member>
     </members>
 </doc>

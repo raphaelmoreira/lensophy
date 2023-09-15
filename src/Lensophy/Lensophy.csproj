@@ -16,7 +16,7 @@
         <PackageProjectUrl>https://github.com/raphaelmoreira/lensophy</PackageProjectUrl>
         <RepositoryUrl>https://github.com/raphaelmoreira/lensophy</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageTags>OpenAI AI API ChatGPT LLM Word Filter ContentFiltering ConstructiveCommunication</PackageTags>
+        <PackageTags>OpenAI AI API ChatGPT LLM Word Content Constructive Filter ContentFiltering ConstructiveCommunication</PackageTags>
         <PackageReleaseNotes>Alpha</PackageReleaseNotes>
         <Company>Moreira | Arquiteto de soluções</Company>
         <Product>Lensophy</Product>
@@ -34,7 +34,10 @@
 
     <ItemGroup Label="Lensophy">
         <Using Include="Lensophy.Domain.Dto" />
-        <ProjectReference Include="..\Lensophy.Domain\Lensophy.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Lensophy.Infrastructure\Lensophy.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

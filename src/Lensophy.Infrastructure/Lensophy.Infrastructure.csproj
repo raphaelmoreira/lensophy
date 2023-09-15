@@ -3,9 +3,9 @@
     <PropertyGroup Label="Configurações">
         <TargetFramework>net6.0</TargetFramework>
         <LangVersion>10</LangVersion>
-        <Title>Lensophy.Domain</Title>
+        <Title>Lensophy.Infrastructure</Title>
         <Authors>Raphael Moreira</Authors>
-        <Description>Estrutura de dados.</Description>
+        <Description>Infraestrutura.</Description>
         <Copyright>Lensophy® - 2023</Copyright>
         <Company>Moreira | Arquiteto de soluções</Company>
         <Product>Lensophy®</Product>
@@ -16,12 +16,20 @@
     </PropertyGroup>
 
     <PropertyGroup Label="Documentação" Condition=" '$(Configuration)' == 'Release' ">
-      <DocumentationFile>Doc\Lensophy.Domain.xml</DocumentationFile>
+        <DocumentationFile>Doc\Lensophy.Infrastructure.xml</DocumentationFile>
     </PropertyGroup>
 
+    <ItemGroup Label="Csharp">
+        <Using Include="System" />
+        <Using Include="System.ComponentModel" />
+    </ItemGroup>
+    
     <ItemGroup Label="Lensophy">
         <Using Include="Lensophy.Domain.Dto" />
         <Using Include="Lensophy.Domain.Interface" />
+        <Using Include="Lensophy.Infrastructure.Util" />
+        
+        <ProjectReference Include="..\Lensophy.Domain\Lensophy.Domain.csproj" />
     </ItemGroup>
 
 

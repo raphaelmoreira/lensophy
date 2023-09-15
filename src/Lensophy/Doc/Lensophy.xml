@@ -4,28 +4,10 @@
         <name>Lensophy</name>
     </assembly>
     <members>
-        <member name="T:Lensophy.ILargeLanguageModel">
-            <summary>
-            Interface do modelo de linguagem.
-            </summary>
-        </member>
-        <member name="M:Lensophy.ILargeLanguageModel.Analyse(Lensophy.Domain.Dto.MessageAnalyse)">
-            <summary>
-            Analisa um conteúdo baseado nas diretivas filosóficas de Sócrates, Siddharta Gautama e Confúcio.
-            </summary>
-            <param name="messageAnalyse">Ver <see cref="T:Lensophy.Domain.Dto.MessageAnalyse"/></param>
-            <returns>Ver <see cref="T:Lensophy.Domain.Dto.MessageAnalysed"/></returns>
-        </member>
         <member name="T:Lensophy.Lensophy">
             <summary>
             Cada instância configura e inicia a biblioteca para avaliação e sugestão de comentários.
             </summary>
-        </member>
-        <member name="T:Lensophy.OpenAi">
-            <inheritdoc/>
-        </member>
-        <member name="M:Lensophy.OpenAi.Analyse(Lensophy.Domain.Dto.MessageAnalyse)">
-            <inheritdoc/>
         </member>
     </members>
 </doc>

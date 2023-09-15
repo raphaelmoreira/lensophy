@@ -1,14 +1,14 @@
-﻿namespace Lensophy.Domain.Dto;
+﻿namespace Lensophy.Infrastructure.LargeLanguageModel.OpenAi;
 
 /// <summary>
 /// Estrutura de requisição do OpenAI.
 /// </summary>
-public record struct OpenAiRequest
+internal record struct OpenAiRequest
 {
     /// <summary>
     /// Modelo de linguagem a ser utilizado.
     /// </summary>
-    public string Model = "text-davinci-003";
+    public string Model = OpenAiModel.TextDaVinci003.GetDescription();
     /// <summary>
     /// Temperatura da saída gerada. Temperaturas altas e baixas indicam, respectivamente, aleatoriedade e previsibilidade.
     /// </summary>
