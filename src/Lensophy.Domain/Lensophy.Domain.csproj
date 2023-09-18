@@ -24,5 +24,4 @@
         <Using Include="Lensophy.Domain.Interface" />
     </ItemGroup>
 
-
 </Project>

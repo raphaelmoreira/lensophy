@@ -19,12 +19,22 @@
             Interface do modelo de linguagem do Lensophy.
             </summary>
         </member>
-        <member name="M:Lensophy.Domain.Interface.ILensophyLanguageModel.Analyse(Lensophy.Domain.Dto.ContentAnalyse)">
+        <member name="M:Lensophy.Domain.Interface.ILensophyLanguageModel.IsOnline(System.Net.Http.HttpClient)">
+            <summary>
+            Verifica se a api está online e funcional antes de uma requisição.
+            </summary>
+            <param name="httpClient">O cliente http corrente.</param>
+            <returns>Retorna <b>True</b> se estiver online, do contrário, <b>False</b></returns>
+            <remarks>Este método não é executado a cada chamada de <see cref="M:Lensophy.Domain.Interface.ILensophyLanguageModel.Analyse(System.Net.Http.HttpClient,Lensophy.Domain.Dto.ContentAnalyse)"/>, pois isso resultaria num
+            excesso de chamada. Ele será futuramente usado no tramento de Retry. Use-o de forma esporádica.</remarks>
+        </member>
+        <member name="M:Lensophy.Domain.Interface.ILensophyLanguageModel.Analyse(System.Net.Http.HttpClient,Lensophy.Domain.Dto.ContentAnalyse)">
             <summary>
             Analisa um conteúdo baseado nas diretivas filosóficas de Sócrates, Siddharta Gautama e Confúcio.
             </summary>
-            <param name="contentAnalyse">Ver <see cref="T:Lensophy.Domain.Dto.ContentAnalyse"/></param>
-            <returns>Ver <see cref="T:Lensophy.Domain.Dto.ContentAnalysed"/></returns>
+            <param name="httpClient">O cliente http corrente.</param>
+            <param name="contentAnalyse">O conteúdo para análise.</param>
+            <returns>O conteúdo analisado.</returns>
         </member>
     </members>
 </doc>
