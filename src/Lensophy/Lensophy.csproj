@@ -31,9 +31,15 @@
     <PropertyGroup Label="Documentação" Condition=" '$(Configuration)' == 'Release' ">
       <DocumentationFile>Doc\Lensophy.xml</DocumentationFile>
     </PropertyGroup>
-
+    
+    <ItemGroup Label="Csharp">
+        <Using Include="System" />
+        <Using Include="System.Net.Http" />
+    </ItemGroup>
+    
     <ItemGroup Label="Lensophy">
         <Using Include="Lensophy.Domain.Dto" />
+        <Using Include="Lensophy.Domain.Interface" />
     </ItemGroup>
 
     <ItemGroup>
