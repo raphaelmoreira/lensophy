@@ -9,7 +9,9 @@
     </PropertyGroup>
 
     <ItemGroup Label="Pacotes">
-        <PackageReference Include="FluentAssertions" Version="6.12.0" />
+        <PackageReference Include="FluentAssertions" Version="6.12.0"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0"/>
         <PackageReference Include="xunit" Version="2.4.1"/>
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
@@ -23,7 +25,19 @@
     </ItemGroup>
 
     <ItemGroup Label="Lensophy">
-      <ProjectReference Include="..\..\src\Lensophy\Lensophy.csproj" />
+        <Using Include="Xunit" />
+        <Using Include="FluentAssertions" />
+        
+        <ProjectReference Include="..\..\src\Lensophy.Infrastructure\Lensophy.Infrastructure.csproj" />
     </ItemGroup>
+
+    <ItemGroup>
+        <None Update="appsettings.Test.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+
+
 
 </Project>

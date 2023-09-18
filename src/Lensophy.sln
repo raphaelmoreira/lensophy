@@ -6,7 +6,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02372D72-219
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D656561A-D0CA-475B-88DD-E35C71AFCA32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lensophy.UnitTest", "..\test\Lensophy.UnitTest\Lensophy.UnitTest.csproj", "{9A4162DE-9420-4B4C-8D70-8CD34F9D56EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lensophy.IntegrationTest", "..\test\Lensophy.IntegrationTest\Lensophy.IntegrationTest.csproj", "{9A4162DE-9420-4B4C-8D70-8CD34F9D56EB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lensophy.Domain", "Lensophy.Domain\Lensophy.Domain.csproj", "{90C4F5AE-8AF3-4228-8294-2DED4CCEFB0E}"
 EndProject
