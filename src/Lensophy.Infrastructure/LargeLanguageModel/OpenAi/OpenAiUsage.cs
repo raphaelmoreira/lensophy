@@ -1,6 +1,6 @@
 namespace Lensophy.Infrastructure.LargeLanguageModel.OpenAi;
 
-public class OpenAiUsage
+internal class OpenAiUsage
 {
     public int PromptTokens { get; set; }
     public int CompletionTokens { get; set; }

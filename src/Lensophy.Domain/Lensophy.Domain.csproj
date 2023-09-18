@@ -19,6 +19,11 @@
       <DocumentationFile>Doc\Lensophy.Domain.xml</DocumentationFile>
     </PropertyGroup>
 
+    <ItemGroup Label="Csharp">
+        <Using Include="System.Net.Http" />
+        <Using Include="System.Threading.Tasks" />
+    </ItemGroup>
+    
     <ItemGroup Label="Lensophy">
         <Using Include="Lensophy.Domain.Dto" />
         <Using Include="Lensophy.Domain.Interface" />

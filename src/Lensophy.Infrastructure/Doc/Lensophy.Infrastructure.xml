@@ -4,10 +4,18 @@
         <name>Lensophy.Infrastructure</name>
     </assembly>
     <members>
-        <member name="T:Lensophy.Infrastructure.LargeLanguageModel.OpenAi.OpenAi">
-            <inheritdoc/>
+        <member name="T:Lensophy.Infrastructure.LargeLanguageModel.OpenAi.OpenAiApi">
+            <summary>
+            Api do OpenIA.
+            </summary>
         </member>
-        <member name="M:Lensophy.Infrastructure.LargeLanguageModel.OpenAi.OpenAi.Analyse(Lensophy.Domain.Dto.ContentAnalyse)">
+        <member name="M:Lensophy.Infrastructure.LargeLanguageModel.OpenAi.OpenAiApi.#ctor(Lensophy.Infrastructure.LargeLanguageModel.OpenAi.OpenAiConfig)">
+            <summary>
+            Cria uma nova instância.
+            </summary>
+            <param name="config">Configuração do OpenAI.</param>
+        </member>
+        <member name="M:Lensophy.Infrastructure.LargeLanguageModel.OpenAi.OpenAiApi.Analyse(System.Net.Http.HttpClient,Lensophy.Domain.Dto.ContentAnalyse)">
             <inheritdoc/>
         </member>
         <member name="T:Lensophy.Infrastructure.LargeLanguageModel.OpenAi.OpenAiModel">

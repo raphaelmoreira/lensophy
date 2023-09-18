@@ -1,6 +1,6 @@
 namespace Lensophy.Infrastructure.LargeLanguageModel.OpenAi;
 
-public class OpenAiChoice
+internal class OpenAiChoice
 {
     public string Text { get; set; }
     public int Index { get; set; }

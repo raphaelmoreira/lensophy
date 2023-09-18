@@ -1,6 +1,6 @@
 namespace Lensophy.Infrastructure.LargeLanguageModel.OpenAi;
 
-public class OpenAiError
+internal class OpenAiError
 {
     public string Message { get; set; }
     public string Type { get; set; }

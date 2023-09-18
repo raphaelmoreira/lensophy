@@ -3,7 +3,7 @@
 /// <summary>
 /// The OpenAI API is powered by a diverse set of models with different capabilities.
 /// </summary>
-public enum OpenAiModel
+internal enum OpenAiModel
 {
     /// <summary>
     /// None.

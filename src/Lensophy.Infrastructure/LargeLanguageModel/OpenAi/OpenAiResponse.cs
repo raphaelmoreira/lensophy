@@ -12,4 +12,6 @@ internal record struct OpenAiResponse
     public OpenAiChoice[] Choices { get; set; }
     public OpenAiUsage OpenAiUsage { get; set; }
     public OpenAiError? Error { get; set; }
+    public string FullErrorMessage => $"[{Error?.Type}] - {Error?.Message}";
+    public bool HasError => Error is not null;
 }

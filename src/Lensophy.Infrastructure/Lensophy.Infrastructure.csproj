@@ -22,6 +22,7 @@
     <ItemGroup Label="Csharp">
         <Using Include="System" />
         <Using Include="System.ComponentModel" />
+        <Using Include="System.Threading.Tasks" />
     </ItemGroup>
     
     <ItemGroup Label="Lensophy">
@@ -30,7 +31,14 @@
         <Using Include="Lensophy.Infrastructure.Util" />
         
         <ProjectReference Include="..\Lensophy.Domain\Lensophy.Domain.csproj" />
+
+        <InternalsVisibleTo Include="Lensophy" />
+        <InternalsVisibleTo Include="Lensophy.IntegrationTest" />
     </ItemGroup>
-
-
+    
+    <ItemGroup Label="Pacotes">
+      <PackageReference Include="Jil" Version="2.17.0" />
+      <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+    </ItemGroup>
+    
 </Project>
