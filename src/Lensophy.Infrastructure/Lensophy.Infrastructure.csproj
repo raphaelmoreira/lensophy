@@ -27,6 +27,7 @@
     
     <ItemGroup Label="Lensophy">
         <Using Include="Lensophy.Domain.Dto" />
+        <Using Include="Lensophy.Domain.Extension" />
         <Using Include="Lensophy.Domain.Interface" />
         <Using Include="Lensophy.Infrastructure.Util" />
         
@@ -40,5 +41,7 @@
       <PackageReference Include="Jil" Version="2.17.0" />
       <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
     </ItemGroup>
+    
+    
     
 </Project>

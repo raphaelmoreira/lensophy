@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="ConsideringFollowingContext" xml:space="preserve">
+        <value>Considering the following context: '{0}'.</value>
+    </data>
+    <data name="ConsideringFollowingVirtues" xml:space="preserve">
+        <value>Considering the following virtues: the triple filter of Socrates, the righteous word of Buddha and the trustworthy disciple of Confucius</value>
+    </data>
+    <data name="AnalyseTheMessage" xml:space="preserve">
+        <value>Analyze the message: `{0}`.</value>
+    </data>
+    <data name="SocratesVirtue" xml:space="preserve">
+        <value>Socrates' Triple Filter: promotes kindness and considers the utility of our words. Words and actions should be beneficial to all involved, promoting well-being and harmony. Information should serve a constructive purpose and contribute to knowledge or progress.</value>
+    </data>
+    <data name="BuddhaVirtue" xml:space="preserve">
+        <value>The straight word of Buddha: represents the importance of practicing honest, truthful, and benevolent communication that benefits both the speaker and the listener. Avoid speaking ill or harming someone's reputation. Do not use rude language, insults, or words that may hurt or inflict emotional suffering.</value>
+    </data>
+    <data name="ConfuciusVirtue" xml:space="preserve">
+        <value>The trustworthy disciple of Confucius: seeks to emphasize the importance of ethics in interpersonal relationships and the pursuit of moral virtue. Strives to do what is right in all situations and cultivates virtues such as compassion, honesty, and respect.</value>
+    </data>
+    <data name="RewriteMessage" xml:space="preserve">
+        <value>Rewrite the message based on the mentioned virtues without changing or corrupting the original meaning of the message, without mentioning any of the virtues.</value>
+    </data>
+    <data name="DoNotExceedMaxTokens" xml:space="preserve">
+        <value>Develop the answer without exceeding the limit of `{0}` tokens from the Api.</value>
+    </data>
+    <data name="SaitamaVirtue" xml:space="preserve">
+        <value>Synthesize the answer in 20 words or less.</value>
+    </data>
+</root>

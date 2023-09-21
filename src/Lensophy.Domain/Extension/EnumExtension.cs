@@ -1,4 +1,4 @@
-namespace Lensophy.Infrastructure.Util;
+namespace Lensophy.Domain.Extension;
 
 /// <summary>
 /// Facilitadores para o tipo <see cref="Enum"/>.

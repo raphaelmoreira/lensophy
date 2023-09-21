@@ -1,5 +1,6 @@
+using Lensophy.Domain.Dto.OpenAi;
 using Lensophy.Domain.Interface;
-using Lensophy.Infrastructure.LargeLanguageModel.OpenAi;
+using Lensophy.Infrastructure.LargeLanguageModel;
 using Lensophy.IntegrationTest.Util;
 using Microsoft.Extensions.Configuration;
 

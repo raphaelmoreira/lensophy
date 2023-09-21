@@ -12,4 +12,6 @@ public interface ILensophyLanguageModel
     /// <param name="contentAnalyse">O conteúdo para análise.</param>
     /// <returns>O conteúdo analisado.</returns>
     Task<ContentAnalysed> Analyse(HttpClient httpClient, ContentAnalyse contentAnalyse);
+
+    Task<bool> IsHarmful(HttpClient httpClient, ContentAnalyse contentAnalyse);
 }

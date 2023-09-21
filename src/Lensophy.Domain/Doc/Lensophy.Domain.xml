@@ -9,6 +9,11 @@
             Estrutura de envio do conteúdo a ser analisado.
             </summary>
         </member>
+        <member name="M:Lensophy.Domain.Dto.ContentAnalyse.#ctor(System.String,System.String)">
+            <summary>
+            Estrutura de envio do conteúdo a ser analisado.
+            </summary>
+        </member>
         <member name="T:Lensophy.Domain.Dto.ContentAnalysed">
             <summary>
             Estrutura de retorno do conteúdo analisado.
@@ -31,6 +36,58 @@
             <param name="httpClient">O cliente http corrente.</param>
             <param name="contentAnalyse">O conteúdo para análise.</param>
             <returns>O conteúdo analisado.</returns>
+        </member>
+        <member name="T:Lensophy.Domain.Resource.Message">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Resource.Message.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Resource.Message.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Resource.Message.ConsideringFollowingContext">
+            <summary>
+              Looks up a localized string similar to Considering the following context.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Resource.Message.RespondIfIsHarmfulMessage">
+            <summary>
+              Looks up a localized string similar to Respond only `true`or `false`, in the following JSON structure `{ harmful: null }`, if the message below contains harmful content.
+            </summary>
+        </member>
+        <member name="T:Lensophy.Domain.Resource.Message_pt_br">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Resource.Message_pt_br.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Resource.Message_pt_br.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Resource.Message_pt_br.ConsideringFollowingContext">
+            <summary>
+              Looks up a localized string similar to Considerando o seguinte contexto.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Resource.Message_pt_br.RespondIfIsHarmfulMessage">
+            <summary>
+              Looks up a localized string similar to Responda apenas `true`ou `false`, na seguinte estrutura JSON `{ harmful: null }`, se a mensagem abaixo contiver conteúdo prejudicial.
+            </summary>
         </member>
     </members>
 </doc>

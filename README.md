@@ -1,35 +1,44 @@
 # Lensophy
-Lensophy é uma biblioteca projetada para promover uma comunicação online positiva e respeitosa. Baseada em princípios filosóficos de ética e virtude, Lensophy atua como uma lente de observação, oferecendo aos usuários a oportunidade de repensar e reformular mensagens que possam conter agressividade verbal, antes de enviá-las.
+Lensophy is a library designed to promote positive and respectful online communication. Based on philosophical principles of ethics and virtue, Lensophy acts as an observational lens, providing users with the opportunity to reconsider and rephrase messages that may contain verbal aggression before sending them.
 
-A partir do contexto do assunto e comentário relacionado, Lensophy revela se há potencial negativo, bem como sugere reformulação branda da mensagem, sem censura, deixando a critério do desenvolvedor o que fazer com ela.
+In the context of the subject and related comment, Lensophy reveals whether there is potential negativity and suggests a gentle rephrasing of the message, without censorship, leaving it up to the developer to decide how to proceed with it.
 
-# Filosofia
-Os princípio que balizam a ferramenta consideram as seguintes abordagens:
+# How it works?
+Soon...
 
-## O Triplo Filtro de Sócrates
-Refere-se a uma abordagem que avalia a validade das informações e das palavras dos outros. São uma lembrança de que devemos ser críticos em relação às informações que encontramos, buscar a verdade, promover a bondade e considerar a utilidade de nossas palavras e crenças. Essa abordagem filosófica ainda é relevante hoje em dia para avaliar informações e tomar decisões informadas.
+```
+{ examples goes here }
+```
 
-Divide-se em três filtros:
+# Philosophy
+The principles guiding the tool consider the following approaches:
 
-- <ins>Filtro da Verdade</ins>: antes de falar ou acreditar em algo, questione se aquilo é verdadeiro. Busque a verdade e não aceite informações sem evidências sólidas.
-- <ins>Filtro da Bondade</ins>: considere se o que estava prestes a ser dito ou acreditado é bom. Palavras e as ações devem ser benéficas para todos os envolvidos, promovendo o bem-estar e a harmonia.
-- <ins>Filtro da Utilidade</ins>: avaliar se o que se ia dizer ou acreditar é útil. As informações devem ter um propósito construtivo e contribuir para o conhecimento ou o progresso.
+## The Triple Filter of Socrates
+This refers to an approach that assesses the validity of information and the words of others. It serves as a reminder that we should be critical of the information we encounter, seek the truth, promote goodness, and consider the utility of our words and beliefs. This philosophical approach remains relevant today for evaluating information and making informed decisions.
 
-## A Reta Palavra (Fala Correta) de Buda
-Parte do Nobre Caminho Óctuplo, é um dos princípios fundamentais do Budismo. É uma das oito partes desse caminho e representa a importância de praticar a comunicação honesta, verdadeira e benevolente. O objetivo é criar um ambiente de comunicação saudável, baseado na verdade e na compaixão, que beneficie tanto quem fala quanto quem ouve, pois é fundamental para desempenharmos um papel importante na qualidade de nossas interações.
+It is divided into three filters:
 
-Envolve várias dimensões:
+- <ins>Truth Filter</ins>: Before speaking or believing something, question whether it is true. Seek the truth and do not accept information without solid evidence.
 
-- <ins>Abster-se de mentir</ins>: significa não falar deliberadamente falsidades, enganar ou distorcer a verdade.
-- <ins>Abster-se de difamação</ins>: evite falar mal dos outros, espalhar boatos prejudiciais ou prejudicar a reputação de alguém.
-- <ins>Abster-se de palavras rudes ou prejudiciais</ins>: não use linguagem grosseira, insultos ou palavras que possam magoar ou infligir sofrimento emocional.
+- <ins>Goodness Filter</ins>: Consider whether what was about to be said or believed is good. Words and actions should be beneficial to all involved, promoting well-being and harmony.
 
-## O Discípulo Confiável de Confúcio
-Um dos princípios-chave do pensamento e da ética de Confúcio, o filósofo chinês. Busca enfatizar a importância da confiabilidade, lealdade e ética nas relações interpessoais e na busca pela virtude moral. Reflete a ênfase na importância das relações interpessoais harmoniosas e na construção de uma sociedade baseada na moralidade e na ética.
+- <ins>Usefulness Filter</ins>: Evaluate whether what was about to be said or believed is useful. Information should serve a constructive purpose and contribute to knowledge or progress.
 
-Dentro os ensinamentos, devemos ser alguém que:
+## The "Right Speech" of Buddha
+Part of the Noble Eightfold Path, it is one of the fundamental principles of Buddhism. It is one of the eight parts of this path and represents the importance of practicing honest, truthful, and benevolent communication. The goal is to create an environment of healthy communication based on truth and compassion, benefiting both the speaker and the listener, as it is essential for playing a significant role in the quality of our interactions.
 
-- <ins>Pratica a retidão</ins>: age de acordo com os princípios éticos e morais, buscando fazer o que é certo em todas as situações.
-- <ins>Demonstra lealdade</ins>: é leal a seus compromissos, relacionamentos e responsabilidades, demonstrando fidelidade às pessoas e aos valores que considera importantes.
-- <ins>Mantém a confiança</ins>: pode ser confiado para cumprir suas promessas e manter segredos quando necessário.
-- <ins>Busca a virtude moral</ins>: esforça-se para melhorar constantemente e cultivar virtudes como a compaixão, a honestidade e o respeito.
+It involves several dimensions:
+
+- <ins>Refraining from lying</ins>: This means not deliberately speaking falsehoods, deceiving, or distorting the truth.
+- <ins>Refraining from slander</ins>: Avoid speaking ill of others, spreading harmful rumors, or harming someone's reputation.
+- <ins>Refraining from harsh or harmful words</ins>: Do not use coarse language, insults, or words that may hurt or inflict emotional suffering.
+
+## Confucius's Trusted Disciple
+One of the key principles of the thought and ethics of the Chinese philosopher Confucius. It seeks to emphasize the importance of reliability, loyalty, and ethics in interpersonal relationships and the pursuit of moral virtue. It reflects the emphasis on the importance of harmonious interpersonal relationships and the construction of a society based on morality and ethics.
+
+Within the teachings, we should be someone who:
+
+- <ins>Practices righteousness</ins>: Acts in accordance with ethical and moral principles, striving to do what is right in all situations.
+- <ins>Demonstrates loyalty</ins>: Is loyal to their commitments, relationships, and responsibilities, showing fidelity to people and values they consider important.
+- <ins>Maintains trust</ins>: Can be trusted to keep promises and hold secrets when necessary.
+- <ins>Pursues moral virtue</ins>: Strives for continuous improvement and the cultivation of virtues such as compassion, honesty, and respect.

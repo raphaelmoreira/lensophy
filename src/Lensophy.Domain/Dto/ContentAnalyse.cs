@@ -3,4 +3,4 @@
 /// <summary>
 /// Estrutura de envio do conteúdo a ser analisado.
 /// </summary>
-public record struct ContentAnalyse;
+public readonly record struct ContentAnalyse(string? Context, string Message);

@@ -9,11 +9,12 @@
             Cada instância configura e inicia a biblioteca para avaliação e sugestão de comentários.
             </summary>
         </member>
-        <member name="M:Lensophy.Lensophy.Create(System.Net.Http.HttpClient)">
+        <member name="M:Lensophy.Lensophy.CreateWithOpenAi(System.Net.Http.HttpClient,Lensophy.Infrastructure.LargeLanguageModel.OpenAi.OpenAiConfig)">
             <summary>
             Cria uma nova instância da biblioteca.
             </summary>
             <param name="httpClient">O cliente http corrente.</param>
+            <param name="config">A configuração do OpenAi.</param>
             <returns>Retorna a interface de uso.</returns>
             <remarks><para>Se estiver numa aplicação web, evite criar <see cref="T:System.Net.Http.HttpClient"/> usando o keyword <b>new</b>.
             Sempre repasse a instância corrente ou gerida através do <see cref="T:System.Net.Http.IHttpClientFactory"/>.</para>

@@ -1,4 +1,4 @@
-namespace Lensophy.Infrastructure.LargeLanguageModel.OpenAi;
+namespace Lensophy.Domain.Dto.OpenAi;
 
 internal class OpenAiError
 {
