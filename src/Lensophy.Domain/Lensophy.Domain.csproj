@@ -37,6 +37,7 @@
       <EmbeddedResource Update="Resource\Shared.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>Shared.Designer.cs</LastGenOutput>
+        <CustomToolNamespace>Lensophy.Domain.Resource</CustomToolNamespace>
       </EmbeddedResource>
       <Compile Update="Resource\Shared.Designer.cs">
         <DesignTime>True</DesignTime>
