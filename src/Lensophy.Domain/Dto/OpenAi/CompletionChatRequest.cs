@@ -28,5 +28,5 @@ internal class CompletionChatRequest
     /// A mensagem que deseja enviar ao modelo de linguagem.
     /// </summary>
     [DataMember(Name="messages")]
-    public IEnumerable<CompletionChatMessage> Messages { get; set; }
+    public IEnumerable<CompletionChatMessage>? Messages { get; set; }
 }

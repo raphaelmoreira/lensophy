@@ -20,7 +20,7 @@ public class Lensophy
     /// será descartado, podendo gerar mais instâncias do que o Garbage Collector é capaz de liberar,
     /// ocasionando um <see cref="SocketsHttpHandler"/>.</para>
     /// </remarks>
-    public ILensophyLanguageModel CreateWithOpenAi(HttpClient httpClient, OpenAiConfig config)
+    public static ILensophyLanguageModel CreateWithOpenAi(HttpClient httpClient, OpenAiConfig config)
     {
         return new OpenAiApi(config);
     }
