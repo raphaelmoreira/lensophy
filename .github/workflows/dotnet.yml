@@ -22,9 +22,12 @@ jobs:
         dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore
+      working-directory: Lensophy
     - name: Build
       run: dotnet build --no-restore
+      working-directory: Lensophy
     - name: Test
       env:
         openaiconfigsecret: ${{ secrets.OPENAICONFIGSECRET }}
       run: dotnet test --no-build --verbosity normal
+      working-directory: Lensophy
