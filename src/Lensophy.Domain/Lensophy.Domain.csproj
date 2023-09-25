@@ -38,15 +38,15 @@
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>Shared.Designer.cs</LastGenOutput>
         <CustomToolNamespace>Lensophy.Domain.Resource</CustomToolNamespace>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       </EmbeddedResource>
       <Compile Update="Resource\Shared.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>Shared.resx</DependentUpon>
       </Compile>
-      <EmbeddedResource Update="Resource\Shared.pt-br.resx">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <EmbeddedResource Update="Resource\Shared.pt-BR.resx">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
         <Generator>PublicResXFileCodeGenerator</Generator>
         <CustomToolNamespace>Lensophy.Domain.Resource</CustomToolNamespace>
       </EmbeddedResource>
