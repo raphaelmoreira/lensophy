@@ -1,6 +1,7 @@
 using Lensophy.Domain.Dto.OpenAi;
 using Lensophy.Domain.Interface;
 using Lensophy.Infrastructure.LargeLanguageModel;
+using Lensophy.IntegrationTest.LargeLanguageModel.OpenAi;
 using Lensophy.IntegrationTest.Util;
 using Microsoft.Extensions.Configuration;
 
@@ -12,7 +13,7 @@ public record OpenAiFixture
     public readonly ILensophyLanguageModel LensophyLanguageModel;
 
     private readonly IConfiguration? _configuration = 
-        new ConfigurationBuilder().AddUserSecrets<OpenAiFixture>(true).Build();
+        new ConfigurationBuilder().AddUserSecrets<OpenAiTest>(true).Build();
 
     public OpenAiFixture()
     {
