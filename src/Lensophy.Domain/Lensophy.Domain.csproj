@@ -38,6 +38,7 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>Shared.Designer.cs</LastGenOutput>
         <CustomToolNamespace>Lensophy.Domain.Resource</CustomToolNamespace>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
       <Compile Update="Resource\Shared.Designer.cs">
         <DesignTime>True</DesignTime>
