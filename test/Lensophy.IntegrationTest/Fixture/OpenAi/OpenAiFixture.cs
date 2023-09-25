@@ -18,7 +18,7 @@ public record OpenAiFixture
     public OpenAiFixture()
     {
         ArgumentNullException.ThrowIfNull(_configuration);
-        var openAiConfig = new OpenAiConfig(Environment.GetEnvironmentVariable("openaiconfigsecret"));
+        var openAiConfig = new OpenAiConfig(_configuration["openaiconfigsecret"]);
         LensophyLanguageModel = new OpenAiApi(openAiConfig);
     }
 }
