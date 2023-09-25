@@ -21,14 +21,14 @@ namespace Lensophy.Domain.Resource {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Message {
+    internal class Shared {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Message() {
+        internal Shared() {
         }
         
         /// <summary>
@@ -38,7 +38,7 @@ namespace Lensophy.Domain.Resource {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Lensophy.Domain.Resource.Message", typeof(Message).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Lensophy.Domain.Resource.Shared", typeof(Shared).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

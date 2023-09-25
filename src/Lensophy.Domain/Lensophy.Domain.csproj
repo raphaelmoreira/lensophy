@@ -34,24 +34,19 @@
     </ItemGroup>
     
     <ItemGroup Label="Resources">
-        <EmbeddedResource Update="Resource\Message.resx">
-            <Generator>ResXFileCodeGenerator</Generator>
-            <LastGenOutput>Message.Designer.cs</LastGenOutput>
-        </EmbeddedResource>
-        <EmbeddedResource Update="Resource\Message.pt-br.resx">
-            <Generator>ResXFileCodeGenerator</Generator>
-            <LastGenOutput>Message.pt-br.Designer.cs</LastGenOutput>
-        </EmbeddedResource>
-      <Compile Update="Resource\Message.Designer.cs">
+      <EmbeddedResource Update="Resource\Shared.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Shared.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <Compile Update="Resource\Shared.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
-        <DependentUpon>Message.resx</DependentUpon>
+        <DependentUpon>Shared.resx</DependentUpon>
       </Compile>
-      <Compile Update="Resource\Message.pt-br.Designer.cs">
-        <DesignTime>True</DesignTime>
-        <AutoGen>True</AutoGen>
-        <DependentUpon>Message.pt-br.resx</DependentUpon>
-      </Compile>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <EmbeddedResource Remove="Resource\Message.resx" />
     </ItemGroup>
 
 </Project>

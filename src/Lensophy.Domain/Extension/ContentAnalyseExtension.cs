@@ -11,18 +11,18 @@ internal static class ContentAnalyseExtension
     /// <returns>Transforma o conteúdo a ser analisado num prompt adequado.</returns>
     public static string ToPreparedPrompt(this ContentAnalyse contentAnalyse)
     {
-        var preparedPrompt = $"{string.Format(Resource.Message.AnalyseTheMessage, contentAnalyse.Message)} " +
-                             $"{Resource.Message.ConsideringFollowingVirtues} " +
-                             $"{Resource.Message.SocratesVirtue} " +
-                             $"{Resource.Message.BuddhaVirtue} " +
-                             $"{Resource.Message.ConfuciusVirtue} " +
-                             $"{Resource.Message.SaitamaVirtue} " +
-                             $"{Resource.Message.RewriteMessage} " +
-                             $"{string.Format(Resource.Message.DoNotExceedMaxTokens, OpenAiConstant.MaxTokens)}";
+        var preparedPrompt = $"{string.Format(Resource.Shared.AnalyseTheMessage, contentAnalyse.Message)} " +
+                             $"{Resource.Shared.ConsideringFollowingVirtues} " +
+                             $"{Resource.Shared.SocratesVirtue} " +
+                             $"{Resource.Shared.BuddhaVirtue} " +
+                             $"{Resource.Shared.ConfuciusVirtue} " +
+                             $"{Resource.Shared.SaitamaVirtue} " +
+                             $"{Resource.Shared.RewriteMessage} " +
+                             $"{string.Format(Resource.Shared.DoNotExceedMaxTokens, OpenAiConstant.MaxTokens)}";
 
         if (!string.IsNullOrWhiteSpace(contentAnalyse.Context))
         {
-            preparedPrompt = $"{string.Format(Resource.Message.ConsideringFollowingContext, contentAnalyse.Context)} " +
+            preparedPrompt = $"{string.Format(Resource.Shared.ConsideringFollowingContext, contentAnalyse.Context)} " +
                              preparedPrompt;
         }
         
