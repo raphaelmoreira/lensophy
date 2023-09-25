@@ -3,7 +3,6 @@ using Lensophy.Domain.Interface;
 using Lensophy.Infrastructure.LargeLanguageModel;
 using Lensophy.IntegrationTest.Util;
 using Microsoft.Extensions.Configuration;
-using Xunit.Sdk;
 
 namespace Lensophy.IntegrationTest.Fixture.OpenAi;
 
@@ -11,19 +10,14 @@ public record OpenAiFixture
 {
     public readonly HttpClient CurrentHttpClient = new DefaultHttpClientFactory().CreateClient();
     public readonly ILensophyLanguageModel LensophyLanguageModel;
-    private readonly string? _secret = new ConfigurationBuilder()
-        .AddUserSecrets<OpenAiFixture>()
-        .AddJsonFile("appsettings.Test.json")
-        .Build()
-        .GetSection("OpenAiConfigSecret").Value;
+
+    private readonly IConfiguration? _configuration = 
+        new ConfigurationBuilder().AddUserSecrets<OpenAiFixture>(true).Build();
 
     public OpenAiFixture()
     {
-        if (string.IsNullOrWhiteSpace(_secret))
-        {
-            throw new TestClassException("The secret was not provided!");
-        }
-        var config = new OpenAiConfig(_secret);
-        LensophyLanguageModel = new OpenAiApi(config);
+        ArgumentNullException.ThrowIfNull(_configuration);
+        var openAiConfig = new OpenAiConfig(_configuration["OpenAiConfigSecret"]);
+        LensophyLanguageModel = new OpenAiApi(openAiConfig);
     }
 }
