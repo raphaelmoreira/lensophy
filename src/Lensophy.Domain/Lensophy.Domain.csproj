@@ -35,7 +35,7 @@
     
     <ItemGroup Label="Resources">
       <EmbeddedResource Update="Resource\Shared.resx">
-        <Generator>ResXFileCodeGenerator</Generator>
+        <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>Shared.Designer.cs</LastGenOutput>
         <CustomToolNamespace>Lensophy.Domain.Resource</CustomToolNamespace>
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -45,10 +45,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>Shared.resx</DependentUpon>
       </Compile>
-    </ItemGroup>
-    
-    <ItemGroup>
-      <EmbeddedResource Remove="Resource\Message.resx" />
+      <EmbeddedResource Update="Resource\Shared.pt-br.resx">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <CustomToolNamespace>Lensophy.Domain.Resource</CustomToolNamespace>
+      </EmbeddedResource>
     </ItemGroup>
 
 </Project>
