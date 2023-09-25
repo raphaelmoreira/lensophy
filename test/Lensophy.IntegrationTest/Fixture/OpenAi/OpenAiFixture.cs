@@ -13,12 +13,12 @@ public record OpenAiFixture
     public readonly ILensophyLanguageModel LensophyLanguageModel;
 
     private readonly IConfiguration? _configuration = 
-        new ConfigurationBuilder().AddUserSecrets<OpenAiTest>(true).Build();
+        new ConfigurationBuilder().AddUserSecrets<OpenAiTest>().Build();
 
     public OpenAiFixture()
     {
         ArgumentNullException.ThrowIfNull(_configuration);
-        var openAiConfig = new OpenAiConfig(_configuration["openaiconfigsecret"]);
+        var openAiConfig = new OpenAiConfig(Environment.GetEnvironmentVariable("openaiconfigsecret"));
         LensophyLanguageModel = new OpenAiApi(openAiConfig);
     }
 }
