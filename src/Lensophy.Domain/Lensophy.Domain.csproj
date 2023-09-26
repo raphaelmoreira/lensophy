@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup Label="Configurações">
-        <TargetFramework>net6.0</TargetFramework>
-        <LangVersion>10</LangVersion>
+        <TargetFramework>net7.0</TargetFramework>
+        <LangVersion>11</LangVersion>
         <Title>Lensophy.Domain</Title>
         <Authors>Raphael Moreira</Authors>
         <Description>Estrutura de dados.</Description>

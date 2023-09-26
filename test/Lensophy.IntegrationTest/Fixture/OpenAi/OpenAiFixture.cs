@@ -12,8 +12,10 @@ public record OpenAiFixture
     public readonly HttpClient CurrentHttpClient = new DefaultHttpClientFactory().CreateClient();
     public readonly ILensophyLanguageModel LensophyLanguageModel;
 
-    private readonly IConfiguration? _configuration = 
-        new ConfigurationBuilder().AddUserSecrets<OpenAiTest>().Build();
+    private readonly IConfiguration? _configuration = new ConfigurationBuilder()
+        .AddUserSecrets<OpenAiTest>()
+        .AddEnvironmentVariables()
+        .Build();
 
     public OpenAiFixture()
     {

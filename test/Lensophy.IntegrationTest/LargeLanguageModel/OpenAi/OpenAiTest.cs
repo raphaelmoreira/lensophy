@@ -23,7 +23,7 @@ public class OpenAiTest : IClassFixture<OpenAiFixture>
         //act
         var contentAnalysed = await _fixture.LensophyLanguageModel
             .IsHarmful(_fixture.CurrentHttpClient, contentToAnalyse)
-            .ConfigureAwait(false);
+;
         
         //assert
         contentAnalysed.Should().BeTrue();
@@ -43,7 +43,7 @@ public class OpenAiTest : IClassFixture<OpenAiFixture>
         //act
         var contentAnalysed = await _fixture.LensophyLanguageModel
             .Analyse(_fixture.CurrentHttpClient, contentToAnalyse)
-            .ConfigureAwait(false);
+;
         
         //assert
         contentAnalysed.IsHarmful.Should().BeTrue();
