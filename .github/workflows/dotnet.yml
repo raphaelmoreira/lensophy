@@ -24,8 +24,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Test
-      run: |       
-        env:
-          openaiconfigsecret: "${{ secrets.OPENAICONFIGSECRET }}"
-        dotnet test --no-restore --verbosity normal
+    - name: Test       
+      env:
+        openaiconfigsecret: "${{ secrets.OPENAICONFIGSECRET }}"
+      run: dotnet test --no-restore --verbosity normal
