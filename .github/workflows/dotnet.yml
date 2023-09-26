@@ -27,4 +27,6 @@ jobs:
     - name: Test
       run: |       
         export openaiconfigsecret='${{ secrets.OPENAICONFIGSECRET }}';
+        env:
+          openaiconfigsecret: ${{ secrets.OPENAICONFIGSECRET }}
         dotnet test --no-restore --verbosity normal
