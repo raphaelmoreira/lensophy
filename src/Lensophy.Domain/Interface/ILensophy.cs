@@ -3,7 +3,7 @@ namespace Lensophy.Domain.Interface;
 /// <summary>
 /// Interface do modelo de linguagem do Lensophy.
 /// </summary>
-public interface ILensophyLanguageModel
+public interface ILensophy
 {
     /// <summary>
     /// Analisa um conteúdo baseado nas diretivas filosóficas de Sócrates, Siddharta Gautama e Confúcio.

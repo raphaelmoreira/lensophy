@@ -7,7 +7,7 @@ namespace Lensophy.Infrastructure.LargeLanguageModel;
 /// <summary>
 /// Api do OpenIA.
 /// </summary>
-internal class OpenAiApi : BaseApi, ILensophyLanguageModel
+internal class OpenAiApi : BaseApi, ILensophy
 {
     /// <summary>
     /// Cria uma nova instância.

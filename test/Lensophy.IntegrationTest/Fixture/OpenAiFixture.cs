@@ -1,19 +1,18 @@
 using Lensophy.Domain.Dto.OpenAi;
 using Lensophy.Domain.Interface;
 using Lensophy.Infrastructure.LargeLanguageModel;
-using Lensophy.IntegrationTest.LargeLanguageModel.OpenAi;
 using Lensophy.IntegrationTest.Util;
 using Microsoft.Extensions.Configuration;
 
-namespace Lensophy.IntegrationTest.Fixture.OpenAi;
+namespace Lensophy.IntegrationTest.Fixture;
 
 public record OpenAiFixture
 {
     public readonly HttpClient CurrentHttpClient = new DefaultHttpClientFactory().CreateClient();
-    public readonly ILensophyLanguageModel LensophyLanguageModel;
+    public readonly ILensophy Lensophy;
 
     private readonly IConfiguration? _configuration = new ConfigurationBuilder()
-        .AddUserSecrets<OpenAiTest>()
+        .AddUserSecrets<LensophyTest>()
         .AddEnvironmentVariables()
         .Build();
 
@@ -21,6 +20,6 @@ public record OpenAiFixture
     {
         ArgumentNullException.ThrowIfNull(_configuration);
         var openAiConfig = new OpenAiConfig(_configuration.GetSection("openaiconfigsecret").Value);
-        LensophyLanguageModel = new OpenAiApi(openAiConfig);
+        Lensophy = new OpenAiApi(openAiConfig);
     }
 }

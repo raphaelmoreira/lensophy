@@ -1,4 +1,6 @@
-﻿namespace Lensophy.Domain.Dto.OpenAi;
+﻿using System.Linq;
+
+namespace Lensophy.Domain.Dto.OpenAi;
 
 /// <summary>
 /// Estrutura de resposta do OpenAI.
@@ -12,6 +14,7 @@ internal record struct CompletionChatResponse
     public CompletionChatChoice[] Choices { get; set; }
     public CompletionChatUsage Usage { get; set; }
     public OpenAiError? Error { get; set; }
+    public string? SuggestedMessage => Choices?.FirstOrDefault().Message.Content;
     public string FullErrorMessage => $"[{Error?.Type}] - {Error?.Message}";
     public bool HasError => Error is not null;
 }

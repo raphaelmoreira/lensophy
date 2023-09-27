@@ -6,23 +6,79 @@
     <members>
         <member name="T:Lensophy.Domain.Dto.ContentAnalyse">
             <summary>
-            Estrutura de envio do conteúdo a ser analisado.
+            Structure of the content to be analyzed.
             </summary>
+            <param name="Message">The message to be analyzed.</param>
+            <param name="Context">The subject that should be taken into consideration during the response generation.</param>
+            <remarks>The use of <see cref="P:Lensophy.Domain.Dto.ContentAnalyse.Context"/> aids in providing a subject-oriented response suggestion.
+            If omitted, the result will be disconnected from the subject, although the result will still make sense.</remarks>
+            <example><para><b>Context:</b> "They are discussing the latest Indiana Jones movie."</para>
+            <para><b>Message:</b> "You are an idiot, and your opinion is worthless. The old movies were better, you jerk!"</para>
+            <para><b>Possible result:</b> "Your opinion is valuable, but I personally prefer the older Indiana Jones movies."</para>
+            <para><b>Possible result with no context:</b> "Your opinion is valid, but the old film productions were more preferred."</para>
+            </example>
         </member>
         <member name="M:Lensophy.Domain.Dto.ContentAnalyse.#ctor(System.String,System.String)">
             <summary>
-            Estrutura de envio do conteúdo a ser analisado.
+            Structure of the content to be analyzed.
             </summary>
+            <param name="Message">The message to be analyzed.</param>
+            <param name="Context">The subject that should be taken into consideration during the response generation.</param>
+            <remarks>The use of <see cref="P:Lensophy.Domain.Dto.ContentAnalyse.Context"/> aids in providing a subject-oriented response suggestion.
+            If omitted, the result will be disconnected from the subject, although the result will still make sense.</remarks>
+            <example><para><b>Context:</b> "They are discussing the latest Indiana Jones movie."</para>
+            <para><b>Message:</b> "You are an idiot, and your opinion is worthless. The old movies were better, you jerk!"</para>
+            <para><b>Possible result:</b> "Your opinion is valuable, but I personally prefer the older Indiana Jones movies."</para>
+            <para><b>Possible result with no context:</b> "Your opinion is valid, but the old film productions were more preferred."</para>
+            </example>
+        </member>
+        <member name="P:Lensophy.Domain.Dto.ContentAnalyse.Message">
+            <summary>The message to be analyzed.</summary>
+        </member>
+        <member name="P:Lensophy.Domain.Dto.ContentAnalyse.Context">
+            <summary>The subject that should be taken into consideration during the response generation.</summary>
         </member>
         <member name="T:Lensophy.Domain.Dto.ContentAnalysed">
             <summary>
-            Estrutura de retorno do conteúdo analisado.
+            Structure of the content analyzed.
             </summary>
+            <param name="SuggestedMessage">The reformulated <see cref="P:Lensophy.Domain.Dto.ContentAnalyse.Message"/>, whether based on
+            <see cref="P:Lensophy.Domain.Dto.ContentAnalyse.Context"/> or not. It can be null or empty if there is an <see cref="P:Lensophy.Domain.Dto.ContentAnalysed.ErrorMessage"/>.</param>
+            <param name="IsHarmful">Indicates as <c>true</c> if the message was considered harmful; otherwise, <c>false</c>.</param>
+            <param name="ErrorMessage">Displays an error message if the external Api request fails. Please note that the
+            displayed message comes exclusively from the external Api and not from Lensophy. Whenever there is an error,
+            the <see cref="P:Lensophy.Domain.Dto.ContentAnalysed.SuggestedMessage"/> will be null or empty.</param>
         </member>
         <member name="M:Lensophy.Domain.Dto.ContentAnalysed.#ctor(System.String,System.Boolean,System.String)">
             <summary>
-            Estrutura de retorno do conteúdo analisado.
+            Structure of the content analyzed.
             </summary>
+            <param name="SuggestedMessage">The reformulated <see cref="P:Lensophy.Domain.Dto.ContentAnalyse.Message"/>, whether based on
+            <see cref="P:Lensophy.Domain.Dto.ContentAnalyse.Context"/> or not. It can be null or empty if there is an <see cref="P:Lensophy.Domain.Dto.ContentAnalysed.ErrorMessage"/>.</param>
+            <param name="IsHarmful">Indicates as <c>true</c> if the message was considered harmful; otherwise, <c>false</c>.</param>
+            <param name="ErrorMessage">Displays an error message if the external Api request fails. Please note that the
+            displayed message comes exclusively from the external Api and not from Lensophy. Whenever there is an error,
+            the <see cref="P:Lensophy.Domain.Dto.ContentAnalysed.SuggestedMessage"/> will be null or empty.</param>
+        </member>
+        <member name="P:Lensophy.Domain.Dto.ContentAnalysed.SuggestedMessage">
+            <summary>The reformulated <see cref="P:Lensophy.Domain.Dto.ContentAnalyse.Message"/>, whether based on
+            <see cref="P:Lensophy.Domain.Dto.ContentAnalyse.Context"/> or not. It can be null or empty if there is an <see cref="P:Lensophy.Domain.Dto.ContentAnalysed.ErrorMessage"/>.</summary>
+        </member>
+        <member name="P:Lensophy.Domain.Dto.ContentAnalysed.IsHarmful">
+            <summary>Indicates as <c>true</c> if the message was considered harmful; otherwise, <c>false</c>.</summary>
+        </member>
+        <member name="P:Lensophy.Domain.Dto.ContentAnalysed.ErrorMessage">
+            <summary>Displays an error message if the external Api request fails. Please note that the
+            displayed message comes exclusively from the external Api and not from Lensophy. Whenever there is an error,
+            the <see cref="P:Lensophy.Domain.Dto.ContentAnalysed.SuggestedMessage"/> will be null or empty.</summary>
+        </member>
+        <member name="P:Lensophy.Domain.Dto.ContentAnalysed.HasError">
+            <summary>
+            Indicates as <c>true</c> if there was an error in the external API request; otherwise, <c>false</c>.
+            </summary>
+            <remarks>If it is <c>true</c>, <see cref="P:Lensophy.Domain.Dto.ContentAnalysed.SuggestedMessage"/> will be null or empty, and the message related to
+            the issue can be obtained from <see cref="P:Lensophy.Domain.Dto.ContentAnalysed.ErrorMessage"/>. Otherwise, it will be <c>false</c>, and
+            <see cref="P:Lensophy.Domain.Dto.ContentAnalysed.SuggestedMessage"/> will contain the expected result.</remarks>
         </member>
         <member name="T:Lensophy.Domain.Dto.OpenAi.CompletionChatMessage">
             <summary>
@@ -153,12 +209,12 @@
             <para>Esta extensão não tem o intuito de resolver essa particularidade.</para>
             </remarks>
         </member>
-        <member name="T:Lensophy.Domain.Interface.ILensophyLanguageModel">
+        <member name="T:Lensophy.Domain.Interface.ILensophy">
             <summary>
             Interface do modelo de linguagem do Lensophy.
             </summary>
         </member>
-        <member name="M:Lensophy.Domain.Interface.ILensophyLanguageModel.Analyse(System.Net.Http.HttpClient,Lensophy.Domain.Dto.ContentAnalyse)">
+        <member name="M:Lensophy.Domain.Interface.ILensophy.Analyse(System.Net.Http.HttpClient,Lensophy.Domain.Dto.ContentAnalyse)">
             <summary>
             Analisa um conteúdo baseado nas diretivas filosóficas de Sócrates, Siddharta Gautama e Confúcio.
             </summary>

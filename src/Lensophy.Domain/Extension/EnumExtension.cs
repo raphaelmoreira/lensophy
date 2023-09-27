@@ -3,7 +3,7 @@ namespace Lensophy.Domain.Extension;
 /// <summary>
 /// Facilitadores para o tipo <see cref="Enum"/>.
 /// </summary>
-public static class EnumExtension
+internal static class EnumExtension
 {
     /// <summary>
     /// Obtém a descrição do enumerador.

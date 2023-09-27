@@ -16,5 +16,5 @@ internal record struct CompletionChatMessage()
     /// Temperatura da saída gerada. Temperaturas altas e baixas indicam, respectivamente, aleatoriedade e previsibilidade.
     /// </summary>
     [DataMember(Name="content")]
-    public string Content { get; set; } = string.Empty;
+    public string? Content { get; set; } = string.Empty;
 }

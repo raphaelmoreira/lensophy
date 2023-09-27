@@ -16,7 +16,7 @@
             </summary>
             <param name="httpClient">The current HTTP instance (see remark).</param>
             <param name="config">An OpenAI account <b>secret</b> is required to use it.</param>
-            <returns>Returns the <see cref="T:Lensophy.Domain.Interface.ILensophyLanguageModel"/> interface.</returns>
+            <returns>Returns the <see cref="T:Lensophy.Domain.Interface.ILensophy"/> interface.</returns>
             <remarks><para>Avoid creating a <b>new</b> instance of the <see cref="T:System.Net.Http.HttpClient"/> class. Instead, consider
             passing the current request's instance or preferably injecting it through the <see cref="T:System.Net.Http.IHttpClientFactory"/>.</para>
             <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is

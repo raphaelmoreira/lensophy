@@ -11,7 +11,7 @@ public class Lensophy
     /// </summary>
     /// <param name="httpClient">The current HTTP instance (see remark).</param>
     /// <param name="config">An OpenAI account <b>secret</b> is required to use it.</param>
-    /// <returns>Returns the <see cref="ILensophyLanguageModel"/> interface.</returns>
+    /// <returns>Returns the <see cref="ILensophy"/> interface.</returns>
     /// <remarks><para>Avoid creating a <b>new</b> instance of the <see cref="HttpClient"/> class. Instead, consider
     /// passing the current request's instance or preferably injecting it through the <see cref="IHttpClientFactory"/>.</para>
     /// <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="HttpClient"/> is
@@ -19,7 +19,7 @@ public class Lensophy
     /// <see cref="SocketException"/> issue.</para>
     /// </remarks>
     /// <exception cref="ArgumentNullException">In case the <c>httpClient</c> or <c>config</c> are null.</exception>
-    public static ILensophyLanguageModel CreateWithOpenAi(HttpClient httpClient, OpenAiConfig config)
+    public static ILensophy CreateWithOpenAi(HttpClient httpClient, OpenAiConfig config)
     {
         ArgumentNullException.ThrowIfNull(httpClient);
         ArgumentNullException.ThrowIfNull(config);
