@@ -4,7 +4,7 @@ Lensophy is a library designed to promote positive and respectful online communi
 In the context of the subject and related comment, Lensophy reveals whether there is potential negativity and suggests a gentle rephrasing of the message, without censorship, leaving it up to the developer to decide how to proceed with it.
 
 # How it works?
-[![.NET](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)
+**[![.NET](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)**
 
 Soon...
 
