@@ -14,7 +14,7 @@
         <RepositoryType>git</RepositoryType>
         <PackageTags>OpenAI AI API ChatGPT LLM Word Content Constructive Filter ContentFiltering ConstructiveCommunication</PackageTags>
         <PackageReleaseNotes>Alpha version containing the basic mechanics, aimed at validating the NuGet packaging.</PackageReleaseNotes>
-        <Company>Moreira | Arquiteto de soluções</Company>
+        <Company>Moreira | Solutions Architect</Company>
         <Product>Lensophy</Product>
         <Version>0.0.0-beta</Version>
         <PackageVersion>0.0.0-beta</PackageVersion>

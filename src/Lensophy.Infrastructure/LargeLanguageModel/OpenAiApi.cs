@@ -13,7 +13,7 @@ internal class OpenAiApi : BaseApi, ILensophyLanguageModel
     /// Cria uma nova instância.
     /// </summary>
     /// <param name="config">Configuração do OpenAI.</param>
-    public OpenAiApi(OpenAiConfig config) : base(config.Secret) { }
+    public OpenAiApi(OpenAiConfig config) : base(config.Key) { }
 
     /// <inheritdoc/>
     public async Task<ContentAnalysed> Analyse(HttpClient httpClient, ContentAnalyse contentAnalyse)

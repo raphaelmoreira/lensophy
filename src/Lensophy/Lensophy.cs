@@ -18,8 +18,12 @@ public class Lensophy
     /// disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
     /// <see cref="SocketException"/> issue.</para>
     /// </remarks>
+    /// <exception cref="ArgumentNullException">In case the <c>httpClient</c> or <c>config</c> are null.</exception>
     public static ILensophyLanguageModel CreateWithOpenAi(HttpClient httpClient, OpenAiConfig config)
     {
+        ArgumentNullException.ThrowIfNull(httpClient);
+        ArgumentNullException.ThrowIfNull(config);
+        
         return new OpenAiApi(config);
     }
 }

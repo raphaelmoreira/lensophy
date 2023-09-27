@@ -88,6 +88,24 @@
             documentação oficial.</a></para>
             <para>Para o propósito do Lensophy, apenas o indicativo negativo é suficiente.</para></remarks>
         </member>
+        <member name="T:Lensophy.Domain.Dto.OpenAi.OpenAiConfig">
+            <summary>
+            It provides an OpenAI Api configuration class as expected by Lensophy.
+            </summary>
+        </member>
+        <member name="M:Lensophy.Domain.Dto.OpenAi.OpenAiConfig.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lensophy.Domain.Dto.OpenAi.OpenAiConfig"/>.
+            </summary>
+            <param name="key">Your <a href="https://platform.openai.com/">OpenApi</a> key.</param>
+            <remarks><para>To create a new key, access the <a href="https://platform.openai.com/account/api-keys">Api Keys</a>
+            resource (an account and login are required).</para>
+            <para><b>Important:</b> Lensophy never stores or shares the <see cref="F:Lensophy.Domain.Dto.OpenAi.OpenAiConfig.Key"/> outside of its context. Its use
+            is solely for the purpose of making Api calls.</para>
+            <para>Do not share your key with others, or expose it in the browser or other client-side code.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">In case the sent key is null or empty.</exception>
+        </member>
         <member name="T:Lensophy.Domain.Dto.OpenAi.OpenAiModel">
             <summary>
             The OpenAI API is powered by a diverse set of models with different capabilities.

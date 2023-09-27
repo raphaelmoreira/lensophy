@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup Label="Configurações">
+    <PropertyGroup Label="Settings">
         <TargetFramework>net7.0</TargetFramework>
         <LangVersion>11</LangVersion>
         <Title>Lensophy.Domain</Title>
         <Authors>Raphael Moreira</Authors>
-        <Description>Estrutura de dados.</Description>
+        <Description>Data structure.</Description>
         <Copyright>Lensophy® - 2023</Copyright>
-        <Company>Moreira | Arquiteto de soluções</Company>
+        <Company>Moreira | Solutions Architect</Company>
         <Product>Lensophy®</Product>
         <Nullable>enable</Nullable>
         <ImplicitUsings>false</ImplicitUsings>
@@ -15,7 +15,7 @@
         <AssemblyVersion>0.0.0</AssemblyVersion>
     </PropertyGroup>
 
-    <PropertyGroup Label="Documentação" Condition=" '$(Configuration)' == 'Release' ">
+    <PropertyGroup Label="Documentation" Condition=" '$(Configuration)' == 'Release' ">
       <DocumentationFile>Doc\Lensophy.Domain.xml</DocumentationFile>
     </PropertyGroup>
 

@@ -23,6 +23,7 @@
             disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
             <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
             </remarks>
+            <exception cref="T:System.ArgumentNullException">In case the <c>httpClient</c> or <c>config</c> are null.</exception>
         </member>
     </members>
 </doc>
