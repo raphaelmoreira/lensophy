@@ -19,10 +19,121 @@
             Estrutura de retorno do conteúdo analisado.
             </summary>
         </member>
-        <member name="M:Lensophy.Domain.Dto.ContentAnalysed.#ctor(System.String)">
+        <member name="M:Lensophy.Domain.Dto.ContentAnalysed.#ctor(System.String,System.Boolean,System.String)">
             <summary>
             Estrutura de retorno do conteúdo analisado.
             </summary>
+        </member>
+        <member name="T:Lensophy.Domain.Dto.OpenAi.CompletionChatMessage">
+            <summary>
+            Estrutura de requisição do OpenAI.
+            </summary>
+        </member>
+        <member name="M:Lensophy.Domain.Dto.OpenAi.CompletionChatMessage.#ctor">
+            <summary>
+            Estrutura de requisição do OpenAI.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Domain.Dto.OpenAi.CompletionChatMessage.Role">
+            <summary>
+            Modelo de linguagem a ser utilizado.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Dto.OpenAi.CompletionChatMessage.Content">
+            <summary>
+            Temperatura da saída gerada. Temperaturas altas e baixas indicam, respectivamente, aleatoriedade e previsibilidade.
+            </summary>
+        </member>
+        <member name="T:Lensophy.Domain.Dto.OpenAi.CompletionChatRequest">
+            <summary>
+            Estrutura de requisição do OpenAI.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Domain.Dto.OpenAi.CompletionChatRequest.Model">
+            <summary>
+            Modelo de linguagem a ser utilizado.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Domain.Dto.OpenAi.CompletionChatRequest.Temperature">
+            <summary>
+            Temperatura da saída gerada. Temperaturas altas e baixas indicam, respectivamente, aleatoriedade e previsibilidade.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Domain.Dto.OpenAi.CompletionChatRequest.MaxTokens">
+            <summary>
+            Limita a quantidade de saída gerada pelo modelo.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Dto.OpenAi.CompletionChatRequest.Messages">
+            <summary>
+            A mensagem que deseja enviar ao modelo de linguagem.
+            </summary>
+        </member>
+        <member name="T:Lensophy.Domain.Dto.OpenAi.CompletionChatResponse">
+            <summary>
+            Estrutura de resposta do OpenAI.
+            </summary>
+        </member>
+        <member name="T:Lensophy.Domain.Dto.OpenAi.ModerationResponse">
+            <summary>
+            Estrutura de resposta do modelo <b>moderation</b> do OpenAI.
+            </summary>
+        </member>
+        <member name="T:Lensophy.Domain.Dto.OpenAi.ModerationResult">
+            <summary>
+            Estrutura de resultado usado na resposta do modelo <b>moderation</b> do OpenAI.
+            </summary>
+            <remarks><para>A título de implementação futura, o objeto de resultado contém dezenas de informações adicionais.
+            Você pode ver detalhes se sua estrutura na <a href="https://platform.openai.com/docs/guides/moderation/quickstart">
+            documentação oficial.</a></para>
+            <para>Para o propósito do Lensophy, apenas o indicativo negativo é suficiente.</para></remarks>
+        </member>
+        <member name="T:Lensophy.Domain.Dto.OpenAi.OpenAiModel">
+            <summary>
+            The OpenAI API is powered by a diverse set of models with different capabilities.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Domain.Dto.OpenAi.OpenAiModel.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Domain.Dto.OpenAi.OpenAiModel.Gpt35Turbo">
+            <summary>
+            Most capable GPT-3.5 model and optimized for chat at 1/10th the cost of text-davinci-003.
+            </summary>
+        </member>
+        <member name="M:Lensophy.Domain.Extension.ContentAnalyseExtension.ToPreparedPrompt(Lensophy.Domain.Dto.ContentAnalyse)">
+            <summary>
+            O prompt é gerado em torno de uma série de preparos, que vão do contexto à ensinamentos filosóficos.
+            </summary>
+            <param name="contentAnalyse">Conteúdo a ser analisado.</param>
+            <returns>Transforma o conteúdo a ser analisado num prompt adequado.</returns>
+        </member>
+        <member name="T:Lensophy.Domain.Extension.EnumExtension">
+            <summary>
+            Facilitadores para o tipo <see cref="T:System.Enum"/>.
+            </summary>
+        </member>
+        <member name="M:Lensophy.Domain.Extension.EnumExtension.GetDescription(System.Enum)">
+            <summary>
+            Obtém a descrição do enumerador.
+            </summary>
+            <param name="value">O enumerador em questão.</param>
+            <returns><para>A descrição definida através do <see cref="T:System.ComponentModel.DescriptionAttribute"/>. Caso não tenha sido decorado
+            com o atributo, será considerado seu nome literal. Se o <b><see cref="!:value"/></b> não fizer parte dos itens
+            definidos no enumerador em questão, o mesmo valor é retornado.</para>
+            <para>Esta extensão não lança exceção por conta de enumeradores inexistentes. Veja o remark para
+            esclarecimentos.</para></returns>
+            <exception cref="T:System.ArgumentNullException">Se <b>value</b> for nulo.</exception>
+            <remarks>
+            <para>Atente-se ao fato de que, durante uma transformação (<i>cast</i>) de enumeradores, por design, o C# não
+            lança exceção se o valor numérico não fizer parte do enumerador em questão. Ele preserva o mesmo número recebido.</para>
+            <para>Como esse comportamento pode criar cenários inadequados, procure sempre avaliar se a transformação
+            ocorreu com sucesso, através do <see cref="M:System.Enum.IsDefined(System.Type,System.Object)"/> em conjunto com
+            <see cref="M:System.Enum.TryParse``1(System.String,``0@)"/>, antes de fazer uso da extensão.</para>
+            <para>Esta extensão não tem o intuito de resolver essa particularidade.</para>
+            </remarks>
         </member>
         <member name="T:Lensophy.Domain.Interface.ILensophyLanguageModel">
             <summary>
@@ -37,56 +148,65 @@
             <param name="contentAnalyse">O conteúdo para análise.</param>
             <returns>O conteúdo analisado.</returns>
         </member>
-        <member name="T:Lensophy.Domain.Resource.Message">
+        <member name="T:Lensophy.Domain.Resource.Shared">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
             </summary>
         </member>
-        <member name="P:Lensophy.Domain.Resource.Message.ResourceManager">
+        <member name="P:Lensophy.Domain.Resource.Shared.ResourceManager">
             <summary>
               Returns the cached ResourceManager instance used by this class.
             </summary>
         </member>
-        <member name="P:Lensophy.Domain.Resource.Message.Culture">
+        <member name="P:Lensophy.Domain.Resource.Shared.Culture">
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
-        <member name="P:Lensophy.Domain.Resource.Message.ConsideringFollowingContext">
+        <member name="P:Lensophy.Domain.Resource.Shared.AnalyseTheMessage">
             <summary>
-              Looks up a localized string similar to Considering the following context.
+              Looks up a localized string similar to Analyze the message: `{0}`..
             </summary>
         </member>
-        <member name="P:Lensophy.Domain.Resource.Message.RespondIfIsHarmfulMessage">
+        <member name="P:Lensophy.Domain.Resource.Shared.BuddhaVirtue">
             <summary>
-              Looks up a localized string similar to Respond only `true`or `false`, in the following JSON structure `{ harmful: null }`, if the message below contains harmful content.
+              Looks up a localized string similar to The straight word of Buddha: represents the importance of practicing honest, truthful, and benevolent communication that benefits both the speaker and the listener. Avoid speaking ill or harming someone&apos;s reputation. Do not use rude language, insults, or words that may hurt or inflict emotional suffering..
             </summary>
         </member>
-        <member name="T:Lensophy.Domain.Resource.Message_pt_br">
+        <member name="P:Lensophy.Domain.Resource.Shared.ConfuciusVirtue">
             <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
+              Looks up a localized string similar to The trustworthy disciple of Confucius: seeks to emphasize the importance of ethics in interpersonal relationships and the pursuit of moral virtue. Strives to do what is right in all situations and cultivates virtues such as compassion, honesty, and respect..
             </summary>
         </member>
-        <member name="P:Lensophy.Domain.Resource.Message_pt_br.ResourceManager">
+        <member name="P:Lensophy.Domain.Resource.Shared.ConsideringFollowingContext">
             <summary>
-              Returns the cached ResourceManager instance used by this class.
+              Looks up a localized string similar to Considering the following context: &apos;{0}&apos;..
             </summary>
         </member>
-        <member name="P:Lensophy.Domain.Resource.Message_pt_br.Culture">
+        <member name="P:Lensophy.Domain.Resource.Shared.ConsideringFollowingVirtues">
             <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
+              Looks up a localized string similar to Considering the following virtues: the triple filter of Socrates, the righteous word of Buddha and the trustworthy disciple of Confucius.
             </summary>
         </member>
-        <member name="P:Lensophy.Domain.Resource.Message_pt_br.ConsideringFollowingContext">
+        <member name="P:Lensophy.Domain.Resource.Shared.DoNotExceedMaxTokens">
             <summary>
-              Looks up a localized string similar to Considerando o seguinte contexto.
+              Looks up a localized string similar to Develop the answer without exceeding the limit of `{0}` tokens from the Api..
             </summary>
         </member>
-        <member name="P:Lensophy.Domain.Resource.Message_pt_br.RespondIfIsHarmfulMessage">
+        <member name="P:Lensophy.Domain.Resource.Shared.RewriteMessage">
             <summary>
-              Looks up a localized string similar to Responda apenas `true`ou `false`, na seguinte estrutura JSON `{ harmful: null }`, se a mensagem abaixo contiver conteúdo prejudicial.
+              Looks up a localized string similar to Rewrite the message based on the mentioned virtues without changing or corrupting the original meaning of the message, without mentioning any of the virtues..
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Resource.Shared.SaitamaVirtue">
+            <summary>
+              Looks up a localized string similar to Synthesize the answer in 20 words or less..
+            </summary>
+        </member>
+        <member name="P:Lensophy.Domain.Resource.Shared.SocratesVirtue">
+            <summary>
+              Looks up a localized string similar to Socrates&apos; Triple Filter: promotes kindness and considers the utility of our words. Words and actions should be beneficial to all involved, promoting well-being and harmony. Information should serve a constructive purpose and contribute to knowledge or progress..
             </summary>
         </member>
     </members>

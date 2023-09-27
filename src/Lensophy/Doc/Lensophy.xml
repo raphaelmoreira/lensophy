@@ -6,21 +6,22 @@
     <members>
         <member name="T:Lensophy.Lensophy">
             <summary>
-            Cada instância configura e inicia a biblioteca para avaliação e sugestão de comentários.
+            Provides a class for message analysis, returning a gentle suggestion if the content is offensive in any way.
             </summary>
+            <remarks>A service account is required to use it.</remarks>
         </member>
-        <member name="M:Lensophy.Lensophy.CreateWithOpenAi(System.Net.Http.HttpClient,Lensophy.Infrastructure.LargeLanguageModel.OpenAi.OpenAiConfig)">
+        <member name="M:Lensophy.Lensophy.CreateWithOpenAi(System.Net.Http.HttpClient,Lensophy.Domain.Dto.OpenAi.OpenAiConfig)">
             <summary>
-            Cria uma nova instância da biblioteca.
+            Initializes a new instance of the <see cref="T:Lensophy.Lensophy"/> class using a <see cref="T:Lensophy.Domain.Dto.OpenAi.OpenAiConfig"/>.
             </summary>
-            <param name="httpClient">O cliente http corrente.</param>
-            <param name="config">A configuração do OpenAi.</param>
-            <returns>Retorna a interface de uso.</returns>
-            <remarks><para>Se estiver numa aplicação web, evite criar <see cref="T:System.Net.Http.HttpClient"/> usando o keyword <b>new</b>.
-            Sempre repasse a instância corrente ou gerida através do <see cref="T:System.Net.Http.IHttpClientFactory"/>.</para>
-            <para>Mesmo que esteja envolto do escopo <b>using</b>, você não terá controle de quando o <see cref="T:System.Net.Http.HttpClient"/>
-            será descartado, podendo gerar mais instâncias do que o Garbage Collector é capaz de liberar,
-            ocasionando um <see cref="T:System.Net.Http.SocketsHttpHandler"/>.</para>
+            <param name="httpClient">The current HTTP instance (see remark).</param>
+            <param name="config">An OpenAI account <b>secret</b> is required to use it.</param>
+            <returns>Returns the <see cref="T:Lensophy.Domain.Interface.ILensophyLanguageModel"/> interface.</returns>
+            <remarks><para>Avoid creating a <b>new</b> instance of the <see cref="T:System.Net.Http.HttpClient"/> class. Instead, consider
+            passing the current request's instance or preferably injecting it through the <see cref="T:System.Net.Http.IHttpClientFactory"/>.</para>
+            <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
+            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
+            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
             </remarks>
         </member>
     </members>

@@ -1,23 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup Label="Configurações">
+    <PropertyGroup Label="Settings">
         <TargetFramework>net7.0</TargetFramework>
         <LangVersion>11</LangVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Lensophy</PackageId>
         <Title>Lensophy®</Title>
         <Authors>Raphael Moreira</Authors>
-        <Description>Lensophy é uma biblioteca que promove uma comunicação online positiva e respeitosa, avaliando
- através do ChatGPT da OpenAI, se o comentário contempla a ética e virtude. Essa API dá ao desenvolvedor a
- possibilidade de melhorar seu sistema de comentários (fóruns, blogs ou sites), analisando, filtrando e incentivando 
- a boa conduta por meio de sugestões de respostas que orientam a uma perspectiva amigável, ao invés de censurá-la. 
- É necessário uma conta na OpenAI para usá-lo.</Description>
+        <Description>Lensophy is a library that promotes positive and respectful online communication by evaluating, through OpenAI's ChatGPT, whether the comment aligns with ethics and virtue. This API provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective rather than censoring it. An OpenAI account is required to use it.</Description>
         <Copyright>Lensophy® - 2023</Copyright>
         <PackageProjectUrl>https://github.com/raphaelmoreira/lensophy</PackageProjectUrl>
         <RepositoryUrl>https://github.com/raphaelmoreira/lensophy</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>OpenAI AI API ChatGPT LLM Word Content Constructive Filter ContentFiltering ConstructiveCommunication</PackageTags>
-        <PackageReleaseNotes>Alpha</PackageReleaseNotes>
+        <PackageReleaseNotes>Alpha version containing the basic mechanics, aimed at validating the NuGet packaging.</PackageReleaseNotes>
         <Company>Moreira | Arquiteto de soluções</Company>
         <Product>Lensophy</Product>
         <Version>0.0.0-beta</Version>
@@ -28,18 +24,21 @@
         <LicenseUrl>https://github.com/raphaelmoreira/lensophy/blob/main/LICENSE</LicenseUrl>
     </PropertyGroup>
 
-    <PropertyGroup Label="Documentação" Condition=" '$(Configuration)' == 'Release' ">
+    <PropertyGroup Label="Documentation" Condition=" '$(Configuration)' == 'Release' ">
       <DocumentationFile>Doc\Lensophy.xml</DocumentationFile>
     </PropertyGroup>
     
     <ItemGroup Label="Csharp">
         <Using Include="System" />
+        <Using Include="System.Net.Sockets" />
         <Using Include="System.Net.Http" />
     </ItemGroup>
     
     <ItemGroup Label="Lensophy">
         <Using Include="Lensophy.Domain.Dto" />
+        <Using Include="Lensophy.Domain.Dto.OpenAi" />
         <Using Include="Lensophy.Domain.Interface" />
+        <Using Include="Lensophy.Infrastructure.LargeLanguageModel" />
     </ItemGroup>
 
     <ItemGroup>
