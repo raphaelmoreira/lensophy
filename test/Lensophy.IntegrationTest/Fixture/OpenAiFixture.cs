@@ -9,7 +9,8 @@ namespace Lensophy.IntegrationTest.Fixture;
 public record OpenAiFixture
 {
     public readonly HttpClient CurrentHttpClient = new DefaultHttpClientFactory().CreateClient();
-    public readonly ILensophy Lensophy;
+    public readonly ILensophy OpenAiLensophy;
+    public readonly OpenAiConfig OpenAiConfig;
 
     private readonly IConfiguration? _configuration = new ConfigurationBuilder()
         .AddUserSecrets<LensophyTest>()
@@ -19,7 +20,11 @@ public record OpenAiFixture
     public OpenAiFixture()
     {
         ArgumentNullException.ThrowIfNull(_configuration);
-        var openAiConfig = new OpenAiConfig(_configuration.GetSection("openaiconfigsecret").Value);
-        Lensophy = new OpenAiApi(openAiConfig);
+
+        var openAiConfigSecret = _configuration.GetSection("openaiconfigsecret").Value;
+        var key = openAiConfigSecret ?? throw new Exception("OpenAI key not found!");
+        
+        OpenAiConfig = new OpenAiConfig(key);
+        OpenAiLensophy = new OpenAiApi(OpenAiConfig);
     }
 }

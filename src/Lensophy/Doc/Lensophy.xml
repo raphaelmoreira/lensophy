@@ -10,19 +10,12 @@
             </summary>
             <remarks>A service account is required to use it.</remarks>
         </member>
-        <member name="M:Lensophy.Lensophy.CreateWithOpenAi(System.Net.Http.HttpClient,Lensophy.Domain.Dto.OpenAi.OpenAiConfig)">
+        <member name="M:Lensophy.Lensophy.CreateWithOpenAi(Lensophy.Domain.Dto.OpenAi.OpenAiConfig)">
             <summary>
-            Initializes a new instance of the <see cref="T:Lensophy.Lensophy"/> class using a <see cref="T:Lensophy.Domain.Dto.OpenAi.OpenAiConfig"/>.
+            Initializes a new instance of the <see cref="T:Lensophy.Domain.Interface.ILensophy"/> using a <see cref="T:Lensophy.Domain.Dto.OpenAi.OpenAiConfig"/>.
             </summary>
-            <param name="httpClient">The current HTTP instance (see remark).</param>
-            <param name="config">An OpenAI account <b>secret</b> is required to use it.</param>
+            <param name="config">An OpenAI account <b>key</b> is required to use it.</param>
             <returns>Returns the <see cref="T:Lensophy.Domain.Interface.ILensophy"/> interface.</returns>
-            <remarks><para>Avoid creating a <b>new</b> instance of the <see cref="T:System.Net.Http.HttpClient"/> class. Instead, consider
-            passing the current request's instance or preferably injecting it through the <see cref="T:System.Net.Http.IHttpClientFactory"/>.</para>
-            <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
-            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
-            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
-            </remarks>
             <exception cref="T:System.ArgumentNullException">In case the <c>httpClient</c> or <c>config</c> are null.</exception>
         </member>
     </members>

@@ -1,6 +1,6 @@
 ﻿namespace Lensophy.Infrastructure.Util;
 
-public interface IJsonSerializer
+internal interface IJsonSerializer
 {
     string Serialize<T>(T? data);
     T? Deserialize<T>(string json);

@@ -5,10 +5,10 @@ namespace Lensophy.Domain.Extension;
 internal static class ContentAnalyseExtension
 {
     /// <summary>
-    /// O prompt é gerado em torno de uma série de preparos, que vão do contexto à ensinamentos filosóficos.
+    /// The prompt is generated around a series of preparations, ranging from context to philosophical teachings.
     /// </summary>
-    /// <param name="contentAnalyse">Conteúdo a ser analisado.</param>
-    /// <returns>Transforma o conteúdo a ser analisado num prompt adequado.</returns>
+    /// <param name="contentAnalyse">The content to be analyzed.</param>
+    /// <returns>Prepare a properly suitable prompt.</returns>
     public static string ToPreparedPrompt(this ContentAnalyse contentAnalyse)
     {
         var preparedPrompt = $"{string.Format(Resource.Shared.AnalyseTheMessage, contentAnalyse.Message)} " +

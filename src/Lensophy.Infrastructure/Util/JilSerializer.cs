@@ -2,7 +2,7 @@
 
 namespace Lensophy.Infrastructure.Util;
 
-public class JilSerializer : IJsonSerializer
+internal class JilSerializer : IJsonSerializer
 {
     private static readonly Options Options = new(
         dateFormat: DateTimeFormat.ISO8601, 

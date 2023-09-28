@@ -18,56 +18,71 @@ public class LensophyTest : IClassFixture<OpenAiFixture>
     }
     
     [Fact]
-    [Trait(nameof(ILensophy), nameof(ILensophy.IsHarmful))]
+    [Trait("Factory", nameof(Lensophy.CreateWithOpenAi))]
+    public void Lensophy_CreateWithOpenAi_ShouldNotBe_Null()
+    {
+        //arrange
+        var lensophyCreated = Lensophy.CreateWithOpenAi(_openAiFixture.OpenAiConfig);
+        
+        //assert
+        lensophyCreated.Should().NotBeNull();
+    }
+    
+    [Fact]
+    [Trait("Interface", nameof(ILensophy.IsHarmful))]
     public async Task Lensophy_IsHarmful_WithContext_ShouldBe_True()
     {
         //arrange
         var contentToAnalyse = new ContentAnalyse(HarmfullMessage, EmptyContextMessage);
         
         //act
-        var contentAnalysed = await _openAiFixture.Lensophy.IsHarmful(_openAiFixture.CurrentHttpClient, contentToAnalyse);
+        var contentAnalysed = 
+            await _openAiFixture.OpenAiLensophy.IsHarmful(_openAiFixture.CurrentHttpClient, contentToAnalyse);
         
         //assert
         contentAnalysed.Should().BeTrue();
     }
     
     [Fact]
-    [Trait(nameof(ILensophy), nameof(ILensophy.IsHarmful))]
+    [Trait("Interface", nameof(ILensophy.IsHarmful))]
     public async Task Lensophy_IsHarmful_WithoutContext_ShouldBe_True()
     {
         //arrange
         var contentToAnalyse = new ContentAnalyse(HarmfullMessage, EmptyContextMessage);
         
         //act
-        var contentAnalysed = await _openAiFixture.Lensophy.IsHarmful(_openAiFixture.CurrentHttpClient, contentToAnalyse);
+        var contentAnalysed = 
+            await _openAiFixture.OpenAiLensophy.IsHarmful(_openAiFixture.CurrentHttpClient, contentToAnalyse);
         
         //assert
         contentAnalysed.Should().BeTrue();
     }
     
     [Fact]
-    [Trait(nameof(ILensophy), nameof(ILensophy.Analyse))]
+    [Trait("Interface", nameof(ILensophy.Analyse))]
     public async Task Lensophy_Analyse_WithContext_ShouldBe_Harmful()
     {
         //arrange
         var contentToAnalyse = new ContentAnalyse(HarmfullMessage, ContextMessage);
         
         //act
-        var contentAnalysed = await _openAiFixture.Lensophy.Analyse(_openAiFixture.CurrentHttpClient, contentToAnalyse);
+        var contentAnalysed = 
+            await _openAiFixture.OpenAiLensophy.Analyse(_openAiFixture.CurrentHttpClient, contentToAnalyse);
         
         //assert
         contentAnalysed.IsHarmful.Should().BeTrue();
     }
     
     [Fact]
-    [Trait(nameof(ILensophy), nameof(ILensophy.Analyse))]
+    [Trait("Interface", nameof(ILensophy.Analyse))]
     public async Task Lensophy_Analyse_WithoutContext_ShouldBe_Harmful()
     {
         //arrange
         var contentToAnalyse = new ContentAnalyse(HarmfullMessage, EmptyContextMessage);
         
         //act
-        var contentAnalysed = await _openAiFixture.Lensophy.Analyse(_openAiFixture.CurrentHttpClient, contentToAnalyse);
+        var contentAnalysed = 
+            await _openAiFixture.OpenAiLensophy.Analyse(_openAiFixture.CurrentHttpClient, contentToAnalyse);
         
         //assert
         contentAnalysed.IsHarmful.Should().BeTrue();

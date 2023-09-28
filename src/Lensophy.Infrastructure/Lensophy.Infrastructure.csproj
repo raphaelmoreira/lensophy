@@ -21,6 +21,11 @@
 
     <ItemGroup Label="Csharp">
         <Using Include="System" />
+        <Using Include="System.Net.Http" />
+        <Using Include="System.Net.Http.Headers" />
+        <Using Include="System.Threading" />
+        <Using Include="System.Text" />
+        <Using Include="System.Collections.Generic" />
         <Using Include="System.ComponentModel" />
         <Using Include="System.Threading.Tasks" />
     </ItemGroup>

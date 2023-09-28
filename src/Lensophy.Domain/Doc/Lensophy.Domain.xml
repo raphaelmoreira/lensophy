@@ -179,48 +179,73 @@
         </member>
         <member name="M:Lensophy.Domain.Extension.ContentAnalyseExtension.ToPreparedPrompt(Lensophy.Domain.Dto.ContentAnalyse)">
             <summary>
-            O prompt é gerado em torno de uma série de preparos, que vão do contexto à ensinamentos filosóficos.
+            The prompt is generated around a series of preparations, ranging from context to philosophical teachings.
             </summary>
-            <param name="contentAnalyse">Conteúdo a ser analisado.</param>
-            <returns>Transforma o conteúdo a ser analisado num prompt adequado.</returns>
+            <param name="contentAnalyse">The content to be analyzed.</param>
+            <returns>Prepare a properly suitable prompt.</returns>
         </member>
         <member name="T:Lensophy.Domain.Extension.EnumExtension">
             <summary>
-            Facilitadores para o tipo <see cref="T:System.Enum"/>.
+            Extensions for the <see cref="T:System.Enum"/> type."
             </summary>
         </member>
         <member name="M:Lensophy.Domain.Extension.EnumExtension.GetDescription(System.Enum)">
             <summary>
-            Obtém a descrição do enumerador.
+            Get the description of the enumerator.
             </summary>
-            <param name="value">O enumerador em questão.</param>
-            <returns><para>A descrição definida através do <see cref="T:System.ComponentModel.DescriptionAttribute"/>. Caso não tenha sido decorado
-            com o atributo, será considerado seu nome literal. Se o <b><see cref="!:value"/></b> não fizer parte dos itens
-            definidos no enumerador em questão, o mesmo valor é retornado.</para>
-            <para>Esta extensão não lança exceção por conta de enumeradores inexistentes. Veja o remark para
-            esclarecimentos.</para></returns>
-            <exception cref="T:System.ArgumentNullException">Se <b>value</b> for nulo.</exception>
+            <param name="value">The enumerator.</param>
+            <returns><para>The description defined through the <see cref="T:System.ComponentModel.DescriptionAttribute"/>. If it hasn't been decorated
+            with the attribute, its literal name will be considered. If the <b>value</b> is not part of the items defined
+            in the enumerator, the same value is returned.</para>
+            <para>This extension does not throw an exception for non-existent enumerators. See the remark for further
+            clarification.</para></returns>
+            <exception cref="T:System.ArgumentNullException">If <b>value</b> is null.</exception>
             <remarks>
-            <para>Atente-se ao fato de que, durante uma transformação (<i>cast</i>) de enumeradores, por design, o C# não
-            lança exceção se o valor numérico não fizer parte do enumerador em questão. Ele preserva o mesmo número recebido.</para>
-            <para>Como esse comportamento pode criar cenários inadequados, procure sempre avaliar se a transformação
-            ocorreu com sucesso, através do <see cref="M:System.Enum.IsDefined(System.Type,System.Object)"/> em conjunto com
-            <see cref="M:System.Enum.TryParse``1(System.String,``0@)"/>, antes de fazer uso da extensão.</para>
-            <para>Esta extensão não tem o intuito de resolver essa particularidade.</para>
+            <para>Please note that, during an enumerator cast, by design, C# does not throw an exception if the numeric value
+            is not part of the enumerator. It preserves the received number.</para>
+            <para>As this behavior can lead to inappropriate scenarios, always ensure to evaluate whether the transformation
+            was successful using <see cref="M:System.Enum.IsDefined(System.Type,System.Object)"/> in combination with <see cref="M:System.Enum.TryParse``1(System.String,``0@)"/>
+            before using this extension.</para>
+            <para>This extension is not intended to address this particularity.</para>
             </remarks>
         </member>
         <member name="T:Lensophy.Domain.Interface.ILensophy">
             <summary>
-            Interface do modelo de linguagem do Lensophy.
+            An abstraction for the Lensophy Language Model.
             </summary>
         </member>
         <member name="M:Lensophy.Domain.Interface.ILensophy.Analyse(System.Net.Http.HttpClient,Lensophy.Domain.Dto.ContentAnalyse)">
             <summary>
-            Analisa um conteúdo baseado nas diretivas filosóficas de Sócrates, Siddharta Gautama e Confúcio.
+            Analyze content based on the philosophical directives of Socrates, Siddhartha Gautama, and Confucius.
             </summary>
-            <param name="httpClient">O cliente http corrente.</param>
-            <param name="contentAnalyse">O conteúdo para análise.</param>
-            <returns>O conteúdo analisado.</returns>
+            <param name="httpClient">The current HTTP instance (see remark).</param>
+            <param name="contentAnalyse">The content to be analyzed.</param>
+            <returns>The content already analyzed.</returns>
+            <remarks><para>Avoid creating a <b>new</b> instance of the <see cref="T:System.Net.Http.HttpClient"/> class. Instead, consider
+            passing the current request's instance or preferably injecting it through the <b>IHttpClientFactory</b>.</para>
+            <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
+            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
+            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">In case of <c>httpClient</c>, <c>contentAnalyse</c>, or
+            <c>contentAnalyse.Message</c> are null or empty.</exception>
+        </member>
+        <member name="M:Lensophy.Domain.Interface.ILensophy.IsHarmful(System.Net.Http.HttpClient,Lensophy.Domain.Dto.ContentAnalyse)">
+            <summary>
+            Check if the content is harmful, based on the philosophical guidelines of Socrates, Siddhartha Gautama, and Confucius.
+            </summary>
+            <param name="httpClient">The current HTTP instance (see remark).</param>
+            <param name="contentAnalyse">The content to be analyzed.</param>
+            <returns>Returns <c>true</c> if the content is considered harmful. Otherwise, <c>false</c>.</returns>
+            <remarks>
+            <para>Avoid creating a <b>new</b> instance of the <see cref="T:System.Net.Http.HttpClient"/> class. Instead, consider
+            passing the current request's instance or preferably injecting it through the <b>IHttpClientFactory</b>.</para>
+            <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
+            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
+            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">In case of <c>httpClient</c>, <c>contentAnalyse</c>, or
+            <c>contentAnalyse.Message</c> are null or empty.</exception>
         </member>
         <member name="T:Lensophy.Domain.Resource.Shared">
             <summary>

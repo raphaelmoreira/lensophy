@@ -1,18 +1,9 @@
-using System.Collections.Generic;
-using System.Net.Http;
 using Lensophy.Domain.Dto.OpenAi;
 
 namespace Lensophy.Infrastructure.LargeLanguageModel;
 
-/// <summary>
-/// Api do OpenIA.
-/// </summary>
-internal class OpenAiApi : BaseApi, ILensophy
+internal sealed class OpenAiApi : BaseApi, ILensophy
 {
-    /// <summary>
-    /// Cria uma nova instância.
-    /// </summary>
-    /// <param name="config">Configuração do OpenAI.</param>
     public OpenAiApi(OpenAiConfig config) : base(config.Key) { }
 
     /// <inheritdoc/>
@@ -35,7 +26,8 @@ internal class OpenAiApi : BaseApi, ILensophy
 
         return response.ToContentAnalysed(isHarmfull);
     }
-
+    
+    /// <inheritdoc/>
     public async Task<bool> IsHarmful(HttpClient httpClient, ContentAnalyse contentAnalyse)
     {
         EnsureContract(httpClient, contentAnalyse);
