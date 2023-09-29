@@ -1,6 +1,6 @@
 using FluentAssertions;
+using Lensophy.Extension;
 using Xunit;
-using Lensophy.Domain.Extension;
 
 namespace Lensophy.UnitTest.Extension;
 

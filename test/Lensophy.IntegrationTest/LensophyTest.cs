@@ -1,6 +1,6 @@
-using Lensophy.Domain.Dto;
-using Lensophy.Domain.Interface;
+using Lensophy.Dto;
 using Lensophy.IntegrationTest.Fixture;
+using Lensophy.Interface;
 
 namespace Lensophy.IntegrationTest;
 

@@ -4,19 +4,329 @@
         <name>Lensophy</name>
     </assembly>
     <members>
+        <member name="T:Lensophy.Dto.ContentAnalyse">
+            <summary>
+            Structure of the content to be analyzed.
+            </summary>
+            <param name="Message">The message to be analyzed.</param>
+            <param name="Context">The subject that should be taken into consideration during the response generation.</param>
+            <remarks>The use of <see cref="P:Lensophy.Dto.ContentAnalyse.Context"/> aids in providing a subject-oriented response suggestion.
+            If omitted, the result will be disconnected from the subject, although the result will still make sense.</remarks>
+            <example><para><b>Context:</b> "They are discussing the latest Indiana Jones movie."</para>
+            <para><b>Message:</b> "You are an idiot, and your opinion is worthless. The old movies were better, you jerk!"</para>
+            <para><b>Possible result:</b> "Your opinion is valuable, but I personally prefer the older Indiana Jones movies."</para>
+            <para><b>Possible result with no context:</b> "Your opinion is valid, but the old film productions were more preferred."</para>
+            </example>
+        </member>
+        <member name="M:Lensophy.Dto.ContentAnalyse.#ctor(System.String,System.String)">
+            <summary>
+            Structure of the content to be analyzed.
+            </summary>
+            <param name="Message">The message to be analyzed.</param>
+            <param name="Context">The subject that should be taken into consideration during the response generation.</param>
+            <remarks>The use of <see cref="P:Lensophy.Dto.ContentAnalyse.Context"/> aids in providing a subject-oriented response suggestion.
+            If omitted, the result will be disconnected from the subject, although the result will still make sense.</remarks>
+            <example><para><b>Context:</b> "They are discussing the latest Indiana Jones movie."</para>
+            <para><b>Message:</b> "You are an idiot, and your opinion is worthless. The old movies were better, you jerk!"</para>
+            <para><b>Possible result:</b> "Your opinion is valuable, but I personally prefer the older Indiana Jones movies."</para>
+            <para><b>Possible result with no context:</b> "Your opinion is valid, but the old film productions were more preferred."</para>
+            </example>
+        </member>
+        <member name="P:Lensophy.Dto.ContentAnalyse.Message">
+            <summary>The message to be analyzed.</summary>
+        </member>
+        <member name="P:Lensophy.Dto.ContentAnalyse.Context">
+            <summary>The subject that should be taken into consideration during the response generation.</summary>
+        </member>
+        <member name="T:Lensophy.Dto.ContentAnalysed">
+            <summary>
+            Structure of the content analyzed.
+            </summary>
+            <param name="SuggestedMessage">The reformulated <see cref="P:Lensophy.Dto.ContentAnalyse.Message"/>, whether based on
+            <see cref="P:Lensophy.Dto.ContentAnalyse.Context"/> or not. It can be null or empty if there is an <see cref="P:Lensophy.Dto.ContentAnalysed.ErrorMessage"/>.</param>
+            <param name="IsHarmful">Indicates as <c>true</c> if the message was considered harmful; otherwise, <c>false</c>.</param>
+            <param name="ErrorMessage">Displays an error message if the external Api request fails. Please note that the
+            displayed message comes exclusively from the external Api and not from Lensophy. Whenever there is an error,
+            the <see cref="P:Lensophy.Dto.ContentAnalysed.SuggestedMessage"/> will be null or empty.</param>
+        </member>
+        <member name="M:Lensophy.Dto.ContentAnalysed.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Structure of the content analyzed.
+            </summary>
+            <param name="SuggestedMessage">The reformulated <see cref="P:Lensophy.Dto.ContentAnalyse.Message"/>, whether based on
+            <see cref="P:Lensophy.Dto.ContentAnalyse.Context"/> or not. It can be null or empty if there is an <see cref="P:Lensophy.Dto.ContentAnalysed.ErrorMessage"/>.</param>
+            <param name="IsHarmful">Indicates as <c>true</c> if the message was considered harmful; otherwise, <c>false</c>.</param>
+            <param name="ErrorMessage">Displays an error message if the external Api request fails. Please note that the
+            displayed message comes exclusively from the external Api and not from Lensophy. Whenever there is an error,
+            the <see cref="P:Lensophy.Dto.ContentAnalysed.SuggestedMessage"/> will be null or empty.</param>
+        </member>
+        <member name="P:Lensophy.Dto.ContentAnalysed.SuggestedMessage">
+            <summary>The reformulated <see cref="P:Lensophy.Dto.ContentAnalyse.Message"/>, whether based on
+            <see cref="P:Lensophy.Dto.ContentAnalyse.Context"/> or not. It can be null or empty if there is an <see cref="P:Lensophy.Dto.ContentAnalysed.ErrorMessage"/>.</summary>
+        </member>
+        <member name="P:Lensophy.Dto.ContentAnalysed.IsHarmful">
+            <summary>Indicates as <c>true</c> if the message was considered harmful; otherwise, <c>false</c>.</summary>
+        </member>
+        <member name="P:Lensophy.Dto.ContentAnalysed.ErrorMessage">
+            <summary>Displays an error message if the external Api request fails. Please note that the
+            displayed message comes exclusively from the external Api and not from Lensophy. Whenever there is an error,
+            the <see cref="P:Lensophy.Dto.ContentAnalysed.SuggestedMessage"/> will be null or empty.</summary>
+        </member>
+        <member name="P:Lensophy.Dto.ContentAnalysed.HasError">
+            <summary>
+            Indicates as <c>true</c> if there was an error in the external API request; otherwise, <c>false</c>.
+            </summary>
+            <remarks>If it is <c>true</c>, <see cref="P:Lensophy.Dto.ContentAnalysed.SuggestedMessage"/> will be null or empty, and the message related to
+            the issue can be obtained from <see cref="P:Lensophy.Dto.ContentAnalysed.ErrorMessage"/>. Otherwise, it will be <c>false</c>, and
+            <see cref="P:Lensophy.Dto.ContentAnalysed.SuggestedMessage"/> will contain the expected result.</remarks>
+        </member>
+        <member name="T:Lensophy.Dto.OpenAi.CompletionChatMessage">
+            <summary>
+            Estrutura de requisição do OpenAI.
+            </summary>
+        </member>
+        <member name="M:Lensophy.Dto.OpenAi.CompletionChatMessage.#ctor">
+            <summary>
+            Estrutura de requisição do OpenAI.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Dto.OpenAi.CompletionChatMessage.Role">
+            <summary>
+            Modelo de linguagem a ser utilizado.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Dto.OpenAi.CompletionChatMessage.Content">
+            <summary>
+            Temperatura da saída gerada. Temperaturas altas e baixas indicam, respectivamente, aleatoriedade e previsibilidade.
+            </summary>
+        </member>
+        <member name="T:Lensophy.Dto.OpenAi.CompletionChatRequest">
+            <summary>
+            Estrutura de requisição do OpenAI.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Dto.OpenAi.CompletionChatRequest.Model">
+            <summary>
+            Modelo de linguagem a ser utilizado.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Dto.OpenAi.CompletionChatRequest.Temperature">
+            <summary>
+            Temperatura da saída gerada. Temperaturas altas e baixas indicam, respectivamente, aleatoriedade e previsibilidade.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Dto.OpenAi.CompletionChatRequest.MaxTokens">
+            <summary>
+            Limita a quantidade de saída gerada pelo modelo.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Dto.OpenAi.CompletionChatRequest.Messages">
+            <summary>
+            A mensagem que deseja enviar ao modelo de linguagem.
+            </summary>
+        </member>
+        <member name="T:Lensophy.Dto.OpenAi.CompletionChatResponse">
+            <summary>
+            Estrutura de resposta do OpenAI.
+            </summary>
+        </member>
+        <member name="T:Lensophy.Dto.OpenAi.ModerationResponse">
+            <summary>
+            Estrutura de resposta do modelo <b>moderation</b> do OpenAI.
+            </summary>
+        </member>
+        <member name="T:Lensophy.Dto.OpenAi.ModerationResult">
+            <summary>
+            Estrutura de resultado usado na resposta do modelo <b>moderation</b> do OpenAI.
+            </summary>
+            <remarks><para>A título de implementação futura, o objeto de resultado contém dezenas de informações adicionais.
+            Você pode ver detalhes se sua estrutura na <a href="https://platform.openai.com/docs/guides/moderation/quickstart">
+            documentação oficial.</a></para>
+            <para>Para o propósito do Lensophy, apenas o indicativo negativo é suficiente.</para></remarks>
+        </member>
+        <member name="T:Lensophy.Dto.OpenAi.OpenAiConfig">
+            <summary>
+            It provides an OpenAI Api configuration class as expected by Lensophy.
+            </summary>
+        </member>
+        <member name="M:Lensophy.Dto.OpenAi.OpenAiConfig.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lensophy.Dto.OpenAi.OpenAiConfig"/>.
+            </summary>
+            <param name="key">Your <a href="https://platform.openai.com/">OpenApi</a> key.</param>
+            <remarks><para>To create a new key, access the <a href="https://platform.openai.com/account/api-keys">Api Keys</a>
+            resource (an account and login are required).</para>
+            <para><b>Important:</b> Lensophy never stores or shares the <see cref="F:Lensophy.Dto.OpenAi.OpenAiConfig.Key"/> outside of its context. Its use
+            is solely for the purpose of making Api calls.</para>
+            <para>Do not share your key with others, or expose it in the browser or other client-side code.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">In case the sent key is null or empty.</exception>
+        </member>
+        <member name="T:Lensophy.Dto.OpenAi.OpenAiModel">
+            <summary>
+            The OpenAI API is powered by a diverse set of models with different capabilities.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Dto.OpenAi.OpenAiModel.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:Lensophy.Dto.OpenAi.OpenAiModel.Gpt35Turbo">
+            <summary>
+            Most capable GPT-3.5 model and optimized for chat at 1/10th the cost of text-davinci-003.
+            </summary>
+        </member>
+        <member name="M:Lensophy.Extension.ContentAnalyseExtension.ToPreparedPrompt(Lensophy.Dto.ContentAnalyse)">
+            <summary>
+            The prompt is generated around a series of preparations, ranging from context to philosophical teachings.
+            </summary>
+            <param name="contentAnalyse">The content to be analyzed.</param>
+            <returns>Prepare a properly suitable prompt.</returns>
+        </member>
+        <member name="T:Lensophy.Extension.EnumExtension">
+            <summary>
+            Extensions for the <see cref="T:System.Enum"/> type."
+            </summary>
+        </member>
+        <member name="M:Lensophy.Extension.EnumExtension.GetDescription(System.Enum)">
+            <summary>
+            Get the description of the enumerator.
+            </summary>
+            <param name="value">The enumerator.</param>
+            <returns><para>The description defined through the <see cref="T:System.ComponentModel.DescriptionAttribute"/>. If it hasn't been decorated
+            with the attribute, its literal name will be considered. If the <b>value</b> is not part of the items defined
+            in the enumerator, the same value is returned.</para>
+            <para>This extension does not throw an exception for non-existent enumerators. See the remark for further
+            clarification.</para></returns>
+            <exception cref="T:System.ArgumentNullException">If <b>value</b> is null.</exception>
+            <remarks>
+            <para>Please note that, during an enumerator cast, by design, C# does not throw an exception if the numeric value
+            is not part of the enumerator. It preserves the received number.</para>
+            <para>As this behavior can lead to inappropriate scenarios, always ensure to evaluate whether the transformation
+            was successful using <see cref="M:System.Enum.IsDefined(System.Type,System.Object)"/> in combination with <see cref="M:System.Enum.TryParse``1(System.String,``0@)"/>
+            before using this extension.</para>
+            <para>This extension is not intended to address this particularity.</para>
+            </remarks>
+        </member>
+        <member name="T:Lensophy.Interface.ILensophy">
+            <summary>
+            An abstraction for the Lensophy Language Model.
+            </summary>
+        </member>
+        <member name="M:Lensophy.Interface.ILensophy.Analyse(System.Net.Http.HttpClient,Lensophy.Dto.ContentAnalyse)">
+            <summary>
+            Analyze content based on the philosophical directives of Socrates, Siddhartha Gautama, and Confucius.
+            </summary>
+            <param name="httpClient">The current HTTP instance (see remark).</param>
+            <param name="contentAnalyse">The content to be analyzed.</param>
+            <returns>The content already analyzed.</returns>
+            <remarks><para>Avoid creating a <b>new</b> instance of the <see cref="T:System.Net.Http.HttpClient"/> class. Instead, consider
+            passing the current request's instance or preferably injecting it through the <b>IHttpClientFactory</b>.</para>
+            <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
+            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
+            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">In case of <c>httpClient</c>, <c>contentAnalyse</c>, or
+            <c>contentAnalyse.Message</c> are null or empty.</exception>
+        </member>
+        <member name="M:Lensophy.Interface.ILensophy.IsHarmful(System.Net.Http.HttpClient,Lensophy.Dto.ContentAnalyse)">
+            <summary>
+            Check if the content is harmful, based on the philosophical guidelines of Socrates, Siddhartha Gautama, and Confucius.
+            </summary>
+            <param name="httpClient">The current HTTP instance (see remark).</param>
+            <param name="contentAnalyse">The content to be analyzed.</param>
+            <returns>Returns <c>true</c> if the content is considered harmful. Otherwise, <c>false</c>.</returns>
+            <remarks>
+            <para>Avoid creating a <b>new</b> instance of the <see cref="T:System.Net.Http.HttpClient"/> class. Instead, consider
+            passing the current request's instance or preferably injecting it through the <b>IHttpClientFactory</b>.</para>
+            <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
+            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
+            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">In case of <c>httpClient</c>, <c>contentAnalyse</c>, or
+            <c>contentAnalyse.Message</c> are null or empty.</exception>
+        </member>
+        <member name="M:Lensophy.LargeLanguageModel.OpenAiApi.Analyse(System.Net.Http.HttpClient,Lensophy.Dto.ContentAnalyse)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Lensophy.LargeLanguageModel.OpenAiApi.IsHarmful(System.Net.Http.HttpClient,Lensophy.Dto.ContentAnalyse)">
+            <inheritdoc/>
+        </member>
         <member name="T:Lensophy.Lens">
             <summary>
             Provides a class for message analysis, returning a gentle suggestion if the content is offensive in any way.
             </summary>
             <remarks>A service account is required to use it.</remarks>
         </member>
-        <member name="M:Lensophy.Lens.CreateWithOpenAi(Lensophy.Domain.Dto.OpenAi.OpenAiConfig)">
+        <member name="M:Lensophy.Lens.CreateWithOpenAi(Lensophy.Dto.OpenAi.OpenAiConfig)">
             <summary>
-            Initializes a new instance of the <see cref="T:Lensophy.Domain.Interface.ILensophy"/> using a <see cref="T:Lensophy.Domain.Dto.OpenAi.OpenAiConfig"/>.
+            Initializes a new instance of the <see cref="T:Lensophy.Interface.ILensophy"/> using a <see cref="T:Lensophy.Dto.OpenAi.OpenAiConfig"/>.
             </summary>
             <param name="config">An OpenAI account <b>key</b> is required to use it.</param>
-            <returns>Returns the <see cref="T:Lensophy.Domain.Interface.ILensophy"/> interface.</returns>
+            <returns>Returns the <see cref="T:Lensophy.Interface.ILensophy"/> interface.</returns>
             <exception cref="T:System.ArgumentNullException">In case the <c>httpClient</c> or <c>config</c> are null.</exception>
+        </member>
+        <member name="T:Lensophy.Resource.Shared">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.AnalyseTheMessage">
+            <summary>
+              Looks up a localized string similar to Analyze the message: `{0}`..
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.BuddhaVirtue">
+            <summary>
+              Looks up a localized string similar to The straight word of Buddha: represents the importance of practicing honest, truthful, and benevolent communication that benefits both the speaker and the listener. Avoid speaking ill or harming someone&apos;s reputation. Do not use rude language, insults, or words that may hurt or inflict emotional suffering..
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.ConfuciusVirtue">
+            <summary>
+              Looks up a localized string similar to The trustworthy disciple of Confucius: seeks to emphasize the importance of ethics in interpersonal relationships and the pursuit of moral virtue. Strives to do what is right in all situations and cultivates virtues such as compassion, honesty, and respect..
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.ConsideringFollowingContext">
+            <summary>
+              Looks up a localized string similar to Considering the following context: &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.ConsideringFollowingVirtues">
+            <summary>
+              Looks up a localized string similar to Considering the following virtues: the triple filter of Socrates, the righteous word of Buddha and the trustworthy disciple of Confucius.
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.DoNotExceedMaxTokens">
+            <summary>
+              Looks up a localized string similar to Develop the answer without exceeding the limit of `{0}` tokens from the Api..
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.RewriteMessage">
+            <summary>
+              Looks up a localized string similar to Rewrite the message based on the mentioned virtues without changing or corrupting the original meaning of the message, without mentioning any of the virtues..
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.SaitamaVirtue">
+            <summary>
+              Looks up a localized string similar to Synthesize the answer in 20 words or less..
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.SocratesVirtue">
+            <summary>
+              Looks up a localized string similar to Socrates&apos; Triple Filter: promotes kindness and considers the utility of our words. Words and actions should be beneficial to all involved, promoting well-being and harmony. Information should serve a constructive purpose and contribute to knowledge or progress..
+            </summary>
         </member>
     </members>
 </doc>

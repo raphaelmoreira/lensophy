@@ -23,8 +23,9 @@
     </ItemGroup>
 
 
+
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Lensophy.Domain\Lensophy.Domain.csproj" />
+      <ProjectReference Include="..\..\src\Lensophy\Lensophy.csproj" />
     </ItemGroup>
 
 </Project>

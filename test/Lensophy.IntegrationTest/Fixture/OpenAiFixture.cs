@@ -1,7 +1,7 @@
-using Lensophy.Domain.Dto.OpenAi;
-using Lensophy.Domain.Interface;
-using Lensophy.Infrastructure.LargeLanguageModel;
+using Lensophy.Dto.OpenAi;
 using Lensophy.IntegrationTest.Util;
+using Lensophy.Interface;
+using Lensophy.LargeLanguageModel;
 using Microsoft.Extensions.Configuration;
 
 namespace Lensophy.IntegrationTest.Fixture;

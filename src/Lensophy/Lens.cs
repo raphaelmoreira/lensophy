@@ -1,4 +1,8 @@
-﻿namespace Lensophy;
+﻿using Lensophy.Dto.OpenAi;
+using Lensophy.Interface;
+using Lensophy.LargeLanguageModel;
+
+namespace Lensophy;
 
 /// <summary>
 /// Provides a class for message analysis, returning a gentle suggestion if the content is offensive in any way.
