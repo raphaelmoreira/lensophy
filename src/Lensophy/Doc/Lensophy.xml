@@ -4,13 +4,13 @@
         <name>Lensophy</name>
     </assembly>
     <members>
-        <member name="T:Lensophy.Lensophy">
+        <member name="T:Lensophy.Lens">
             <summary>
             Provides a class for message analysis, returning a gentle suggestion if the content is offensive in any way.
             </summary>
             <remarks>A service account is required to use it.</remarks>
         </member>
-        <member name="M:Lensophy.Lensophy.CreateWithOpenAi(Lensophy.Domain.Dto.OpenAi.OpenAiConfig)">
+        <member name="M:Lensophy.Lens.CreateWithOpenAi(Lensophy.Domain.Dto.OpenAi.OpenAiConfig)">
             <summary>
             Initializes a new instance of the <see cref="T:Lensophy.Domain.Interface.ILensophy"/> using a <see cref="T:Lensophy.Domain.Dto.OpenAi.OpenAiConfig"/>.
             </summary>

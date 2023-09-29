@@ -5,10 +5,10 @@
         <LangVersion>11</LangVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Lensophy</PackageId>
-        <Title>Lensophy®</Title>
+        <Title>Lensophy - Enhance Respectful Communication</Title>
         <Authors>Raphael Moreira</Authors>
         <Description>Lensophy is a library that promotes positive and respectful online communication by evaluating, through OpenAI's ChatGPT, whether the comment aligns with ethics and virtue. This API provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective rather than censoring it. An OpenAI account is required to use it.</Description>
-        <Copyright>Lensophy® - 2023</Copyright>
+        <Copyright>Copyright (c) Lensophy® 2023</Copyright>
         <PackageProjectUrl>https://github.com/raphaelmoreira/lensophy</PackageProjectUrl>
         <RepositoryUrl>https://github.com/raphaelmoreira/lensophy</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
@@ -16,12 +16,15 @@
         <PackageReleaseNotes>Alpha version containing the basic mechanics, aimed at validating the NuGet packaging.</PackageReleaseNotes>
         <Company>Moreira | Solutions Architect</Company>
         <Product>Lensophy</Product>
-        <Version>0.0.0-beta</Version>
-        <PackageVersion>0.0.0-beta</PackageVersion>
+        <Version>0.0.0-beta.2</Version>
+        <PackageVersion>0.0.0-beta.2</PackageVersion>
         <AssemblyVersion>0.0.0</AssemblyVersion>
         <Nullable>enable</Nullable>
         <ImplicitUsings>false</ImplicitUsings>
         <LicenseUrl>https://github.com/raphaelmoreira/lensophy/blob/main/LICENSE</LicenseUrl>
+        <PackageIcon>icon.jpg</PackageIcon>
+        <PackageReadmeFile>Readme.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
 
     <PropertyGroup Label="Documentation" Condition=" '$(Configuration)' == 'Release' ">
@@ -43,6 +46,11 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Lensophy.Infrastructure\Lensophy.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup Label="Package">
+        <EmbeddedResource Include="Image\icon.jpg" Pack="true" PackagePath="" />
+        <None Include="Doc\Readme.md" Pack="true" PackagePath="" />
     </ItemGroup>
 
 </Project>

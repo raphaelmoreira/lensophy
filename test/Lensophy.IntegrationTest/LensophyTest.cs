@@ -18,11 +18,11 @@ public class LensophyTest : IClassFixture<OpenAiFixture>
     }
     
     [Fact]
-    [Trait("Factory", nameof(Lensophy.CreateWithOpenAi))]
-    public void Lensophy_CreateWithOpenAi_ShouldNotBe_Null()
+    [Trait("Factory", nameof(Lens.CreateWithOpenAi))]
+    public void Lens_CreateWithOpenAi_ShouldNotBe_Null()
     {
         //arrange
-        var lensophyCreated = Lensophy.CreateWithOpenAi(_openAiFixture.OpenAiConfig);
+        var lensophyCreated = Lens.CreateWithOpenAi(_openAiFixture.OpenAiConfig);
         
         //assert
         lensophyCreated.Should().NotBeNull();
