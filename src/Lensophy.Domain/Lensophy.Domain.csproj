@@ -31,6 +31,7 @@
         <Using Include="Lensophy.Domain.Interface" />
 
         <InternalsVisibleTo Include="Lensophy.Infrastructure" />
+        <InternalsVisibleTo Include="Lensophy.UnitTest" />
     </ItemGroup>
     
     <ItemGroup Label="Resources">
