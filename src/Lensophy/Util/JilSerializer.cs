@@ -2,19 +2,19 @@
 
 namespace Lensophy.Util;
 
-internal class JilSerializer : IJsonSerializer
+internal static class JilSerializer
 {
     private static readonly Options Options = new(
         dateFormat: DateTimeFormat.ISO8601, 
         includeInherited: true,
         serializationNameFormat: SerializationNameFormat.CamelCase);
 
-    public string Serialize<T>(T? data)
+    public static string Serialize<T>(T? data)
     {
         return JSON.Serialize(data, Options);
     }
 
-    public T? Deserialize<T>(string json)
+    public static T? Deserialize<T>(string json)
     {
         json = json.Trim();
         var validJson = !string.IsNullOrWhiteSpace(json) &&

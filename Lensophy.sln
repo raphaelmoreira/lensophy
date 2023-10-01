@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lensophy.IntegrationTest", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lensophy.UnitTest", "test\Lensophy.UnitTest\Lensophy.UnitTest.csproj", "{6C444531-2B85-4484-80D8-4906AFF6DFA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lensophy.Benchmark", "src\Lensophy.Benchmark\Lensophy.Benchmark.csproj", "{A5970E02-878A-4929-BF60-C9F6E6A1B6EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,7 @@ Global
 		{86A5754B-A5CA-4AAB-A4ED-7DB032E3D109} = {9C280B71-E140-457B-B9F2-210EA20135EF}
 		{C00F51A2-F76F-4E24-9229-A86D1FC70C2A} = {0C259FF1-3884-479F-8BFE-493E917C361A}
 		{6C444531-2B85-4484-80D8-4906AFF6DFA8} = {0C259FF1-3884-479F-8BFE-493E917C361A}
+		{A5970E02-878A-4929-BF60-C9F6E6A1B6EE} = {9C280B71-E140-457B-B9F2-210EA20135EF}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{86A5754B-A5CA-4AAB-A4ED-7DB032E3D109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -33,5 +36,9 @@ Global
 		{6C444531-2B85-4484-80D8-4906AFF6DFA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C444531-2B85-4484-80D8-4906AFF6DFA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C444531-2B85-4484-80D8-4906AFF6DFA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5970E02-878A-4929-BF60-C9F6E6A1B6EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5970E02-878A-4929-BF60-C9F6E6A1B6EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5970E02-878A-4929-BF60-C9F6E6A1B6EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5970E02-878A-4929-BF60-C9F6E6A1B6EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

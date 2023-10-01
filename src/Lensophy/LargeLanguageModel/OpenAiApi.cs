@@ -1,6 +1,6 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Lensophy.Extension;
+using Lensophy.Util;
 
 namespace Lensophy.LargeLanguageModel;
 
@@ -12,17 +12,10 @@ public sealed class OpenAiApi : BaseApi, ILensophy
     public async Task<ContentAnalysed> Analyse(HttpClient httpClient, ContentAnalyse contentAnalyse)
     {
         EnsureContract(httpClient, contentAnalyse);
-
-        var dataRequest = new CompletionChatRequest
-        {
-            Messages = new List<CompletionChatMessage>(1)
-            {
-                new(){ Content = contentAnalyse.ToPreparedPrompt() }
-            }
-        };
         
         const string model = "chat/completions";
-        var response = await DoRequest<CompletionChatResponse>(model, httpClient, Json.Serialize(dataRequest));
+        var response = await DoRequest<CompletionChatResponse>(
+            model, httpClient, Lensializer.CompletionChatRequest(contentAnalyse.ToPreparedPrompt()));
 
         var isHarmfull = await IsHarmful(httpClient, contentAnalyse).ConfigureAwait(false);
 
@@ -37,7 +30,7 @@ public sealed class OpenAiApi : BaseApi, ILensophy
         var dataRequest = new ModerationRequest(contentAnalyse.Message);
         
         const string model = "moderations";
-        var response = await DoRequest<ModerationResponse>(model, httpClient, Json.Serialize(dataRequest));
+        var response = await DoRequest<ModerationResponse>(model, httpClient, JilSerializer.Serialize(dataRequest));
         
         return response.Flagged;
     }

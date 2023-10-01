@@ -1,4 +1,4 @@
-﻿namespace Lensophy.Util;
+namespace Lensophy.Interface;
 
 public interface IJsonSerializer
 {

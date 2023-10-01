@@ -1,14 +1,10 @@
-﻿using Lensophy.Dto.OpenAi;
-using Lensophy.Interface;
-using Lensophy.LargeLanguageModel;
-
-namespace Lensophy;
+﻿namespace Lensophy;
 
 /// <summary>
 /// Provides a class for message analysis, returning a gentle suggestion if the content is offensive in any way.
 /// </summary>
 /// <remarks>A service account is required to use it.</remarks>
-public sealed class Lens
+public static class Lens
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="ILensophy"/> using a <see cref="OpenAiConfig"/>.

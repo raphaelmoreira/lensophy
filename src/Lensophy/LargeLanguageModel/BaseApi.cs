@@ -2,6 +2,7 @@
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Jil;
 using Lensophy.Util;
 
 namespace Lensophy.LargeLanguageModel;
@@ -11,7 +12,6 @@ public abstract class BaseApi
     private readonly string _secret;
     private const string MediaType = "application/json";
     private const string BaseAddress = "https://api.openai.com/v1/";
-    protected readonly IJsonSerializer Json = new JilSerializer();
 
     protected BaseApi(string secret)
     {
@@ -29,7 +29,7 @@ public abstract class BaseApi
         var responseMessage = await httpClient.SendAsync(request, CancellationToken.None).ConfigureAwait(false);
         var responseContent = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
         
-        return Json.Deserialize<T>(responseContent);
+        return JilSerializer.Deserialize<T>(responseContent);
     }
     
     protected static void EnsureContract(HttpClient httpClient, ContentAnalyse contentAnalyse)
