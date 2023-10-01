@@ -19,28 +19,28 @@ public class JsonSerializerBenchmark
     };
     
     [Benchmark(Baseline = true)]
-    public string WhyDidYourself()
+    public string WhyDoItYourself()
     {
         var serialize = Lensializer.CompletionChatRequest("hi");
         return serialize;
     }
     
     [Benchmark]
-    public string WhyDidntYouSerializeWithJil()
+    public string WhyDidntYouUseJil()
     {
         var serialize = JSON.Serialize(_completionChatRequest);
         return serialize;
     }
     
     [Benchmark]
-    public string WhyDidntYouSerializeWithNewtonsoft()
+    public string WhyDidntYouUseNewtonsoft()
     {
         var serialize = Newtonsoft.Json.JsonConvert.SerializeObject(_completionChatRequest);
         return serialize;
     }
     
     [Benchmark]
-    public string WhyDidntYouSerializeWithNative()
+    public string WhyDidntYouUseNative()
     {
         var serialize = System.Text.Json.JsonSerializer.Serialize(_completionChatRequest);
         return serialize;
