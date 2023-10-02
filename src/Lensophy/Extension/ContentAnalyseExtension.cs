@@ -29,4 +29,16 @@ internal static class ContentAnalyseExtension
         
         return preparedPrompt;
     }
+    
+    public static string ToCompletionChatRequest(this string content) => @"{" +
+                                                                  $"\"max_tokens\": 256," +
+                                                                  $"\"temperature\": 1, " +
+                                                                  "\"messages\": [" +
+                                                                  "{" +
+                                                                  $"\"content\": \"{content}\"," +
+                                                                  $"\"role\": \"user\"," +
+                                                                  "}" +
+                                                                  "]," +
+                                                                  $"\"model\": \"gpt-3.5-turbo\"" +
+                                                                  "}";
 }

@@ -1,7 +1,7 @@
 using BenchmarkDotNet.Attributes;
 using Jil;
 using Lensophy.Dto.OpenAi;
-using Lensophy.Util;
+using Lensophy.Extension;
 
 namespace Lensophy.Benchmark;
 
@@ -21,7 +21,7 @@ public class JsonSerializerBenchmark
     [Benchmark(Baseline = true)]
     public string WhyDoItYourself()
     {
-        var serialize = Lensializer.CompletionChatRequest("hi");
+        var serialize = "hi".ToCompletionChatRequest();
         return serialize;
     }
     

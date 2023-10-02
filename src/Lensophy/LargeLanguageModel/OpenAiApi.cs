@@ -15,7 +15,9 @@ public sealed class OpenAiApi : BaseApi, ILensophy
         
         const string model = "chat/completions";
         var response = await DoRequest<CompletionChatResponse>(
-            model, httpClient, Lensializer.CompletionChatRequest(contentAnalyse.ToPreparedPrompt()));
+            model, 
+            httpClient,
+            contentAnalyse.ToPreparedPrompt().ToCompletionChatRequest());
 
         var isHarmfull = await IsHarmful(httpClient, contentAnalyse).ConfigureAwait(false);
 

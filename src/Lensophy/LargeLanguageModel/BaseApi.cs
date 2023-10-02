@@ -2,7 +2,6 @@
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Jil;
 using Lensophy.Util;
 
 namespace Lensophy.LargeLanguageModel;

@@ -1,16 +1,12 @@
 # Lensophy
 Lensophy is a library designed to promote positive and respectful online communication. Based on philosophical principles of ethics and virtue, Lensophy acts as an observational lens, providing users with the opportunity to reconsider and rephrase messages that may contain verbal aggression before sending them.
 
-In the context of the subject and related comment, Lensophy reveals whether there is potential negativity and suggests a gentle rephrasing of the message, without censorship, leaving it up to the developer to decide how to proceed with it.
+This API provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective rather than censoring it.
 
 # How it works?
 **[![.NET](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)**
 
-Soon...
-
-```
-{ examples goes here }
-```
+If you prefer to understand through practice, go straight to the [Technical Specification](src/Lensophy/Doc/Readme.md), otherwise, continue.
 
 # Philosophy
 The principles guiding the tool consider the following approaches:
