@@ -17,11 +17,11 @@
         <RepositoryUrl>https://github.com/raphaelmoreira/lensophy</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>OpenAI AI API ChatGPT LLM Word Content Constructive Filter ContentFiltering ConstructiveCommunication</PackageTags>
-        <PackageReleaseNotes>Alpha version containing the basic mechanics, aimed at validating the NuGet packaging.</PackageReleaseNotes>
+        <PackageReleaseNotes>Beta version containing the basic mechanics, aimed at validating the NuGet packaging.</PackageReleaseNotes>
         <Company>Moreira | Solutions Architect</Company>
         <Product>Lensophy</Product>
-        <Version>0.0.0-beta.3</Version>
-        <PackageVersion>0.0.0-beta.3</PackageVersion>
+        <Version>0.0.0-beta.4</Version>
+        <PackageVersion>0.0.0-beta.4</PackageVersion>
         <AssemblyVersion>0.0.0</AssemblyVersion>
         <Nullable>enable</Nullable>
         <ImplicitUsings>false</ImplicitUsings>
@@ -44,7 +44,6 @@
         <Using Include="Lensophy.Dto" />
         <Using Include="Lensophy.Dto.OpenAi" />
         <Using Include="Lensophy.Interface" />
-        <Using Include="Lensophy.LargeLanguageModel" />
         
         <InternalsVisibleTo Include="Lensophy.UnitTest" />
         <InternalsVisibleTo Include="Lensophy.IntegrationTest" />
@@ -69,6 +68,14 @@
     <ItemGroup>
       <PackageReference Include="Jil" Version="2.17.0" />
     </ItemGroup>
+
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Net.Http.Headers">
+        <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.7\Microsoft.Net.Http.Headers.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 
 
 </Project>

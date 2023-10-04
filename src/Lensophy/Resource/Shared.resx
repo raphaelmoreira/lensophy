@@ -28,7 +28,7 @@
         <value>The trustworthy disciple of Confucius: seeks to emphasize the importance of ethics in interpersonal relationships and the pursuit of moral virtue. Strives to do what is right in all situations and cultivates virtues such as compassion, honesty, and respect.</value>
     </data>
     <data name="ConsideringFollowingContext" xml:space="preserve">
-        <value>Considering the following context: '{0}'.</value>
+        <value>Considering the following context: `{0}`.</value>
     </data>
     <data name="ConsideringFollowingVirtues" xml:space="preserve">
         <value>Considering the following virtues: the triple filter of Socrates, the righteous word of Buddha and the trustworthy disciple of Confucius</value>
@@ -44,5 +44,14 @@
     </data>
     <data name="SocratesVirtue" xml:space="preserve">
         <value>Socrates' Triple Filter: promotes kindness and considers the utility of our words. Words and actions should be beneficial to all involved, promoting well-being and harmony. Information should serve a constructive purpose and contribute to knowledge or progress.</value>
+    </data>
+    <data name="EmptySeeFullErrorMessage" xml:space="preserve">
+        <value>Empty. See FullErrorMessage for details.</value>
+    </data>
+    <data name="NoChanges" xml:space="preserve">
+        <value>(no changes)</value>
+    </data>
+    <data name="ServiceDidNotRespondAsExpected" xml:space="preserve">
+        <value>Service did not respond as expected.</value>
     </data>
 </root>

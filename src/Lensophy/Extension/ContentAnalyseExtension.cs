@@ -10,7 +10,7 @@ internal static class ContentAnalyseExtension
     /// </summary>
     /// <param name="contentAnalyse">The content to be analyzed.</param>
     /// <returns>Prepare a properly suitable prompt.</returns>
-    public static string ToPreparedPrompt(this ContentAnalyse contentAnalyse)
+    internal static string ToPreparedPrompt(this ContentAnalyse contentAnalyse)
     {
         var preparedPrompt = $"{string.Format(Resource.Shared.AnalyseTheMessage, contentAnalyse.Message)} " +
                              $"{Resource.Shared.ConsideringFollowingVirtues} " +
@@ -30,15 +30,31 @@ internal static class ContentAnalyseExtension
         return preparedPrompt;
     }
     
-    public static string ToCompletionChatRequest(this string content) => @"{" +
-                                                                  $"\"max_tokens\": 256," +
-                                                                  $"\"temperature\": 1, " +
-                                                                  "\"messages\": [" +
-                                                                  "{" +
-                                                                  $"\"content\": \"{content}\"," +
-                                                                  $"\"role\": \"user\"," +
-                                                                  "}" +
-                                                                  "]," +
-                                                                  $"\"model\": \"gpt-3.5-turbo\"" +
-                                                                  "}";
+    internal static string ToModerationRequest(this ContentAnalyse contentAnalyse)
+    {
+        var content = contentAnalyse.Message.Replace("\"", "'");
+        var json = "{" +
+                   $"\"input\": \"{content}\"" +
+                   "}";
+
+        return json;
+    }
+
+    internal static string ToCompletionChatRequest(this string content)
+    {
+        content = content.Replace("\"", "'");
+        var json = "{" +
+                   "\"max_tokens\": 256," +
+                   "\"temperature\": 1, " +
+                   "\"messages\": [" +
+                   "{" +
+                   $"\"content\": \"{content}\"," +
+                   "\"role\": \"user\"" +
+                   "}" +
+                   "]," +
+                   "\"model\": \"gpt-3.5-turbo\"" +
+                   "}";
+
+        return json;
+    }
 }

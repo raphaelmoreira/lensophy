@@ -87,7 +87,7 @@ namespace Lensophy.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Considering the following context: &apos;{0}&apos;..
+        ///   Looks up a localized string similar to Considering the following context: `{0}`..
         /// </summary>
         public static string ConsideringFollowingContext {
             get {
@@ -114,6 +114,24 @@ namespace Lensophy.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Empty. See FullErrorMessage for details..
+        /// </summary>
+        public static string EmptySeeFullErrorMessage {
+            get {
+                return ResourceManager.GetString("EmptySeeFullErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (no changes).
+        /// </summary>
+        public static string NoChanges {
+            get {
+                return ResourceManager.GetString("NoChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rewrite the message based on the mentioned virtues without changing or corrupting the original meaning of the message, without mentioning any of the virtues..
         /// </summary>
         public static string RewriteMessage {
@@ -128,6 +146,15 @@ namespace Lensophy.Resource {
         public static string SaitamaVirtue {
             get {
                 return ResourceManager.GetString("SaitamaVirtue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service did not respond as expected..
+        /// </summary>
+        public static string ServiceDidNotRespondAsExpected {
+            get {
+                return ResourceManager.GetString("ServiceDidNotRespondAsExpected", resourceCulture);
             }
         }
         

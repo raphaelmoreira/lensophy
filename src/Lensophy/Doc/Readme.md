@@ -9,6 +9,54 @@ Installing the package.
 dotnet add package Lensophy --version 0.0.0
 ```
 
+In your `appSettings.json`, add the following configuration:
+
+```
+{
+  "OpenAiConfig": {
+    "Secret": "your OpenAi secret"
+  }
+}
+```
+
+In `Program.cs`, perform the following registration:
+
+```
+var builder = WebApplication.CreateBuilder(args);
+
+...
+//code hidden for brevity.
+
+builder.Services.AddHttpClient<LensophyService>(httpClient =>
+{
+    var secret = builder.Configuration.GetSection("openaiconfig:secret").Value;
+    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", secret);
+});
+```
+
+In the `SampleController`, inject the dependency:
+```
+[ApiController]
+[Route("[controller]")]
+public class SampleController : ControllerBase
+{
+    private readonly LensophyService _lensophyService;
+
+    public SampleController(LensophyService lensophyService) => _lensophyService = lensophyService;
+}
+```
+
+Call the `Analyse` routine at the desired endpoint.
+
+```
+[HttpPost(Name = "Analyse")]
+public async Task<ContentAnalysed> Analyse([FromBody]ContentAnalyse contentToAnalyse)
+{
+    var contentAnalysed = await _lensophyService.AnalyseAsync(contentToAnalyse).ConfigureAwait(false);
+    return contentAnalysed;
+}
+```
+
 # Release notes
 Every version governs a basic principle of change, although it may carry other minor improvements.
 
@@ -19,7 +67,7 @@ Every version governs a basic principle of change, although it may carry other m
 - Consolidation and simplification of the architecture.
 - Object serialization for performance purposes.
 - Increasing code coverage by 80%.
-
+- Adding the Async suffix;
 
 # Documentation
 Soon...

@@ -209,63 +209,50 @@
             <para>This extension is not intended to address this particularity.</para>
             </remarks>
         </member>
-        <member name="T:Lensophy.Interface.ILensophy">
+        <member name="T:Lensophy.LensophyService">
             <summary>
-            An abstraction for the Lensophy Language Model.
-            </summary>
-        </member>
-        <member name="M:Lensophy.Interface.ILensophy.Analyse(System.Net.Http.HttpClient,Lensophy.Dto.ContentAnalyse)">
-            <summary>
-            Analyze content based on the philosophical directives of Socrates, Siddhartha Gautama, and Confucius.
-            </summary>
-            <param name="httpClient">The current HTTP instance (see remark).</param>
-            <param name="contentAnalyse">The content to be analyzed.</param>
-            <returns>The content already analyzed.</returns>
-            <remarks><para>Avoid creating a <b>new</b> instance of the <see cref="T:System.Net.Http.HttpClient"/> class. Instead, consider
-            passing the current request's instance or preferably injecting it through the <b>IHttpClientFactory</b>.</para>
-            <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
-            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
-            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
-            </remarks>
-            <exception cref="T:System.ArgumentNullException">In case of <c>httpClient</c>, <c>contentAnalyse</c>, or
-            <c>contentAnalyse.Message</c> are null or empty.</exception>
-        </member>
-        <member name="M:Lensophy.Interface.ILensophy.IsHarmful(System.Net.Http.HttpClient,Lensophy.Dto.ContentAnalyse)">
-            <summary>
-            Check if the content is harmful, based on the philosophical guidelines of Socrates, Siddhartha Gautama, and Confucius.
-            </summary>
-            <param name="httpClient">The current HTTP instance (see remark).</param>
-            <param name="contentAnalyse">The content to be analyzed.</param>
-            <returns>Returns <c>true</c> if the content is considered harmful. Otherwise, <c>false</c>.</returns>
-            <remarks>
-            <para>Avoid creating a <b>new</b> instance of the <see cref="T:System.Net.Http.HttpClient"/> class. Instead, consider
-            passing the current request's instance or preferably injecting it through the <b>IHttpClientFactory</b>.</para>
-            <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
-            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
-            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
-            </remarks>
-            <exception cref="T:System.ArgumentNullException">In case of <c>httpClient</c>, <c>contentAnalyse</c>, or
-            <c>contentAnalyse.Message</c> are null or empty.</exception>
-        </member>
-        <member name="M:Lensophy.LargeLanguageModel.OpenAiApi.Analyse(System.Net.Http.HttpClient,Lensophy.Dto.ContentAnalyse)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Lensophy.LargeLanguageModel.OpenAiApi.IsHarmful(System.Net.Http.HttpClient,Lensophy.Dto.ContentAnalyse)">
-            <inheritdoc/>
-        </member>
-        <member name="T:Lensophy.Lens">
-            <summary>
-            Provides a class for message analysis, returning a gentle suggestion if the content is offensive in any way.
+            Provides a service for message analysis, returning a gentle suggestion if the content is offensive in any way.
             </summary>
             <remarks>A service account is required to use it.</remarks>
         </member>
-        <member name="M:Lensophy.Lens.CreateWithOpenAi(Lensophy.Dto.OpenAi.OpenAiConfig)">
+        <member name="M:Lensophy.LensophyService.#ctor(System.Net.Http.HttpClient)">
             <summary>
-            Initializes a new instance of the <see cref="T:Lensophy.Interface.ILensophy"/> using a <see cref="T:Lensophy.Dto.OpenAi.OpenAiConfig"/>.
+            Initializes a new instance of the <see cref="T:Lensophy.LensophyService"/>.
             </summary>
-            <param name="config">An OpenAI account <b>key</b> is required to use it.</param>
-            <returns>Returns the <see cref="T:Lensophy.Interface.ILensophy"/> interface.</returns>
-            <exception cref="T:System.ArgumentNullException">In case the <c>httpClient</c> or <c>config</c> are null.</exception>
+            <param name="httpClient">The current HTTP instance (see remark).</param>
+            <remarks><para>Avoid creating a <b>new</b> instance of the <see cref="T:System.Net.Http.HttpClient"/> class. Instead, consider
+            passing the current request's instance or preferably injecting it through the
+            <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-7.0#basic-usage">IHttpClientFactory.</a>
+            </para>
+            <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
+            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
+            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">In case of <c>httpClient</c> is null or empty.</exception>
+        </member>
+        <member name="M:Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse)">
+            <summary>
+            Analyze content based on the philosophical directives of Socrates, Siddhartha Gautama, and Confucius.
+            </summary>
+            <param name="contentAnalyse">The content to be analyzed.</param>
+            <returns>The content already analyzed.</returns>
+            <exception cref="T:System.ArgumentNullException">In case of <c>contentAnalyse</c> or <c>contentAnalyse.Message</c>
+            are null or empty.</exception>
+        </member>
+        <member name="M:Lensophy.LensophyService.IsHarmful(Lensophy.Dto.ContentAnalyse)">
+            <summary>
+            Check if the content is harmful, based on the philosophical guidelines of Socrates, Siddhartha Gautama, and Confucius.
+            </summary>
+            <param name="contentAnalyse">The content to be analyzed.</param>
+            <returns>Returns <c>true</c> if the content is considered harmful. Otherwise, <c>false</c>.</returns>
+            <exception cref="T:System.ArgumentNullException">In case of <c>contentAnalyse</c> or <c>contentAnalyse.Message</c> are null or empty.</exception>
+        </member>
+        <member name="M:Lensophy.LensophyService.EnsureContract(Lensophy.Dto.ContentAnalyse)">
+            <summary>
+            Check if the terms of use have been properly met.
+            </summary>
+            <param name="contentAnalyse">The content to be analyzed.</param>
+            <exception cref="T:System.ArgumentNullException">In case of <c>contentAnalyse</c> or <c>contentAnalyse.Message</c> are null or empty.</exception>
         </member>
         <member name="T:Lensophy.Resource.Shared">
             <summary>
@@ -300,7 +287,7 @@
         </member>
         <member name="P:Lensophy.Resource.Shared.ConsideringFollowingContext">
             <summary>
-              Looks up a localized string similar to Considering the following context: &apos;{0}&apos;..
+              Looks up a localized string similar to Considering the following context: `{0}`..
             </summary>
         </member>
         <member name="P:Lensophy.Resource.Shared.ConsideringFollowingVirtues">
@@ -313,6 +300,16 @@
               Looks up a localized string similar to Develop the answer without exceeding the limit of `{0}` tokens from the Api..
             </summary>
         </member>
+        <member name="P:Lensophy.Resource.Shared.EmptySeeFullErrorMessage">
+            <summary>
+              Looks up a localized string similar to Empty. See FullErrorMessage for details..
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.NoChanges">
+            <summary>
+              Looks up a localized string similar to (no changes).
+            </summary>
+        </member>
         <member name="P:Lensophy.Resource.Shared.RewriteMessage">
             <summary>
               Looks up a localized string similar to Rewrite the message based on the mentioned virtues without changing or corrupting the original meaning of the message, without mentioning any of the virtues..
@@ -321,6 +318,11 @@
         <member name="P:Lensophy.Resource.Shared.SaitamaVirtue">
             <summary>
               Looks up a localized string similar to Synthesize the answer in 20 words or less..
+            </summary>
+        </member>
+        <member name="P:Lensophy.Resource.Shared.ServiceDidNotRespondAsExpected">
+            <summary>
+              Looks up a localized string similar to Service did not respond as expected..
             </summary>
         </member>
         <member name="P:Lensophy.Resource.Shared.SocratesVirtue">

@@ -21,7 +21,7 @@
         <value>O discípulo confiável de Confúcio: busca enfatizar a importância da ética nas relações interpessoais e na busca pela virtude moral. Busca fazer o que é certo em todas as situações. Cultiva virtudes como a compaixão, a honestidade e o respeito.</value>
     </data>
     <data name="ConsideringFollowingContext" xml:space="preserve">
-        <value>Considerando o seguinte contexto: '{0}'.</value>
+        <value>Considerando o seguinte contexto: `{0}`.</value>
     </data>
     <data name="ConsideringFollowingVirtues" xml:space="preserve">
         <value>Considerando as seguintes virtudes:</value>
@@ -37,5 +37,14 @@
     </data>
     <data name="SocratesVirtue" xml:space="preserve">
         <value>Triplo filtro de Sócrates: promover a bondade e considerar a utilidade de nossas palavras. Palavras e as ações devem ser benéficas para todos os envolvidos, promovendo o bem-estar e a harmonia. As informações devem ter um propósito construtivo e contribuir para o conhecimento ou o progresso.</value>
+    </data>
+    <data name="EmptySeeFullErrorMessage" xml:space="preserve">
+        <value>Vazio. Veja FullErrorMessage para detalhes.</value>
+    </data>
+    <data name="NoChanges" xml:space="preserve">
+        <value>(sem alteração)</value>
+    </data>
+    <data name="ServiceDidNotRespondAsExpected" xml:space="preserve">
+        <value>Serviço não respondeu como esperado.</value>
     </data>
 </root>
