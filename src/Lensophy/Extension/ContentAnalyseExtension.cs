@@ -3,7 +3,7 @@ using Lensophy.Dto.OpenAi;
 
 namespace Lensophy.Extension;
 
-internal static class ContentAnalyseExtension
+public static class ContentAnalyseExtension
 {
     /// <summary>
     /// The prompt is generated around a series of preparations, ranging from context to philosophical teachings.
@@ -40,7 +40,7 @@ internal static class ContentAnalyseExtension
         return json;
     }
 
-    internal static string ToCompletionChatRequest(this string content)
+    public static string ToCompletionChatRequest(this string content)
     {
         content = content.Replace("\"", "'");
         var json = "{" +

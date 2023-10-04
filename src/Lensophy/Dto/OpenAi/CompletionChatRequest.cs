@@ -7,7 +7,7 @@ namespace Lensophy.Dto.OpenAi;
 /// <summary>
 /// Estrutura de requisição do OpenAI.
 /// </summary>
-internal class CompletionChatRequest
+public class CompletionChatRequest
 {
     /// <summary>
     /// Modelo de linguagem a ser utilizado.

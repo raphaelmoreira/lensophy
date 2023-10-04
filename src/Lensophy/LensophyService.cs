@@ -1,6 +1,5 @@
 using System.Threading.Tasks;
 using Lensophy.Extension;
-using Microsoft.Net.Http.Headers;
 using System.Text;
 using Lensophy.Util;
 
@@ -13,7 +12,7 @@ namespace Lensophy;
 public class LensophyService
 {
     private readonly HttpClient _httpClient;
-    private const string MediaType = "application/json";
+    private const string MediaTypeRequest = "application/json";
 
     /// <summary>
     /// Initializes a new instance of the <see cref="LensophyService"/>.
@@ -34,7 +33,7 @@ public class LensophyService
         
         _httpClient = httpClient;
         _httpClient.BaseAddress = new Uri("https://api.openai.com/v1/");
-        _httpClient.DefaultRequestHeaders.Add(HeaderNames.Accept, MediaType);
+        _httpClient.DefaultRequestHeaders.Add("Accept", MediaTypeRequest);
     }
 
     /// <summary>
@@ -61,7 +60,7 @@ public class LensophyService
         }
         
         var data = contentAnalyse.ToPreparedPrompt().ToCompletionChatRequest();
-        var content = new StringContent(data, Encoding.UTF8, MediaType);
+        var content = new StringContent(data, Encoding.UTF8, MediaTypeRequest);
         var responseMessage = await _httpClient.PostAsync("chat/completions", content).ConfigureAwait(false);
         var responseContent = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
 
@@ -79,7 +78,7 @@ public class LensophyService
     private async Task<ModerationResponse?> IsHarmful(ContentAnalyse contentAnalyse)
     {
         var data = contentAnalyse.ToModerationRequest();
-        var content = new StringContent(data, Encoding.UTF8, MediaType);
+        var content = new StringContent(data, Encoding.UTF8, MediaTypeRequest);
         var responseMessage = await _httpClient.PostAsync("moderations", content).ConfigureAwait(false);
         var responseContent = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
 
