@@ -69,20 +69,16 @@ Every version governs a basic principle of change, although it may carry other m
 - Increasing code coverage by 80%.
 - Adding the Async suffix;
 
-# Documentation
-Soon...
-
 # Examples
-Soon...
+Below is a suggestion for use in your posting system.
 
-# Feedback
-Soon...
+[![How to use it](../Image/how_to_use_it.png)](Readme.md)
 
-# Contributing
+# Contributing & Feedback
 If you encounter a bug or have a feature request, please use the [Issue Tracker](https://github.com/raphaelmoreira/lensophy/issues). The project is also open to contributions, so feel free to [fork the project](https://github.com/raphaelmoreira/lensophy/fork) and open pull requests. Contributions are highly appreciated! Please make sure it is covered by unit or integrations tests.
 
-
 # About the project
+Remind people that, even physically distant from the interlocutor, respect must be maintained.
 
 # License
 Copyright © Raphael Moreira | MIT

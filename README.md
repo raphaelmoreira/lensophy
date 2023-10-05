@@ -1,12 +1,21 @@
 # Lensophy
 Lensophy is a library designed to promote positive and respectful online communication. Based on philosophical principles of ethics and virtue, Lensophy acts as an observational lens, providing users with the opportunity to reconsider and rephrase messages that may contain verbal aggression before sending them.
 
-This API provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective rather than censoring it.
-
-# How it works?
 **[![.NET](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)**
 
+# TL;DR;
 If you prefer to understand through practice, go straight to the [Technical Specification](src/Lensophy/Doc/Readme.md), otherwise, continue.
+
+# How it works?
+
+This API provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective rather than censoring it.
+
+[![How to use it](src/Lensophy/Image/how_to_use_it.png)](#philosophy)
+
+
+### WARNING!
+The example above is merely illustrative, acting as a suggestion for use. There are no interfaces or UX flow. This must be done by you. Lensophy just returns an object with suggested message, after analysis.
+ 
 
 # Philosophy
 The principles guiding the tool consider the following approaches:
@@ -40,3 +49,7 @@ Within the teachings, we should be someone who:
 - <ins>Demonstrates loyalty</ins>: Is loyal to their commitments, relationships, and responsibilities, showing fidelity to people and values they consider important.
 - <ins>Maintains trust</ins>: Can be trusted to keep promises and hold secrets when necessary.
 - <ins>Pursues moral virtue</ins>: Strives for continuous improvement and the cultivation of virtues such as compassion, honesty, and respect.
+
+
+# Why?
+Remind people that, even physically distant from the interlocutor, respect must be maintained.
