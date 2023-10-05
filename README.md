@@ -54,4 +54,4 @@ Within the teachings, we should be someone who:
 
 
 # Why waste time on this?
-Remind people that, even physically distant from the interlocutor, respect must be maintained.
+Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [wiki](https://github.com/users/raphaelmoreira/projects/3) if you wanna read more about it.
