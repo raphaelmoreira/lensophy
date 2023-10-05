@@ -209,6 +209,28 @@
             <para>This extension is not intended to address this particularity.</para>
             </remarks>
         </member>
+        <member name="T:Lensophy.Extension.ServiceCollectionExtension">
+            <summary>
+            Extension methods to configure an <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> for <see cref="T:Lensophy.LensophyService"/>.
+            </summary>
+        </member>
+        <member name="M:Lensophy.Extension.ServiceCollectionExtension.AddLensophy(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+            <summary>
+            Adds the <see cref="T:Lensophy.LensophyService"/> to the <see cref="T:System.Net.Http.IHttpClientFactory"/> and configures a binding for
+            <see cref="T:System.Net.Http.HttpClient"/>.
+            </summary>
+            <param name="serviceCollection">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/></param>
+            <param name="secret">The OpenAI secret.</param>
+            <exception cref="T:System.ArgumentNullException">If <c>serviceCollection</c> or <c>secret</c> are null or empty.</exception>
+            <remarks><para>Lensophy handle the life cycle of <see cref="T:System.Net.Http.HttpClient"/>, without creating a <b>new</b> instance
+            of the <see cref="T:System.Net.Http.HttpClient"/> class, through the
+            <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-7.0#basic-usage">IHttpClientFactory.</a>
+            </para>
+            <para>For curiosity, even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
+            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
+            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
+            </remarks>
+        </member>
         <member name="T:Lensophy.LensophyService">
             <summary>
             Provides a service for message analysis, returning a gentle suggestion if the content is offensive in any way.
@@ -220,14 +242,6 @@
             Initializes a new instance of the <see cref="T:Lensophy.LensophyService"/>.
             </summary>
             <param name="httpClient">The current HTTP instance (see remark).</param>
-            <remarks><para>Avoid creating a <b>new</b> instance of the <see cref="T:System.Net.Http.HttpClient"/> class. Instead, consider
-            passing the current request's instance or preferably injecting it through the
-            <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-7.0#basic-usage">IHttpClientFactory.</a>
-            </para>
-            <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
-            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
-            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
-            </remarks>
             <exception cref="T:System.ArgumentNullException">In case of <c>httpClient</c> is null or empty.</exception>
         </member>
         <member name="M:Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse)">

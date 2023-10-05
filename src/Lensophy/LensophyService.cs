@@ -18,14 +18,6 @@ public class LensophyService
     /// Initializes a new instance of the <see cref="LensophyService"/>.
     /// </summary>
     /// <param name="httpClient">The current HTTP instance (see remark).</param>
-    /// <remarks><para>Avoid creating a <b>new</b> instance of the <see cref="HttpClient"/> class. Instead, consider
-    /// passing the current request's instance or preferably injecting it through the
-    /// <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-7.0#basic-usage">IHttpClientFactory.</a>
-    /// </para>
-    /// <para>Even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="HttpClient"/> is
-    /// disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
-    /// <see cref="SocketException"/> issue.</para>
-    /// </remarks>
     /// <exception cref="ArgumentNullException">In case of <c>httpClient</c> is null or empty.</exception>
     public LensophyService(HttpClient httpClient)
     {

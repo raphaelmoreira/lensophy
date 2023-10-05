@@ -1,5 +1,2 @@
 # Example Api
-Demonstração básica do uso da biblioteca.
-
-# Warning
-Este projeto não é um boilerprate para ser utilizado em produção. Seu intuito é puramente ilustrativo. 
+Basic demonstration of using the library. This project is not a boilerplate to be used in production. Its purpose is purely illustrative. 

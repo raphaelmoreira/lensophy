@@ -27,11 +27,8 @@ var builder = WebApplication.CreateBuilder(args);
 ...
 //code hidden for brevity.
 
-builder.Services.AddHttpClient<LensophyService>(httpClient =>
-{
-    var secret = builder.Configuration.GetSection("openaiconfig:secret").Value;
-    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", secret);
-});
+var secret = builder.Configuration.GetSection("openaiconfig:secret").Value;
+builder.Services.AddLensophy(secret);
 ```
 
 In the `SampleController`, inject the dependency:

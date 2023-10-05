@@ -20,8 +20,8 @@
         <PackageReleaseNotes>Beta version containing the basic mechanics, aimed at validating the NuGet packaging.</PackageReleaseNotes>
         <Company>Moreira | Solutions Architect</Company>
         <Product>Lensophy</Product>
-        <Version>0.0.0-beta.4</Version>
-        <PackageVersion>0.0.0-beta.4</PackageVersion>
+        <Version>0.0.0-beta.5</Version>
+        <PackageVersion>0.0.0-beta.5</PackageVersion>
         <AssemblyVersion>0.0.0</AssemblyVersion>
         <Nullable>enable</Nullable>
         <ImplicitUsings>false</ImplicitUsings>
@@ -67,6 +67,7 @@
 
     <ItemGroup>
       <PackageReference Include="Jil" Version="2.17.0" />
+      <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
     </ItemGroup>
 
 
