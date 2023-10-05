@@ -72,10 +72,10 @@ Below is a suggestion for use in your posting system.
 [![How to use it](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/how-to-use-it.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream)](Readme.md)
 
 # Contributing & Feedback
-If you encounter a bug or have a feature request, please use the [Issue Tracker](https://github.com/raphaelmoreira/lensophy/issues). The project is also open to contributions, so feel free to [fork the project](https://github.com/raphaelmoreira/lensophy/fork) and open pull requests. Contributions are highly appreciated! Please make sure it is covered by unit or integrations tests.
+If you encounter a bug or have a feature request, please use the [Issue Tracker](https://github.com/raphaelmoreira/lensophy/issues) or the [Project Board](https://github.com/users/raphaelmoreira/projects/3). The project is also open to contributions, so feel free to [fork the project](https://github.com/raphaelmoreira/lensophy/fork) and open pull requests. Contributions are highly appreciated! Please make sure it is covered by unit or integrations tests.
 
 # About the project
-Remind people that, even physically distant from the interlocutor, respect must be maintained.
+Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [Lensowiki](https://github.com/raphaelmoreira/lensophy/wiki/Lensophy) if you wanna read more about it.
 
 # License
 Copyright © Raphael Moreira | MIT
