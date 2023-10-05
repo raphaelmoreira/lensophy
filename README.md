@@ -4,7 +4,7 @@ Lensophy is a library designed to promote positive and respectful online communi
 **[![.NET](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)**
 
 # TL;DR;
-If you prefer to understand through practice, go straight to the [Technical Specification](src/Lensophy/Doc/Readme.md), otherwise, continue.
+If you prefer to understand through practice, go straight to the [Technical Specification](https://github.com/raphaelmoreira/lensophy/blob/main/src/Lensophy/Doc/Readme.md), otherwise, continue.
 
 # How it works?
 
@@ -51,5 +51,5 @@ Within the teachings, we should be someone who:
 - <ins>Pursues moral virtue</ins>: Strives for continuous improvement and the cultivation of virtues such as compassion, honesty, and respect.
 
 
-# Why?
+# Why waste time on this?
 Remind people that, even physically distant from the interlocutor, respect must be maintained.
