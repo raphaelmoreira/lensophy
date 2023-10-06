@@ -12,7 +12,7 @@ If you prefer to understand through practice, go straight to the [Technical Spec
 
 This API provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective rather than censoring it.
 
-[![How to use it](src/Lensophy/Image/how_to_use_it.png)](#philosophy)
+[![How to use it](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/how-to-use-it.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream)](#philosophy)
 
 
 ### WARNING!
