@@ -6,7 +6,7 @@ An [OpenAI account](https://platform.openai.com/signup) is required to use it
 # Getting Started
 Installing the package.
 ```
-dotnet add package Lensophy --version 0.0.0
+dotnet add package Lensophy --version 0.0.0-beta.6
 ```
 
 In your `appSettings.json`, add the following configuration:
