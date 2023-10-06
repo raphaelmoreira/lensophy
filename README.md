@@ -1,4 +1,4 @@
-# Lensophy
+# Lensophy - Enhance Respectful Communication
 Lensophy is a library designed to promote positive and respectful online communication. Based on philosophical principles of ethics and virtue, Lensophy acts as an observational lens, providing users with the opportunity to reconsider and rephrase messages that may contain verbal aggression before sending them.
 
 **[![Lensophy last build](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)**
@@ -52,6 +52,5 @@ Within the teachings, we should be someone who:
 - <ins>Maintains trust</ins>: Can be trusted to keep promises and hold secrets when necessary.
 - <ins>Pursues moral virtue</ins>: Strives for continuous improvement and the cultivation of virtues such as compassion, honesty, and respect.
 
-
 # Why waste time on this?
-Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [wiki](https://github.com/users/raphaelmoreira/projects/3) if you wanna read more about it.
+Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [Lensowiki](https://github.com/raphaelmoreira/lensophy/wiki/Lensophy) if you wanna read more about it.
