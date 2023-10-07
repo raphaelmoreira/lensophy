@@ -53,4 +53,4 @@ Within the teachings, we should be someone who:
 - <ins>Pursues moral virtue</ins>: Strives for continuous improvement and the cultivation of virtues such as compassion, honesty, and respect.
 
 # Why waste time on this?
-Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [Lensowiki](https://github.com/raphaelmoreira/lensophy/wiki) if you wanna read more about it.
+Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [Lensowiki](https://github.com/raphaelmoreira/lensophy/wiki) you wanna read more about it.
