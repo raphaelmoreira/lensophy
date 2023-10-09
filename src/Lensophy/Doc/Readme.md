@@ -4,9 +4,9 @@ This API provides developers with the ability to enhance their comment systems (
 An [OpenAI account](https://platform.openai.com/signup) is required to use it
 
 # Getting Started
-Installing the package.
+Installing the package with the desired version (last version is always recommended).
 ```
-dotnet add package Lensophy --version 0.0.0-beta.6
+dotnet add package Lensophy --version X.Y.Z
 ```
 
 In your `appSettings.json`, add the following configuration:
@@ -43,7 +43,7 @@ public class SampleController : ControllerBase
 }
 ```
 
-Call the `Analyse` routine at the desired endpoint.
+Call the `Analyse` routine at the desired place.
 
 ```
 [HttpPost(Name = "Analyse")]
@@ -57,17 +57,15 @@ public async Task<ContentAnalysed> Analyse([FromBody]ContentAnalyse contentToAna
 # Release notes
 Every version governs a basic principle of change, although it may carry other minor improvements.
 
-### v0.0.0 (beta.*)
-**[![.NET](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)**
-- Mild message analysis and rewriting API for detecting harmful content.
-- Testing with packaging and installation flow via NuGet.
-- Consolidation and simplification of the architecture.
-- Object serialization for performance purposes.
-- Increasing code coverage by 80%.
-- Adding the Async suffix;
+### v1.0.0
+**[![Lensophy last build](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)**
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/raphaelmoreira/lensophy.svg)](http://isitmaintained.com/project/raphaelmoreira/lensophy "Percentage of issues still open")
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/raphaelmoreira/lensophy.svg)](http://isitmaintained.com/project/raphaelmoreira/lensophy "Average time to resolve an issue")
+
+- Provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective
 
 # Examples
-Below is a suggestion for use in your posting system.
+A suggestion for your message system.
 
 [![How to use it](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/how-to-use-it.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream)](Readme.md)
 
@@ -75,7 +73,7 @@ Below is a suggestion for use in your posting system.
 If you encounter a bug or have a feature request, please use the [Issue Tracker](https://github.com/raphaelmoreira/lensophy/issues) or the [Project Board](https://github.com/users/raphaelmoreira/projects/3). The project is also open to contributions, so feel free to [fork the project](https://github.com/raphaelmoreira/lensophy/fork) and open pull requests. Contributions are highly appreciated! Please make sure it is covered by unit or integrations tests.
 
 # About the project
-Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [Lensowiki](https://github.com/raphaelmoreira/lensophy/wiki/Lensophy) if you wanna read more about it.
+Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [Lensowiki](https://github.com/raphaelmoreira/lensophy/wiki) if you wanna read more about it.
 
 # License
 Copyright © Raphael Moreira | MIT

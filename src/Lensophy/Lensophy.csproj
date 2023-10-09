@@ -38,6 +38,7 @@
         <Using Include="System" />
         <Using Include="System.Net.Sockets" />
         <Using Include="System.Net.Http" />
+        <Using Include="System.Text.Json" />
     </ItemGroup>
     
     <ItemGroup Label="Lensophy">
@@ -65,7 +66,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Jil" Version="2.17.0" />
       <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
     </ItemGroup>
 
@@ -75,6 +75,8 @@
         <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.7\Microsoft.Net.Http.Headers.dll</HintPath>
       </Reference>
     </ItemGroup>
+
+
 
 
 

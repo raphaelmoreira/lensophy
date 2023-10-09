@@ -1,7 +1,6 @@
 using System.Threading.Tasks;
 using Lensophy.Extension;
 using System.Text;
-using Lensophy.Util;
 
 namespace Lensophy;
 
@@ -13,6 +12,10 @@ public class LensophyService
 {
     private readonly HttpClient _httpClient;
     private const string MediaTypeRequest = "application/json";
+    private readonly JsonSerializerOptions _serializerOptions = new()
+    {
+        PropertyNameCaseInsensitive = true
+    };
 
     /// <summary>
     /// Initializes a new instance of the <see cref="LensophyService"/>.
@@ -56,7 +59,7 @@ public class LensophyService
         var responseMessage = await _httpClient.PostAsync("chat/completions", content).ConfigureAwait(false);
         var responseContent = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
 
-        var response = JilSerializer.Deserialize<CompletionChatResponse>(responseContent);
+        var response = JsonSerializer.Deserialize<CompletionChatResponse>(responseContent, _serializerOptions);
 
         return response.ToContentAnalysed(moderationResponse.Flagged);
     }
@@ -74,7 +77,7 @@ public class LensophyService
         var responseMessage = await _httpClient.PostAsync("moderations", content).ConfigureAwait(false);
         var responseContent = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
 
-        var response = JilSerializer.Deserialize<ModerationResponse>(responseContent);
+        var response = JsonSerializer.Deserialize<ModerationResponse>(responseContent, _serializerOptions);
 
         return response;
     }

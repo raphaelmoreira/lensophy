@@ -9,5 +9,6 @@
 /// <para>Para o propósito do Lensophy, apenas o indicativo negativo é suficiente.</para></remarks>
 internal record struct ModerationResult
 {
+    
     public bool Flagged { get; set; }
 }
