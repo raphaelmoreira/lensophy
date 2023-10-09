@@ -27,5 +27,12 @@ jobs:
     - name: Test       
       env:
         openaiconfigsecret: "${{ secrets.OPENAICONFIGSECRET }}"
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal    
+
+    - name: Doc
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs/_site
+
             
