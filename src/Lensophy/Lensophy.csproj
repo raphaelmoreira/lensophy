@@ -13,7 +13,7 @@
             
             An OpenAI account is required to use it.</Description>
         <Copyright>Copyright (c) Lensophy® 2023</Copyright>
-        <PackageProjectUrl>https://www.nuget.org/packages/Lensophy</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/raphaelmoreira/lensophy/wiki</PackageProjectUrl>
         <RepositoryUrl>https://github.com/raphaelmoreira/lensophy</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>OpenAI AI API ChatGPT LLM Word Content Constructive Filter ContentFiltering ConstructiveCommunication</PackageTags>
@@ -43,7 +43,6 @@
     <ItemGroup Label="Lensophy">
         <Using Include="Lensophy.Dto" />
         <Using Include="Lensophy.Dto.OpenAi" />
-        <Using Include="Lensophy.Interface" />
         
         <InternalsVisibleTo Include="Lensophy.UnitTest" />
         <InternalsVisibleTo Include="Lensophy.IntegrationTest" />
@@ -76,6 +75,8 @@
         <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.7\Microsoft.Net.Http.Headers.dll</HintPath>
       </Reference>
     </ItemGroup>
+
+
 
 
 
