@@ -6,7 +6,7 @@ Based on philosophical principles of ethics and virtue, Lensophy acts as an obse
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/raphaelmoreira/lensophy.svg)](http://isitmaintained.com/project/raphaelmoreira/lensophy "Average time to resolve an issue")
 
 # TL;DR;
-If you prefer to understand through practice, go straight to the [Technical Specification](https://github.com/raphaelmoreira/lensophy/wiki/III-%E2%80%90-Technical-Specification), otherwise, continue.
+If you prefer to understand through practice, go straight to the [Getting Started](https://github.com/raphaelmoreira/lensophy/tree/main/src/Lensophy/Doc#getting-started), otherwise, continue.
 
 # How it works?
 
