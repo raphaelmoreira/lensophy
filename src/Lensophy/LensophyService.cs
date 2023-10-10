@@ -20,7 +20,7 @@ public class LensophyService
     /// <summary>
     /// Initializes a new instance of the <see cref="LensophyService"/>.
     /// </summary>
-    /// <param name="httpClient">The current HTTP instance (see remark).</param>
+    /// <param name="httpClient">The current HTTP instance.</param>
     /// <exception cref="ArgumentNullException">In case of <c>httpClient</c> is null or empty.</exception>
     public LensophyService(HttpClient httpClient)
     {

@@ -241,7 +241,7 @@
             <summary>
             Initializes a new instance of the <see cref="T:Lensophy.LensophyService"/>.
             </summary>
-            <param name="httpClient">The current HTTP instance (see remark).</param>
+            <param name="httpClient">The current HTTP instance.</param>
             <exception cref="T:System.ArgumentNullException">In case of <c>httpClient</c> is null or empty.</exception>
         </member>
         <member name="M:Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse)">
