@@ -44,12 +44,12 @@ jobs:
         dotnet-version: 7.0.x
 
     - run: dotnet tool update -g docfx
-    - run: docfx docs/docfx.json
+    - run: docfx ../docs/docfx.json
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/_site
+        publish_dir: ../docs/_site
 
             
