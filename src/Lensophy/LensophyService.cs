@@ -1,17 +1,15 @@
-using System.Threading.Tasks;
-using Lensophy.Extension;
-using System.Text;
-
 namespace Lensophy;
 
 /// <summary>
 /// Provides a service for message analysis, returning a gentle suggestion if the content is offensive in any way.
 /// </summary>
 /// <remarks>A service account is required to use it.</remarks>
-public class LensophyService
+public sealed class LensophyService
 {
     private readonly HttpClient _httpClient;
-    private const string MediaTypeRequest = "application/json";
+    private const string ApplicationJsonMediaTypeRequest = "application/json";
+    private const string AcceptHeaderRequest = "Accept";
+    private const string OpenAiApiBaseUrl = "https://api.openai.com/v1/";
     private readonly JsonSerializerOptions _serializerOptions = new()
     {
         PropertyNameCaseInsensitive = true
@@ -22,23 +20,40 @@ public class LensophyService
     /// </summary>
     /// <param name="httpClient">The current HTTP instance.</param>
     /// <exception cref="ArgumentNullException">In case of <c>httpClient</c> is null or empty.</exception>
+    /// <remarks><para>Lensophy handle the life cycle of <see cref="HttpClient"/> through the
+    /// <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-7.0#basic-usage">IHttpClientFactory.</a>
+    /// </para>
+    /// <para>
+    /// Therefore, avoid instantiating <see cref="LensophyService"/> directly, with a <c>new HttpClient()</c>. Consider
+    /// register the dependency with <see cref="ServiceCollectionExtension.AddLensophy"/> extension, unless
+    /// you know how to use <see cref="IHttpClientFactory"/> properly.
+    /// </para>
+    /// <para>For curiosity, even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="HttpClient"/> is
+    /// disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
+    /// <see cref="SocketException"/> issue.</para>
+    /// </remarks>
     public LensophyService(HttpClient httpClient)
     {
         ArgumentNullException.ThrowIfNull(httpClient);
         
         _httpClient = httpClient;
-        _httpClient.BaseAddress = new Uri("https://api.openai.com/v1/");
-        _httpClient.DefaultRequestHeaders.Add("Accept", MediaTypeRequest);
+        _httpClient.BaseAddress = new Uri(OpenAiApiBaseUrl);
+        _httpClient.DefaultRequestHeaders.Add(AcceptHeaderRequest, ApplicationJsonMediaTypeRequest);
     }
 
     /// <summary>
-    /// Analyze content based on the philosophical directives of Socrates, Siddhartha Gautama, and Confucius.
+    /// Analyze content based on the philosophical directives of
+    /// <a href="https://raphaelmoreira.github.io/lensophy/articles/philosophy.html#the-triple-filter-of-socrates">Socrates</a>,
+    /// <a href="https://raphaelmoreira.github.io/lensophy/articles/philosophy.html#the-right-speech-of-buddha">Siddhartha Gautama</a> and
+    /// <a href="https://raphaelmoreira.github.io/lensophy/articles/philosophy.html#confuciuss-trusted-disciple">Confucius.</a>
     /// </summary>
     /// <param name="contentAnalyse">The content to be analyzed.</param>
+    /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive
+    /// notice of cancellation.</param>
     /// <returns>The content already analyzed.</returns>
     /// <exception cref="ArgumentNullException">In case of <c>contentAnalyse</c> or <c>contentAnalyse.Message</c>
     /// are null or empty.</exception>
-    public async Task<ContentAnalysed> AnalyseAsync(ContentAnalyse contentAnalyse)
+    public async Task<ContentAnalysed> AnalyseAsync(ContentAnalyse contentAnalyse, CancellationToken cancellationToken)
     {
         EnsureContract(contentAnalyse);
         
@@ -55,9 +70,12 @@ public class LensophyService
         }
         
         var data = contentAnalyse.ToPreparedPrompt().ToCompletionChatRequest();
-        var content = new StringContent(data, Encoding.UTF8, MediaTypeRequest);
-        var responseMessage = await _httpClient.PostAsync("chat/completions", content).ConfigureAwait(false);
-        var responseContent = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
+        var content = new StringContent(data, Encoding.UTF8, ApplicationJsonMediaTypeRequest);
+        var responseMessage = 
+            await _httpClient.PostAsync("chat/completions", content, cancellationToken).ConfigureAwait(false);
+        
+        var responseContent = 
+            await responseMessage.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
         var response = JsonSerializer.Deserialize<CompletionChatResponse>(responseContent, _serializerOptions);
 
@@ -73,7 +91,7 @@ public class LensophyService
     private async Task<ModerationResponse?> IsHarmful(ContentAnalyse contentAnalyse)
     {
         var data = contentAnalyse.ToModerationRequest();
-        var content = new StringContent(data, Encoding.UTF8, MediaTypeRequest);
+        var content = new StringContent(data, Encoding.UTF8, ApplicationJsonMediaTypeRequest);
         var responseMessage = await _httpClient.PostAsync("moderations", content).ConfigureAwait(false);
         var responseContent = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
 

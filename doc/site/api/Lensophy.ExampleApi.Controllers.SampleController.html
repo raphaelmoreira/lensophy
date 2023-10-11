@@ -709,8 +709,8 @@ public class SampleController : ControllerBase</code></pre>
 
   <a id="Lensophy_ExampleApi_Controllers_SampleController_Analyse_" data-uid="Lensophy.ExampleApi.Controllers.SampleController.Analyse*"></a>
 
-  <h3 id="Lensophy_ExampleApi_Controllers_SampleController_Analyse_Lensophy_Dto_ContentAnalyse_" data-uid="Lensophy.ExampleApi.Controllers.SampleController.Analyse(Lensophy.Dto.ContentAnalyse)">
-  Analyse(ContentAnalyse)
+  <h3 id="Lensophy_ExampleApi_Controllers_SampleController_Analyse_Lensophy_Dto_ContentAnalyse_System_Threading_CancellationToken_" data-uid="Lensophy.ExampleApi.Controllers.SampleController.Analyse(Lensophy.Dto.ContentAnalyse,System.Threading.CancellationToken)">
+  Analyse(ContentAnalyse, CancellationToken)
   <a class="header-action link-secondary" title="View source" href="https://github.com/raphaelmoreira/lensophy/blob/main/src/Lensophy.ExampleApi/Controllers/SampleController.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -719,12 +719,14 @@ public class SampleController : ControllerBase</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(Name = &quot;Analyse&quot;)]
-public Task&lt;ContentAnalysed&gt; Analyse(ContentAnalyse contentToAnalyse)</code></pre>
+public Task&lt;ContentAnalysed&gt; Analyse(ContentAnalyse contentToAnalyse, CancellationToken cancellationToken)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>contentToAnalyse</code> <a class="xref" href="Lensophy.Dto.ContentAnalyse.html">ContentAnalyse</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 

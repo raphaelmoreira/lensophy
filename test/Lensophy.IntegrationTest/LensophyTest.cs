@@ -25,7 +25,7 @@ public class LensophyTest : IClassFixture<OpenAiFixture>
         
         //act
         var contentAnalysed = 
-            await _openAiFixture.LensophyService.AnalyseAsync(contentToAnalyse);
+            await _openAiFixture.LensophyService.AnalyseAsync(contentToAnalyse, CancellationToken.None);
         
         //assert
         contentAnalysed.IsHarmful.Should().BeTrue();
@@ -40,7 +40,7 @@ public class LensophyTest : IClassFixture<OpenAiFixture>
         
         //act
         var contentAnalysed = 
-            await _openAiFixture.LensophyService.AnalyseAsync(contentToAnalyse);
+            await _openAiFixture.LensophyService.AnalyseAsync(contentToAnalyse, CancellationToken.None);
         
         //assert
         contentAnalysed.IsHarmful.Should().BeTrue();

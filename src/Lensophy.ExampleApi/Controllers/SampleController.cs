@@ -12,9 +12,10 @@ public class SampleController : ControllerBase
     public SampleController(LensophyService lensophyService) => _lensophyService = lensophyService;
 
     [HttpPost(Name = "Analyse")]
-    public async Task<ContentAnalysed> Analyse([FromBody]ContentAnalyse contentToAnalyse)
+    public async Task<ContentAnalysed> Analyse([FromBody]ContentAnalyse contentToAnalyse, CancellationToken cancellationToken)
     {
-        var contentAnalysed = await _lensophyService.AnalyseAsync(contentToAnalyse).ConfigureAwait(false);
+        var contentAnalysed = 
+            await _lensophyService.AnalyseAsync(contentToAnalyse, cancellationToken).ConfigureAwait(false);
         return contentAnalysed;
     }
 }

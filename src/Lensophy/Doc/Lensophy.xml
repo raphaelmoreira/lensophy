@@ -216,20 +216,11 @@
         </member>
         <member name="M:Lensophy.Extension.ServiceCollectionExtension.AddLensophy(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
             <summary>
-            Adds the <see cref="T:Lensophy.LensophyService"/> to the <see cref="T:System.Net.Http.IHttpClientFactory"/> and configures a binding for
-            <see cref="T:System.Net.Http.HttpClient"/>.
+            Adds the <see cref="T:Lensophy.LensophyService"/> and configure the binding for <see cref="T:System.Net.Http.HttpClient"/> through the <see cref="T:System.Net.Http.IHttpClientFactory"/>.
             </summary>
             <param name="serviceCollection">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/></param>
             <param name="secret">The OpenAI secret.</param>
             <exception cref="T:System.ArgumentNullException">If <c>serviceCollection</c> or <c>secret</c> are null or empty.</exception>
-            <remarks><para>Lensophy handle the life cycle of <see cref="T:System.Net.Http.HttpClient"/>, without creating a <b>new</b> instance
-            of the <see cref="T:System.Net.Http.HttpClient"/> class, through the
-            <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-7.0#basic-usage">IHttpClientFactory.</a>
-            </para>
-            <para>For curiosity, even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
-            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
-            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
-            </remarks>
         </member>
         <member name="T:Lensophy.LensophyService">
             <summary>
@@ -243,12 +234,29 @@
             </summary>
             <param name="httpClient">The current HTTP instance.</param>
             <exception cref="T:System.ArgumentNullException">In case of <c>httpClient</c> is null or empty.</exception>
+            <remarks><para>Lensophy handle the life cycle of <see cref="T:System.Net.Http.HttpClient"/> through the
+            <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-7.0#basic-usage">IHttpClientFactory.</a>
+            </para>
+            <para>
+            Therefore, avoid instantiating <see cref="T:Lensophy.LensophyService"/> directly, with a <c>new HttpClient()</c>. Consider
+            register the dependency with <see cref="M:Lensophy.Extension.ServiceCollectionExtension.AddLensophy(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)"/> extension, unless
+            you know how to use <see cref="T:System.Net.Http.IHttpClientFactory"/> properly.
+            </para>
+            <para>For curiosity, even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
+            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
+            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
+            </remarks>
         </member>
-        <member name="M:Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse)">
+        <member name="M:Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse,System.Threading.CancellationToken)">
             <summary>
-            Analyze content based on the philosophical directives of Socrates, Siddhartha Gautama, and Confucius.
+            Analyze content based on the philosophical directives of
+            <a href="https://raphaelmoreira.github.io/lensophy/articles/philosophy.html#the-triple-filter-of-socrates">Socrates</a>,
+            <a href="https://raphaelmoreira.github.io/lensophy/articles/philosophy.html#the-right-speech-of-buddha">Siddhartha Gautama</a> and
+            <a href="https://raphaelmoreira.github.io/lensophy/articles/philosophy.html#confuciuss-trusted-disciple">Confucius.</a>
             </summary>
             <param name="contentAnalyse">The content to be analyzed.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive
+            notice of cancellation.</param>
             <returns>The content already analyzed.</returns>
             <exception cref="T:System.ArgumentNullException">In case of <c>contentAnalyse</c> or <c>contentAnalyse.Message</c>
             are null or empty.</exception>

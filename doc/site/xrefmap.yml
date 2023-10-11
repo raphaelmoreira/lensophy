@@ -348,12 +348,12 @@ references:
   fullName.vb: Lensophy.ExampleApi.Controllers.SampleController.New
   nameWithType: SampleController.SampleController
   nameWithType.vb: SampleController.New
-- uid: Lensophy.ExampleApi.Controllers.SampleController.Analyse(Lensophy.Dto.ContentAnalyse)
-  name: Analyse(ContentAnalyse)
-  href: api/Lensophy.ExampleApi.Controllers.SampleController.html#Lensophy_ExampleApi_Controllers_SampleController_Analyse_Lensophy_Dto_ContentAnalyse_
-  commentId: M:Lensophy.ExampleApi.Controllers.SampleController.Analyse(Lensophy.Dto.ContentAnalyse)
-  fullName: Lensophy.ExampleApi.Controllers.SampleController.Analyse(Lensophy.Dto.ContentAnalyse)
-  nameWithType: SampleController.Analyse(ContentAnalyse)
+- uid: Lensophy.ExampleApi.Controllers.SampleController.Analyse(Lensophy.Dto.ContentAnalyse,System.Threading.CancellationToken)
+  name: Analyse(ContentAnalyse, CancellationToken)
+  href: api/Lensophy.ExampleApi.Controllers.SampleController.html#Lensophy_ExampleApi_Controllers_SampleController_Analyse_Lensophy_Dto_ContentAnalyse_System_Threading_CancellationToken_
+  commentId: M:Lensophy.ExampleApi.Controllers.SampleController.Analyse(Lensophy.Dto.ContentAnalyse,System.Threading.CancellationToken)
+  fullName: Lensophy.ExampleApi.Controllers.SampleController.Analyse(Lensophy.Dto.ContentAnalyse, System.Threading.CancellationToken)
+  nameWithType: SampleController.Analyse(ContentAnalyse, CancellationToken)
 - uid: Lensophy.ExampleApi.Controllers.SampleController.Analyse*
   name: Analyse
   href: api/Lensophy.ExampleApi.Controllers.SampleController.html#Lensophy_ExampleApi_Controllers_SampleController_Analyse_
@@ -455,12 +455,12 @@ references:
   fullName.vb: Lensophy.LensophyService.New
   nameWithType: LensophyService.LensophyService
   nameWithType.vb: LensophyService.New
-- uid: Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse)
-  name: AnalyseAsync(ContentAnalyse)
-  href: api/Lensophy.LensophyService.html#Lensophy_LensophyService_AnalyseAsync_Lensophy_Dto_ContentAnalyse_
-  commentId: M:Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse)
-  fullName: Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse)
-  nameWithType: LensophyService.AnalyseAsync(ContentAnalyse)
+- uid: Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse,System.Threading.CancellationToken)
+  name: AnalyseAsync(ContentAnalyse, CancellationToken)
+  href: api/Lensophy.LensophyService.html#Lensophy_LensophyService_AnalyseAsync_Lensophy_Dto_ContentAnalyse_System_Threading_CancellationToken_
+  commentId: M:Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse,System.Threading.CancellationToken)
+  fullName: Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse, System.Threading.CancellationToken)
+  nameWithType: LensophyService.AnalyseAsync(ContentAnalyse, CancellationToken)
 - uid: Lensophy.LensophyService.AnalyseAsync*
   name: AnalyseAsync
   href: api/Lensophy.LensophyService.html#Lensophy_LensophyService_AnalyseAsync_

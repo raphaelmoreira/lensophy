@@ -5,23 +5,23 @@
         <LangVersion>11</LangVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Lensophy</PackageId>
-        <Title>Lensophy - Enhance Respectful Communication</Title>
+        <Title>Lensophy - Respectful Communication</Title>
         <Authors>Raphael Moreira</Authors>
-        <Description>Lensophy is a library that promotes positive and respectful online communication by evaluating, through OpenAI's ChatGPT, whether the comment aligns with ethics and virtue. 
+        <Description>Lensophy is a library that promotes positive and respectful communication by evaluating, through OpenAI's ChatGPT, whether the comment aligns with ethics and virtue. 
             
-            This API provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective rather than censoring it. 
+            This API provides developers with the ability to enhance their comment systems (such as forums, blogs or websites) by analyzing, filtering and encouraging good behavior through suggested responses that guide towards a friendly perspective. 
             
             An OpenAI account is required to use it.</Description>
         <Copyright>Copyright (c) Lensophy® 2023</Copyright>
-        <PackageProjectUrl>https://github.com/raphaelmoreira/lensophy/wiki</PackageProjectUrl>
+        <PackageProjectUrl>https://raphaelmoreira.github.io/lensophy</PackageProjectUrl>
         <RepositoryUrl>https://github.com/raphaelmoreira/lensophy</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageTags>OpenAI AI API ChatGPT LLM Word Content Constructive Filter ContentFiltering ConstructiveCommunication</PackageTags>
-        <PackageReleaseNotes>Beta version containing the basic mechanics, aimed at validating the NuGet packaging.</PackageReleaseNotes>
+        <PackageTags>OpenAI AI API ChatGPT LLM ContentFiltering ConstructiveCommunication Word Content Filter</PackageTags>
+        <PackageReleaseNotes>Provides a service for message analysis, returning a gentle suggestion if the content is offensive in any way.</PackageReleaseNotes>
         <Company>Moreira | Solutions Architect</Company>
         <Product>Lensophy</Product>
-        <Version>0.0.0-beta.6</Version>
-        <PackageVersion>0.0.0-beta.6</PackageVersion>
+        <Version>0.0.0-beta.7</Version>
+        <PackageVersion>0.0.0-beta.7</PackageVersion>
         <AssemblyVersion>0.0.0</AssemblyVersion>
         <Nullable>enable</Nullable>
         <ImplicitUsings>false</ImplicitUsings>
@@ -39,11 +39,17 @@
         <Using Include="System.Net.Sockets" />
         <Using Include="System.Net.Http" />
         <Using Include="System.Text.Json" />
+        <Using Include="System.Threading" />
+        <Using Include="System.Threading.Tasks" />
+        <Using Include="System.Text" />
+        <Using Include="System.Net.Http.Headers" />
+        <Using Include="Microsoft.Extensions.DependencyInjection" />
     </ItemGroup>
     
     <ItemGroup Label="Lensophy">
         <Using Include="Lensophy.Dto" />
         <Using Include="Lensophy.Dto.OpenAi" />
+        <Using Include="Lensophy.Extension" />
         
         <InternalsVisibleTo Include="Lensophy.UnitTest" />
         <InternalsVisibleTo Include="Lensophy.IntegrationTest" />
@@ -63,23 +69,8 @@
           <LastGenOutput>Shared.Designer.cs</LastGenOutput>
           <CustomToolNamespace>Lensophy.Resource</CustomToolNamespace>
         </EmbeddedResource>
+
+        <Reference Include="Microsoft.Net.Http.Headers" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
     </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
-    </ItemGroup>
-
-
-    <ItemGroup>
-      <Reference Include="Microsoft.Net.Http.Headers">
-        <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.7\Microsoft.Net.Http.Headers.dll</HintPath>
-      </Reference>
-    </ItemGroup>
-
-
-
-
-
-
-
 </Project>
