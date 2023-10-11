@@ -217,20 +217,20 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
+      "source_relative_path": "articles/philosophy.md",
       "output": {
         ".html": {
-          "relative_path": "articles/intro.html"
+          "relative_path": "articles/philosophy.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/philosophy.md",
+      "source_relative_path": "articles/sui-generis.md",
       "output": {
         ".html": {
-          "relative_path": "articles/philosophy.html"
+          "relative_path": "articles/sui-generis.html"
         }
       },
       "version": ""

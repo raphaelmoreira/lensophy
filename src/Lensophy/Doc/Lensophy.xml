@@ -242,9 +242,10 @@
             register the dependency with <see cref="M:Lensophy.Extension.ServiceCollectionExtension.AddLensophy(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)"/> extension, unless
             you know how to use <see cref="T:System.Net.Http.IHttpClientFactory"/> properly.
             </para>
-            <para>For curiosity, even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
-            disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
-            <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
+            <para>For curiosity, even when wrapped in a <c>using</c> scope, you may not have control over when the <see cref="T:System.Net.Http.HttpClient"/> is
+            disposed, potentially leading to
+            <a href="https://learn.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">more instances</a>
+            than the Garbage Collector can release, resulting in a <see cref="T:System.Net.Sockets.SocketException"/> issue.</para>
             </remarks>
         </member>
         <member name="M:Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse,System.Threading.CancellationToken)">

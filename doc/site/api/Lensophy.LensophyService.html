@@ -158,7 +158,7 @@
 
   <h3 id="Lensophy_LensophyService__ctor_System_Net_Http_HttpClient_" data-uid="Lensophy.LensophyService.#ctor(System.Net.Http.HttpClient)">
   LensophyService(HttpClient)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/raphaelmoreira/lensophy/blob/main/src/Lensophy/LensophyService.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/raphaelmoreira/lensophy/blob/main/src/Lensophy/LensophyService.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Lensophy.LensophyService.html">LensophyService</a>.</p>
@@ -192,9 +192,10 @@
     register the dependency with <a class="xref" href="Lensophy.Extension.ServiceCollectionExtension.html#Lensophy_Extension_ServiceCollectionExtension_AddLensophy_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_">AddLensophy(IServiceCollection, string)</a> extension, unless
     you know how to use <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a> properly.
     </p>
-    <p>For curiosity, even when wrapped in a <b>using</b> scope, you may not have control over when the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> is
-    disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.socketexception">SocketException</a> issue.</p>
+    <p>For curiosity, even when wrapped in a <code>using</code> scope, you may not have control over when the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> is
+    disposed, potentially leading to
+    <a href="https://learn.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">more instances</a>
+    than the Garbage Collector can release, resulting in a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.socketexception">SocketException</a> issue.</p>
 </div>
 
   <h4 class="section">Exceptions</h4>
@@ -214,7 +215,7 @@
 
   <h3 id="Lensophy_LensophyService_AnalyseAsync_Lensophy_Dto_ContentAnalyse_System_Threading_CancellationToken_" data-uid="Lensophy.LensophyService.AnalyseAsync(Lensophy.Dto.ContentAnalyse,System.Threading.CancellationToken)">
   AnalyseAsync(ContentAnalyse, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/raphaelmoreira/lensophy/blob/main/src/Lensophy/LensophyService.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/raphaelmoreira/lensophy/blob/main/src/Lensophy/LensophyService.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Analyze content based on the philosophical directives of

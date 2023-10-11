@@ -28,9 +28,10 @@ public sealed class LensophyService
     /// register the dependency with <see cref="ServiceCollectionExtension.AddLensophy"/> extension, unless
     /// you know how to use <see cref="IHttpClientFactory"/> properly.
     /// </para>
-    /// <para>For curiosity, even when wrapped in a <b>using</b> scope, you may not have control over when the <see cref="HttpClient"/> is
-    /// disposed, potentially leading to more instances than the Garbage Collector can release, resulting in a
-    /// <see cref="SocketException"/> issue.</para>
+    /// <para>For curiosity, even when wrapped in a <c>using</c> scope, you may not have control over when the <see cref="HttpClient"/> is
+    /// disposed, potentially leading to
+    /// <a href="https://learn.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">more instances</a>
+    /// than the Garbage Collector can release, resulting in a <see cref="SocketException"/> issue.</para>
     /// </remarks>
     public LensophyService(HttpClient httpClient)
     {

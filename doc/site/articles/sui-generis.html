@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Sui Generis </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Sui Generis ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/raphaelmoreira/lensophy/blob/main/tool/docfx_project/articles/sui-generis.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="sui-generis">Sui Generis</h1>
+
+<p>Since the public release of the <a href="https://platform.openai.com/">OpenAI API</a>, I've wanted to do something with it. However, my learning works better when I set a purpose beyond the infamous 'Hello World,' even though in many cases, that's enough.</p>
+<h2 id="the-snap">The Snap</h2>
+<p>The idea behind this proof of concept was meant to be the simplicity of the mechanics. That's when I came across the following <a href="https://www.linkedin.com/feed/update/urn:li:activity:7105852268574339073/">post</a> by <a href="https://www.linkedin.com/in/mgaspar1/">Marcelo Gaspar</a> on <a href="https://www.linkedin.com/">LinkedIn</a>:</p>
+<p>Image (a screenshot of the post, for illustrative purposes in case the original link ever changes or disappears)</p>
+<p>From this premise, I'd like to highlight two comments that served as the sparks guiding me in defining the library's purpose:</p>
+<blockquote>
+<p><i>&quot;Very similar to Socrates' three sieves... I believe it uses the same basic principle. Makes total sense&quot;</i>, <a href="https://www.linkedin.com/in/alex-tavares-620336164/">Alex Tavares</a>.</p>
+</blockquote>
+<blockquote>
+<p><i>&quot;Is it true? Is it good? Is it useful? An algorithm available for over two thousand years with various names like 'Socrates' Triple Filter,' 'Buddha's Right Speech,' 'Confucius' Trusted Disciple,' etc, etc. It's worth checking out the originals too ;-)&quot;</i>, <a href="https://www.linkedin.com/in/alissonvale/">Alisson Vale</a>, in <a href="https://www.linkedin.com/posts/alissonvale_os-entendedores-entender%C3%A3o-l%C3%B3gica-simples-activity-7105895639296667648-Uvuh/">his share</a> of Marcelo Gaspar's post.</p>
+</blockquote>
+<p>In addition to the comment, Alisson added the article <a href="https://www.weeklywisdomblog.com/post/socrates-triple-filter-test">&quot;Socrates' Triple Filter Test&quot;</a> by <a href="https://www.weeklywisdomblog.com/profile/alexchen373/profile">Alex Chen</a>, where the author discusses the topic.</p>
+<h2 id="the-materialization">The Materialization</h2>
+<p>It was based on these philosophical guidelines that the <strong>Lensophy (Lens + Philosophy)</strong> was conceived: a tool for analyzing the intensity of communication and, when appropriate, suggesting a mild and friendly option, always promoting good communication.</p>
+<p>Its simplicity can be illustrated as follows:</p>
+<p><a href=""><img src="https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/how-to-use-it.png&amp;versionDescriptor%5BversionOptions%5D=0&amp;versionDescriptor%5BversionType%5D=0&amp;versionDescriptor%5Bversion%5D=main&amp;resolveLfs=true&amp;%24format=octetStream" alt="How to use it"></a></p>
+<h2 id="technically-speaking">Technically speaking</h2>
+<p>As I mentioned at the beginning, the library's goal is not to be a reference, have commercial appeal, save sea turtles, or prevent deforestation in the Amazon. Devoid of ethical judgment and behavioral rules, the package is nothing more than an idea used for learning the OpenAI API.</p>
+<blockquote>
+<p><i>But anyone would be able to do this!</i></p>
+</blockquote>
+<p>Of course! And I'm <i>'anyone.'</i> That's why I did it. =)</p>
+<p>Therefore, any and all contributions are welcome, whether it's about improving my code, suggestions for organization or advanced techniques, or simply ideas. Use the <a href="https://github.com/raphaelmoreira/lensophy/wiki/I-%E2%80%90-Sui-Generis">Issue Tracker</a> for that. I read and respond to all.</p>
+<p>I'd like to give an honorable mention to <a href="https://www.linkedin.com/in/gabrielgc/">Gabriel Guarnieri Cardoso</a>, who, even without knowing who I was, accepted my LinkedIn connection request and helped me understand how to communicate secrets (tokens) between GIT and a .Net application, which had me puzzled for hours. It was spot-on. Thank you.</p>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>If you have been mentioned here and wish to have your name dissociated from the origin of the library, please let me know.</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/raphaelmoreira/lensophy/blob/main/tool/docfx_project/articles/sui-generis.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
