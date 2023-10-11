@@ -19,7 +19,7 @@ This API provides developers with the ability to enhance their comment systems (
 The example above is merely illustrative, acting as a suggestion for use. There are no interfaces or UX flow. This must be done by you. Lensophy just returns an object with suggested message, after analysis.
 
 # Concept
-The principles guiding the api consider "The Triple Filter" of Socrates, "The Right Speech" of Buddha and Confucius's "Trusted Disciple" approaches. You can read more about this in [The Philosophy](https://github.com/raphaelmoreira/lensophy/wiki/II-%E2%80%90-The-Philosophy).
+The principles guiding the api consider "The Triple Filter" of Socrates, "The Right Speech" of Buddha and Confucius's "Trusted Disciple" approaches. You can read more about this in [The Philosophy](https://raphaelmoreira.github.io/lensophy/articles/philosophy.html).
 
 # Why waste time on this?
-Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [Sui Generis](https://github.com/raphaelmoreira/lensophy/wiki/I-%E2%80%90-Sui-Generis) if you wanna read more about it.
+Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [Sui Generis](https://raphaelmoreira.github.io/lensophy/articles/sui-generis.html), if you wanna read more about it.
