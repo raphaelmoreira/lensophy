@@ -4,7 +4,7 @@ Since the public release of the [OpenAI API](https://platform.openai.com/), I've
 ## The Snap
 The idea behind this proof of concept was meant to be the simplicity of the mechanics. That's when I came across the following [post](https://www.linkedin.com/feed/update/urn:li:activity:7105852268574339073/) by [Marcelo Gaspar](https://www.linkedin.com/in/mgaspar1/) on [LinkedIn](https://www.linkedin.com/):
 
-Image (a screenshot of the post, for illustrative purposes in case the original link ever changes or disappears)
+![Snap](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/lensophy-inspiration.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream&api-version=5.0)
 
 From this premise, I'd like to highlight two comments that served as the sparks guiding me in defining the library's purpose:
 

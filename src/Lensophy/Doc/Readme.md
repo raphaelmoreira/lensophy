@@ -1,3 +1,4 @@
+[![Lensophy](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/lensophy-banner.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream)](https://raphaelmoreira.github.io/lensophy/)
 # Introduction
 This API provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective rather than censoring it. 
 
@@ -6,7 +7,7 @@ An [OpenAI account](https://platform.openai.com/signup) is required to use it
 # Getting Started
 Installing the package with the desired version (last version is always recommended).
 ```
-dotnet add package Lensophy --version X.Y.Z
+dotnet add package Lensophy --version 1.0.0
 ```
 
 In your `appSettings.json`, add the following configuration:
@@ -57,10 +58,7 @@ public async Task<ContentAnalysed> Analyse([FromBody]ContentAnalyse contentToAna
 # Release notes
 Every version governs a basic principle of change, although it may carry other minor improvements.
 
-### v1.0.0
-**[![Lensophy last build](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)**
-[![Percentage of issues still open](https://isitmaintained.com/badge/open/raphaelmoreira/lensophy.svg)](https://isitmaintained.com/project/raphaelmoreira/lensophy "Percentage of issues still open")
-[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/raphaelmoreira/lensophy.svg)](https://isitmaintained.com/project/raphaelmoreira/lensophy "Average time to resolve an issue")
+### ![GitHub milestone details](https://img.shields.io/github/milestones/progress/raphaelmoreira/lensophy/1)
 
 - Provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective
 
@@ -77,3 +75,5 @@ Remind people that, even physically distant from the interlocutor, respect must 
 
 # License
 Copyright © Raphael Moreira | MIT
+
+[![Lensophy](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/footer.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream)](https://raphaelmoreira.github.io/lensophy/)
