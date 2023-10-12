@@ -1,7 +1,7 @@
-# The Philosophy
+# Philosophy
 The principles guiding the tool consider the following approaches:
 
-## The Triple Filter of Socrates
+## Socrates´s Triple Filter
 This refers to an approach that assesses the validity of information and the words of others. It serves as a reminder that we should be critical of the information we encounter, seek the truth, promote goodness, and consider the utility of our words and beliefs. This philosophical approach remains relevant today for evaluating information and making informed decisions.
 
 It is divided into three filters:
@@ -12,7 +12,7 @@ It is divided into three filters:
 
 - <ins>Usefulness Filter</ins>: Evaluate whether what was about to be said or believed is useful. Information should serve a constructive purpose and contribute to knowledge or progress.
 
-## The "Right Speech" of Buddha
+## Buddha´s Right Speech
 Part of the Noble Eightfold Path, it is one of the fundamental principles of Buddhism. It is one of the eight parts of this path and represents the importance of practicing honest, truthful, and benevolent communication. The goal is to create an environment of healthy communication based on truth and compassion, benefiting both the speaker and the listener, as it is essential for playing a significant role in the quality of our interactions.
 
 It involves several dimensions:

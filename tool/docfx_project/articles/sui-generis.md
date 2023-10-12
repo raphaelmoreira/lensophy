@@ -21,7 +21,7 @@ Its simplicity can be illustrated as follows:
 
 [![How to use it](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/how-to-use-it.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream)]()
 
-## Technically speaking
+## Technically Speaking
 As I mentioned at the beginning, the library's goal is not to be a reference, have commercial appeal, save sea turtles, or prevent deforestation in the Amazon. Devoid of ethical judgment and behavioral rules, the package is nothing more than an idea used for learning the OpenAI API.
 
 ><i>But anyone would be able to do this!</i>

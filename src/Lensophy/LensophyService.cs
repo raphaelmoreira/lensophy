@@ -44,8 +44,8 @@ public sealed class LensophyService
 
     /// <summary>
     /// Analyze content based on the philosophical directives of
-    /// <a href="https://raphaelmoreira.github.io/lensophy/articles/philosophy.html#the-triple-filter-of-socrates">Socrates</a>,
-    /// <a href="https://raphaelmoreira.github.io/lensophy/articles/philosophy.html#the-right-speech-of-buddha">Siddhartha Gautama</a> and
+    /// <a href="https://raphaelmoreira.github.io/lensophy/articles/philosophy.html#socratess-triple-filter">Socrates</a>,
+    /// <a href="https://raphaelmoreira.github.io/lensophy/articles/philosophy.html#buddhas-right-speech">Siddhartha Gautama</a> and
     /// <a href="https://raphaelmoreira.github.io/lensophy/articles/philosophy.html#confuciuss-trusted-disciple">Confucius.</a>
     /// </summary>
     /// <param name="contentAnalyse">The content to be analyzed.</param>
