@@ -59,8 +59,8 @@ Every version governs a basic principle of change, although it may carry other m
 
 ### v1.0.0
 **[![Lensophy last build](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)**
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/raphaelmoreira/lensophy.svg)](http://isitmaintained.com/project/raphaelmoreira/lensophy "Percentage of issues still open")
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/raphaelmoreira/lensophy.svg)](http://isitmaintained.com/project/raphaelmoreira/lensophy "Average time to resolve an issue")
+[![Percentage of issues still open](https://isitmaintained.com/badge/open/raphaelmoreira/lensophy.svg)](https://isitmaintained.com/project/raphaelmoreira/lensophy "Percentage of issues still open")
+[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/raphaelmoreira/lensophy.svg)](https://isitmaintained.com/project/raphaelmoreira/lensophy "Average time to resolve an issue")
 
 - Provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective
 

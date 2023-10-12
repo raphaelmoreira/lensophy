@@ -3,8 +3,8 @@ Based on philosophical principles of ethics and virtue, Lensophy acts as an obse
 
 [![Lensophy last build](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)
 [![Deploy static content to Pages](https://github.com/raphaelmoreira/lensophy/actions/workflows/static.yml/badge.svg)](https://github.com/raphaelmoreira/lensophy/actions/workflows/static.yml)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/raphaelmoreira/lensophy.svg)](http://isitmaintained.com/project/raphaelmoreira/lensophy "Percentage of issues still open")
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/raphaelmoreira/lensophy.svg)](http://isitmaintained.com/project/raphaelmoreira/lensophy "Average time to resolve an issue")
+[![Percentage of issues still open](https://isitmaintained.com/badge/open/raphaelmoreira/lensophy.svg)](https://isitmaintained.com/project/raphaelmoreira/lensophy "Percentage of issues still open")
+[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/raphaelmoreira/lensophy.svg)](https://isitmaintained.com/project/raphaelmoreira/lensophy "Average time to resolve an issue")
 
 # TL;DR;
 If you prefer to understand through practice, go straight to the [Getting Started](https://github.com/raphaelmoreira/lensophy/tree/main/src/Lensophy/Doc#getting-started), otherwise, continue.
