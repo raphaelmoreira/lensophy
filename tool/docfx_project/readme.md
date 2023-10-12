@@ -15,14 +15,16 @@ everything is in order. After the <b>commit/push</b>, the deployment will take c
 
 # New Documentation Project
 This solution is set up to generate documentation for all libraries, although for now, I have chosen to generate 
-documentation only for `Lensophy`. If you need to generate a completely new structure, follow these steps:
+documentation only for `Lensophy`. If you need to generate a completely new structure, follow these steps.
 
+Ensure you are using the latest version of DocFx:
 ```
-//Ensure you are using the latest version of DocFx.
 dotnet tool update -g docfx
+```
 
-//Create a new structure called "docfx_project" at the root. In the case of this project, I have chosen to place it 
+Create a new structure called "docfx_project" at the root. In the case of this project, I have chosen to place it
 within the "tool" directory.
+```
 docfx init --quiet
 ```
 

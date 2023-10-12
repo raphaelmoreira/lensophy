@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Updating the Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Updating the Documentation ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/raphaelmoreira/lensophy/blob/main/tool/docfx_project/readme.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="updating-the-documentation">Updating the Documentation</h1>
+
+<p>After making changes to the <code>Lensophy</code> library, whether in the code or in its documentation, make sure to perform the
+<code>build</code> in <code>release</code>. This ensures that the <code>Lensophy.Doc.Lensophy.xml</code> is generated correctly.</p>
+<p>Next, assuming you are in the project's root folder, run the following command:</p>
+<pre><code>docfx tool/docfx_project/docfx.json --serve
+</code></pre>
+<p>This will compile and publish the updated version of the documentation website on <code>localhost</code>, so you can check if
+everything is in order. After the <b>commit/push</b>, the deployment will take care of the rest.</p>
+<p><i>Note: As soon as possible, I will automate this process.</i></p>
+<h1 id="new-documentation-project">New Documentation Project</h1>
+<p>This solution is set up to generate documentation for all libraries, although for now, I have chosen to generate
+documentation only for <code>Lensophy</code>. If you need to generate a completely new structure, follow these steps.</p>
+<p>Ensure you are using the latest version of DocFx:</p>
+<pre><code>dotnet tool update -g docfx
+</code></pre>
+<p>Create a new structure called &quot;docfx_project&quot; at the root. In the case of this project, I have chosen to place it
+within the &quot;tool&quot; directory.</p>
+<pre><code>docfx init --quiet
+</code></pre>
+<p>Inside this folder, open the <code>docfx.json</code> file and configure the location of the projects in <code>metadata:src</code>. Finally,
+execute the following command and check the result:</p>
+<pre><code>docfx tool/docfx_project/docfx.json --serve
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/raphaelmoreira/lensophy/blob/main/tool/docfx_project/readme.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

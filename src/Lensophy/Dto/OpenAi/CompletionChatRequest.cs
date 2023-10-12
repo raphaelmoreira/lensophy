@@ -1,13 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
-using Lensophy.Extension;
-
-namespace Lensophy.Dto.OpenAi;
+﻿namespace Lensophy.Dto.OpenAi;
 
 /// <summary>
 /// Estrutura de requisição do OpenAI.
 /// </summary>
-public class CompletionChatRequest
+internal class CompletionChatRequest
 {
     /// <summary>
     /// Modelo de linguagem a ser utilizado.

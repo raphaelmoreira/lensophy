@@ -3,7 +3,7 @@ namespace Lensophy.Dto.OpenAi;
 /// <summary>
 /// It provides an OpenAI Api configuration class as expected by Lensophy.
 /// </summary>
-public sealed class OpenAiConfig
+internal sealed class OpenAiConfig
 {
     internal readonly string Key;
     

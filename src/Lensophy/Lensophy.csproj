@@ -43,6 +43,8 @@
         <Using Include="System.Threading.Tasks" />
         <Using Include="System.Text" />
         <Using Include="System.Net.Http.Headers" />
+        <Using Include="System.Collections.Generic" />
+        <Using Include="System.Runtime.Serialization" />
         <Using Include="Microsoft.Extensions.DependencyInjection" />
     </ItemGroup>
     

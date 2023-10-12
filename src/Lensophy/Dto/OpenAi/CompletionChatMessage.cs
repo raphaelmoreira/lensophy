@@ -1,11 +1,9 @@
-﻿using System.Runtime.Serialization;
-
-namespace Lensophy.Dto.OpenAi;
+﻿namespace Lensophy.Dto.OpenAi;
 
 /// <summary>
 /// Estrutura de requisição do OpenAI.
 /// </summary>
-public record struct CompletionChatMessage()
+internal record struct CompletionChatMessage()
 {
     /// <summary>
     /// Modelo de linguagem a ser utilizado.
