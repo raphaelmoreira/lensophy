@@ -20,8 +20,8 @@
         <PackageReleaseNotes>Provides a service for message analysis, returning a gentle suggestion if the content is offensive in any way.</PackageReleaseNotes>
         <Company>Moreira | Solutions Architect</Company>
         <Product>Lensophy</Product>
-        <Version>0.0.0-beta.7</Version>
-        <PackageVersion>0.0.0-beta.7</PackageVersion>
+        <Version>0.0.0-beta.8</Version>
+        <PackageVersion>0.0.0-beta.8</PackageVersion>
         <AssemblyVersion>0.0.0</AssemblyVersion>
         <Nullable>enable</Nullable>
         <ImplicitUsings>false</ImplicitUsings>

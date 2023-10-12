@@ -5,7 +5,7 @@ namespace Lensophy.Extension;
 /// <summary>
 /// Extensions for the <see cref="Enum"/> type."
 /// </summary>
-public static class EnumExtension
+internal static class EnumExtension
 {
     /// <summary>
     /// Get the description of the enumerator.
@@ -25,7 +25,7 @@ public static class EnumExtension
     /// before using this extension.</para>
     /// <para>This extension is not intended to address this particularity.</para>
     /// </remarks>
-    public static string GetDescription(this Enum value)
+    internal static string GetDescription(this Enum value)
     {
         if (value is null)
         {
