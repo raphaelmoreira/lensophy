@@ -3,6 +3,9 @@
 Based on philosophical principles of ethics and virtue, Lensophy acts as an observational lens, providing users with the opportunity to reconsider and rephrase messages that may contain verbal aggression before sending them.
 
 [![Lensophy last build](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)
+![](https://img.shields.io/github/license/raphaelmoreira/lensophy)
+![GitHub tag checks state](https://img.shields.io/github/checks-status/raphaelmoreira/lensophy/v0.0.0-beta.7)
+
 [![Deploy static content to Pages](https://github.com/raphaelmoreira/lensophy/actions/workflows/static.yml/badge.svg)](https://github.com/raphaelmoreira/lensophy/actions/workflows/static.yml)
 [![Percentage of issues still open](https://isitmaintained.com/badge/open/raphaelmoreira/lensophy.svg)](https://isitmaintained.com/project/raphaelmoreira/lensophy "Percentage of issues still open")
 [![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/raphaelmoreira/lensophy.svg)](https://isitmaintained.com/project/raphaelmoreira/lensophy "Average time to resolve an issue")
