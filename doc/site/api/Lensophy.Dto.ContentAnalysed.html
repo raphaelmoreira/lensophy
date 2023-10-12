@@ -169,14 +169,14 @@
   <dl class="parameters">
     <dt><code>SuggestedMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The reformulated <a class="xref" href="Lensophy.Dto.ContentAnalyse.html#Lensophy_Dto_ContentAnalyse_Message">Message</a>, whether based on
-<a class="xref" href="Lensophy.Dto.ContentAnalyse.html#Lensophy_Dto_ContentAnalyse_Context">Context</a> or not. It can be null or empty if there is an <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_ErrorMessage">ErrorMessage</a>.</p>
+<a class="xref" href="Lensophy.Dto.ContentAnalyse.html#Lensophy_Dto_ContentAnalyse_Context">Context</a> or not. It can be null or empty if <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_HasError">HasError</a>.</p>
 </dd>
     <dt><code>IsHarmful</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p>Indicates as <code>true</code> if the message was considered harmful; otherwise, <code>false</code>.</p>
 </dd>
     <dt><code>ErrorMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Displays an error message if the external Api request fails. Please note that the
-displayed message comes exclusively from the external Api and not from Lensophy. Whenever there is an error,
+displayed message comes exclusively from the external Api and not from Lensophy. Whenever <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_HasError">HasError</a>,
 the <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_SuggestedMessage">SuggestedMessage</a> will be null or empty.</p>
 </dd>
   </dl>
@@ -204,7 +204,7 @@ the <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_Content
   </h3>
 
   <div class="markdown level1 summary"><p>Displays an error message if the external Api request fails. Please note that the
-displayed message comes exclusively from the external Api and not from Lensophy. Whenever there is an error,
+displayed message comes exclusively from the external Api and not from Lensophy. Whenever <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_HasError">HasError</a>,
 the <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_SuggestedMessage">SuggestedMessage</a> will be null or empty.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -259,8 +259,8 @@ the <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_Content
 
 
   <h4 class="section" id="Lensophy_Dto_ContentAnalysed_HasError_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If it is <code>true</code>, <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_SuggestedMessage">SuggestedMessage</a> will be null or empty, and the message related to
-the issue can be obtained from <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_ErrorMessage">ErrorMessage</a>. Otherwise, it will be <code>false</code>, and
+  <div class="markdown level1 remarks"><p>If it is <code>true</code>, <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_SuggestedMessage">SuggestedMessage</a> will be null or empty and the message related to
+the issue can be obtained from <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_ErrorMessage">ErrorMessage</a>. Otherwise, it will be <code>false</code> and
 <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_SuggestedMessage">SuggestedMessage</a> will contain the expected result.</p>
 </div>
 
@@ -307,7 +307,7 @@ the issue can be obtained from <a class="xref" href="Lensophy.Dto.ContentAnalyse
   </h3>
 
   <div class="markdown level1 summary"><p>The reformulated <a class="xref" href="Lensophy.Dto.ContentAnalyse.html#Lensophy_Dto_ContentAnalyse_Message">Message</a>, whether based on
-<a class="xref" href="Lensophy.Dto.ContentAnalyse.html#Lensophy_Dto_ContentAnalyse_Context">Context</a> or not. It can be null or empty if there is an <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_ErrorMessage">ErrorMessage</a>.</p>
+<a class="xref" href="Lensophy.Dto.ContentAnalyse.html#Lensophy_Dto_ContentAnalyse_Context">Context</a> or not. It can be null or empty if <a class="xref" href="Lensophy.Dto.ContentAnalysed.html#Lensophy_Dto_ContentAnalysed_HasError">HasError</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

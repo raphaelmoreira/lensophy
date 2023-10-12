@@ -3,7 +3,7 @@
     {
       "src": [
 		{
-		  "files": [ "**.csproj" ],
+		  "files": [ "Lensophy/Lensophy.csproj" ],
 		  "src": "../../src"
 		}
 	  ],
