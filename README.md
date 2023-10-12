@@ -10,11 +10,12 @@ Based on philosophical principles of ethics and virtue, Lensophy acts as an obse
 [![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/raphaelmoreira/lensophy.svg)](https://isitmaintained.com/project/raphaelmoreira/lensophy "Average time to resolve an issue")
 ![GitHub tag checks state](https://img.shields.io/github/checks-status/raphaelmoreira/lensophy/v0.0.0-beta.7)
 
-
 ![Nuget](https://img.shields.io/nuget/dt/lensophy)
 ![](https://img.shields.io/github/license/raphaelmoreira/lensophy)
 
 ![GitHub milestone details](https://img.shields.io/github/milestones/progress/raphaelmoreira/lensophy/1)
+![GitHub repo size](https://img.shields.io/github/repo-size/raphaelmoreira/lensophy)
+![GitHub watchers](https://img.shields.io/github/watchers/raphaelmoreira/lensophy)
 
 # TL;DR;
 If you prefer to understand through practice, go straight to the [Getting Started](https://github.com/raphaelmoreira/lensophy/tree/main/src/Lensophy/Doc#getting-started), otherwise, continue.
