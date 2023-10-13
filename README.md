@@ -37,9 +37,9 @@ Remind people that, even physically distant from the interlocutor, respect must 
 
 Well... that´s it. If you want to do more than help with coding, click below:
 
-[![Terminal](https://badgen.net/badge/IDonate/Where(x%20=>%20x.IsPatreon).AddBeer()/red?icon=terminal)](https://www.patreon.com/lensophy)
+[![Terminal](https://badgen.net/badge/IDonate/.AddBeerToPatreon()/red?icon=terminal)](https://www.patreon.com/lensophy)
 
-[![Terminal](https://badgen.net/badge/IDonate/Where(x%20=>%20x.IsAma).AddCharity()/red?icon=terminal)](https://www.paypal.com/BR/fundraiser/charity/3955029)
+[![Terminal](https://badgen.net/badge/IDonate/.AddCharityToAma()/red?icon=terminal)](https://www.paypal.com/BR/fundraiser/charity/3955029)
 
 
 
