@@ -9,7 +9,7 @@
         <Authors>Raphael Moreira</Authors>
         <Description>Lensophy is a library that promotes positive and respectful communication by evaluating, through OpenAI's ChatGPT, whether the comment aligns with ethics and virtue. 
             
-            This API provides developers with the ability to enhance their comment systems (such as forums, blogs or websites) by analyzing, filtering and encouraging good behavior through suggested responses that guide towards a friendly perspective. 
+            This API provides developers the ability to enhance their comment systems (such as forums, blogs or websites) by analyzing, filtering and encouraging good behavior through suggested responses that guide towards a friendly perspective. 
             
             An OpenAI account is required to use it.</Description>
         <Copyright>Copyright (c) Lensophy® 2023</Copyright>
@@ -20,9 +20,9 @@
         <PackageReleaseNotes>Provides a service for message analysis, returning a gentle suggestion if the content is offensive in any way.</PackageReleaseNotes>
         <Company>Moreira | Solutions Architect</Company>
         <Product>Lensophy</Product>
-        <Version>0.0.0-beta.8</Version>
-        <PackageVersion>0.0.0-beta.8</PackageVersion>
-        <AssemblyVersion>0.0.0</AssemblyVersion>
+        <Version>1.0.0</Version>
+        <PackageVersion>1.0.0</PackageVersion>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
         <Nullable>enable</Nullable>
         <ImplicitUsings>false</ImplicitUsings>
         <PackageIcon>icon.jpg</PackageIcon>

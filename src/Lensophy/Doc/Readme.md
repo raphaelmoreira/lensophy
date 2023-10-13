@@ -5,7 +5,7 @@ This API provides developers with the ability to enhance their comment systems (
 An [OpenAI account](https://platform.openai.com/signup) is required to use it
 
 # Getting Started
-Installing the package with the desired version (last version is always recommended).
+Installing the package with the last version.
 ```
 dotnet add package Lensophy --version 1.0.0
 ```
@@ -32,7 +32,7 @@ var secret = builder.Configuration.GetSection("openaiconfig:secret").Value;
 builder.Services.AddLensophy(secret);
 ```
 
-In the `SampleController`, inject the dependency:
+In the `SampleController` (or where you need it), inject the dependency:
 ```
 [ApiController]
 [Route("[controller]")]
@@ -44,7 +44,7 @@ public class SampleController : ControllerBase
 }
 ```
 
-Call the `Analyse` routine at the desired place.
+Call the `AnalyseAsync` routine at the desired place.
 
 ```
 [HttpPost(Name = "Analyse")]
@@ -60,7 +60,7 @@ Every version governs a basic principle of change, although it may carry other m
 
 ### ![GitHub milestone details](https://img.shields.io/github/milestones/progress/raphaelmoreira/lensophy/1)
 
-- Provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective
+- Provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective.
 
 # Examples
 A suggestion for your message system.
