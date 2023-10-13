@@ -32,6 +32,8 @@ The example above is merely illustrative, acting as a suggestion for use. There 
 # Concept
 The principles guiding the api consider "The Triple Filter" of Socrates, "The Right Speech" of Buddha and Confucius's "Trusted Disciple" approaches. You can read more about this in [The Philosophy](https://raphaelmoreira.github.io/lensophy/articles/philosophy.html).
 
+[![Terminal](https://badgen.net/badge/IFuel/AddChopp(from%20=>%20from.Patreon)/red?icon=terminal)](https://www.patreon.com/lensophy)
+
 # Why waste time on this?
 Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [Sui Generis](https://raphaelmoreira.github.io/lensophy/articles/sui-generis.html), if you wanna read more about it.
 
