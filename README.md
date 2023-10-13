@@ -32,9 +32,11 @@ The example above is merely illustrative, acting as a suggestion for use. There 
 # Concept
 The principles guiding the api consider "The Triple Filter" of Socrates, "The Right Speech" of Buddha and Confucius's "Trusted Disciple" approaches. You can read more about this in [The Philosophy](https://raphaelmoreira.github.io/lensophy/articles/philosophy.html).
 
-[![Terminal](https://badgen.net/badge/IFuel/AddChopp(from%20=>%20from.Patreon)/red?icon=terminal)](https://www.patreon.com/lensophy)
-
 # Why waste time on this?
 Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [Sui Generis](https://raphaelmoreira.github.io/lensophy/articles/sui-generis.html), if you wanna read more about it.
+
+Well... that´s it. If you want to do more than help with coding, click below:
+
+[![Terminal](https://badgen.net/badge/IFuel/AddBeer(to%20=>%20to.Patreon)/red?icon=terminal)](https://www.patreon.com/lensophy)
 
 [![Lensophy](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/footer.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream)](https://raphaelmoreira.github.io/lensophy/)
