@@ -60,7 +60,7 @@ Every version governs a basic principle of change, although it may carry other m
 
 ### ![GitHub milestone details](https://img.shields.io/github/milestones/progress/raphaelmoreira/lensophy/1)
 
-- Provides developers with the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective.
+- Provides developers the ability to enhance their comment systems (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective.
 
 # Examples
 A suggestion for your message system.
