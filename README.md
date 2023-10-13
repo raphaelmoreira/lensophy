@@ -37,6 +37,10 @@ Remind people that, even physically distant from the interlocutor, respect must 
 
 Well... that´s it. If you want to do more than help with coding, click below:
 
-[![Terminal](https://badgen.net/badge/IFuel/AddBeer(to%20=>%20to.Patreon)/red?icon=terminal)](https://www.patreon.com/lensophy)
+[![Terminal](https://badgen.net/badge/IDonate/Where(x%20=>%20x.IsPatreon).AddBeer()/red?icon=terminal)](https://www.patreon.com/lensophy)
+
+[![Terminal](https://badgen.net/badge/IDonate/Where(x%20=>%20x.IsAma).AddCharity()/red?icon=terminal)](https://www.paypal.com/BR/fundraiser/charity/3955029)
+
+
 
 [![Lensophy](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/footer.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream)](https://raphaelmoreira.github.io/lensophy/)
