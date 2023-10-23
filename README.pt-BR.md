@@ -31,9 +31,9 @@ Lembrar às pessoas que, mesmo fisicamente distantes do interlocutor, o respeito
 
 Bom... é isso. Se quiser fazer mais do que ajudar com o código, clique num dos links abaixo:
 
-[![Terminal](https://badgen.net/badge/IDonate/.AddCharityToAma()/red?icon=terminal)](https://www.paypal.com/BR/fundraiser/charity/3955029)
+[![Terminal](https://badgen.net/badge/IDoo/.AdicionarCaridadeParaAma()/red?icon=terminal)](https://www.paypal.com/BR/fundraiser/charity/3955029)
 
-[![Terminal](https://badgen.net/badge/IDonate/.AddBeerToPatreon()/red?icon=terminal)](https://www.patreon.com/lensophy)
+[![Terminal](https://badgen.net/badge/IDoo/.AdicionarCervejaParaPatreon()/red?icon=terminal)](https://www.patreon.com/lensophy)
 
 ## Marco (pVersão)
 Acompanhe ou sugira melhorias para versões futuras.
