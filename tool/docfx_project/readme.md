@@ -28,8 +28,31 @@ within the "tool" directory.
 docfx init --quiet
 ```
 
-Inside this folder, open the `docfx.json` file and configure the location of the projects in `metadata:src`. Finally, 
-execute the following command and check the result:
+Inside this folder, open the `docfx.json` file and configure the location of the projects in `metadata:src`. As reference,
+in this project we have:
+
+```
+{
+  "metadata": [
+    {
+      "src": [
+		{
+		  "files": [ "Lensophy/Lensophy.csproj" ],
+		  "src": "../../src"
+		}
+	  ],
+	  ...	  
+```
+
+And:
+
+```
+...
+"output": "../../doc/site",
+...
+```
+
+Finally, execute the following command and check the result:
 
 ```
 docfx tool/docfx_project/docfx.json --serve
