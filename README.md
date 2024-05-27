@@ -1,48 +1,48 @@
 [![Lensophy](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/lensophy-banner.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream)](https://raphaelmoreira.github.io/lensophy/)
 
-[![](https://img.shields.io/badge/Version-v1.0.0-blue)](https://www.nuget.org/packages/Lensophy/1.0.0)
-[![](https://img.shields.io/badge/Status-Released-blue)](https://github.com/raphaelmoreira/lensophy/releases/tag/v1.0.0)
-[![](https://img.shields.io/github/license/raphaelmoreira/lensophy)](https://github.com/raphaelmoreira/lensophy/blob/main/LICENSE)
+[![](https://img.shields.io/badge/Versão-v1.0.0-blue)](https://www.nuget.org/packages/Lensophy/1.0.0)
+[![](https://img.shields.io/badge/Estado-Lançado-blue)](https://github.com/raphaelmoreira/lensophy/releases/tag/v1.0.0)
+[![](https://img.shields.io/badge/Licença-MIT-blue)](https://github.com/raphaelmoreira/lensophy/blob/main/LICENSE)
 [![Nuget](https://img.shields.io/nuget/dt/lensophy)](https://www.nuget.org/stats/packages/Lensophy?groupby=Version)
 [![Lensophy last build](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/raphaelmoreira/lensophy/actions/workflows/dotnet.yml)
 [![Deploy static content to Pages](https://github.com/raphaelmoreira/lensophy/actions/workflows/static.yml/badge.svg)](https://github.com/raphaelmoreira/lensophy/actions/workflows/static.yml)
 
+[🇺🇸](https://github.com/raphaelmoreira/lensophy/blob/main/README.en-US.md) | 🇧🇷
 
-🇺🇸 | [🇧🇷](https://github.com/raphaelmoreira/lensophy/blob/main/README.pt-BR.md)
+# Lensophy - Comunicação Respeitosa
+Com base nos princípios filosóficos de ética e virtude, Lensophy atua como uma lente observadora, fornecendo aos usuários a oportunidade de reconsiderar e reformular mensagens que possam conter agressão verbal antes de enviá-las.
 
-# Lensophy - Respectful Communication
-Based on philosophical principles of ethics and virtue, Lensophy acts as an observational lens, providing users the opportunity to reconsider and rephrase messages that may contain verbal aggression before sending them.
+# ML;ÑL;
+Se você prefere aprender por meio da prática, vá diretamente para o [Início Rápido](https://github.com/raphaelmoreira/lensophy/tree/main/src/Lensophy/Doc#getting-started), caso contrário, continue.
 
-# TL;DR;
-If you prefer to understand through practice, go straight to the [Getting Started](https://github.com/raphaelmoreira/lensophy/tree/main/src/Lensophy/Doc#getting-started), otherwise, continue.
+# Como isso funciona?
+Esta API fornece aos desenvolvedores a capacidade de aprimorar seu sistema de comentário (como fóruns, blogs ou sites) por meio da análise, filtragem e estímulo ao bom comportamento, sugerindo respostas que direcionam para uma perspectiva amigável, em vez de censurá-la.
 
-# How it works?
-This API provides developers the ability to enhance their comment system (such as forums, blogs, or websites) by analyzing, filtering, and encouraging good behavior through suggested responses that guide towards a friendly perspective rather than censoring it.
+[![Como usar isso?](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/how-to-use-it.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream)](#philosophy)
 
-[![How to use it](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/how-to-use-it.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream)](#philosophy)
+### Atenção!
+O exemplo acima é meramente ilustrativo e atua como uma sugestão de uso. Não há interfaces ou fluxo de experiência do usuário. Isso deve ser feito pelo desenvolvedor. Lensophy apenas retorna um objeto com a mensagem sugerida após a análise.
 
-### Warning!
-The example above is merely illustrative, acting as a suggestion for use. There are no interfaces or UX flow. This must be done by you. Lensophy just returns an object with suggested message, after analysis.
+# Conceito
+Os princípios que guiam a API consideram "O Triplo Filtro" de Sócrates, "O Discurso Correto" de Buda e as abordagens do "Discípulo Confiável de Confúcio". Você pode saber mais sobre isso em [A Filosofia](https://raphaelmoreira.github.io/lensophy/articles/philosophy.html).
 
-# Concept
-The principles guiding the api consider "The Triple Filter" of Socrates, "The Right Speech" of Buddha and Confucius's "Trusted Disciple" approaches. You can read more about this in [The Philosophy](https://raphaelmoreira.github.io/lensophy/articles/philosophy.html).
+# Pra quê gastar tempo com isso?
+Lembrar às pessoas que, mesmo fisicamente distantes do interlocutor, o respeito deve ser mantido. Confira [Sui Generis](https://raphaelmoreira.github.io/lensophy/articles/sui-generis.html) se desejar ler mais sobre o assunto.
 
-# Why waste time on this?
-Remind people that, even physically distant from the interlocutor, respect must be maintained. Check the [Sui Generis](https://raphaelmoreira.github.io/lensophy/articles/sui-generis.html), if you wanna read more about it.
+Bom... é isso. Se quiser fazer mais do que ajudar com o código, clique num dos links abaixo:
 
-Well... that´s it. If you want to do more than help with coding, click below:
+[![Terminal](https://badgen.net/badge/IDoo/.AdicionarCaridadeParaAma()/red?icon=terminal)](https://www.paypal.com/BR/fundraiser/charity/3955029)
 
-[![Terminal](https://badgen.net/badge/IDonate/.AddBeerToPatreon()/red?icon=terminal)](https://www.patreon.com/lensophy)
+[![Terminal](https://badgen.net/badge/IDoo/.AdicionarCervejaParaPatreon()/red?icon=terminal)](https://www.patreon.com/lensophy)
 
-[![Terminal](https://badgen.net/badge/IDonate/.AddCharityToAma()/red?icon=terminal)](https://www.paypal.com/BR/fundraiser/charity/3955029)
-
-## Milestone (vNext)
-Track or suggest improvements for future versions.
+## Marco (pVersão)
+Acompanhe ou sugira melhorias para versões futuras.
 
 [![GitHub milestone details](https://img.shields.io/github/milestones/progress/raphaelmoreira/lensophy/2)](https://github.com/raphaelmoreira/lensophy/milestone/2)
 [![GitHub issues](https://img.shields.io/github/issues/raphaelmoreira/lensophy)](https://github.com/raphaelmoreira/lensophy/issues)
 [![GitHub watchers](https://img.shields.io/github/watchers/raphaelmoreira/lensophy)](https://github.com/raphaelmoreira/lensophy/watchers)
 [![GitHub repo size](https://img.shields.io/github/repo-size/raphaelmoreira/lensophy)](https://zombo.com/)
 ![GitHub tag checks state](https://img.shields.io/github/checks-status/raphaelmoreira/lensophy/v1.0.0)
+
 
 [![Lensophy](https://dev.azure.com/raphaelmoreira/758a305a-a7fa-4b96-95aa-962c2cf2248c/_apis/git/repositories/27fc1054-4851-4e6d-af8a-a463841dc8c1/items?path=/footer.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=octetStream)](https://raphaelmoreira.github.io/lensophy/)
