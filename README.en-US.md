@@ -8,7 +8,7 @@
 [![Deploy static content to Pages](https://github.com/raphaelmoreira/lensophy/actions/workflows/static.yml/badge.svg)](https://github.com/raphaelmoreira/lensophy/actions/workflows/static.yml)
 
 
-🇺🇸 | [🇧🇷](https://github.com/raphaelmoreira/lensophy/blob/main/README.pt-BR.md)
+🇺🇸 | [🇧🇷](https://github.com/raphaelmoreira/lensophy/blob/main/README.md)
 
 # Lensophy - Respectful Communication
 Based on philosophical principles of ethics and virtue, Lensophy acts as an observational lens, providing users the opportunity to reconsider and rephrase messages that may contain verbal aggression before sending them.
