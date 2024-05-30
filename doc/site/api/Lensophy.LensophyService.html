@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class LensophyService
- </title>
+      <title>Class LensophyService </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class LensophyService
- ">
+      <meta name="title" content="Class LensophyService ">
       
+      <meta name="description" content="Provides a service for message analysis, returning a gentle suggestion if the content is offensive in any way.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -29,19 +28,16 @@
       <meta name="loc:themeAuto" content="Auto">
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module">
-    import options from './../public/main.js'
-    import { init } from './../public/docfx.min.js'
-    init(options)
-  </script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,8 +85,7 @@
 
 
   <h1 id="Lensophy_LensophyService" data-uid="Lensophy.LensophyService" class="text-break">
-    Class LensophyService
-  <a class="header-action link-secondary" title="View source" href="https://github.com/raphaelmoreira/lensophy/blob/main/src/Lensophy/LensophyService.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Class LensophyService  <a class="header-action link-secondary" title="View source" href="https://github.com/raphaelmoreira/lensophy/blob/main/src/Lensophy/LensophyService.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -119,7 +114,7 @@
 
 
 
-  <dl class="typelist derived">
+  <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
     <div>
@@ -185,17 +180,16 @@
 
   <h4 class="section" id="Lensophy_LensophyService__ctor_System_Net_Http_HttpClient__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Lensophy handle the life cycle of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> through the
-    <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-7.0#basic-usage">IHttpClientFactory.</a>
-    </p>
-    <p>
-    Therefore, avoid instantiating <a class="xref" href="Lensophy.LensophyService.html">LensophyService</a> directly, with a <code>new HttpClient()</code>. Consider
-    register the dependency with <a class="xref" href="Lensophy.Extension.ServiceCollectionExtension.html#Lensophy_Extension_ServiceCollectionExtension_AddLensophy_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_">AddLensophy(IServiceCollection, string)</a> extension, unless
-    you know how to use <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a> properly.
-    </p>
-    <p>For curiosity, even when wrapped in a <code>using</code> scope, you may not have control over when the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> is
-    disposed, potentially leading to
-    <a href="https://learn.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">more instances</a>
-    than the Garbage Collector can release, resulting in a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.socketexception">SocketException</a> issue.</p>
+<a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-7.0#basic-usage">IHttpClientFactory.</a></p>
+<p>
+Therefore, avoid instantiating <a class="xref" href="Lensophy.LensophyService.html">LensophyService</a> directly, with a <code>new HttpClient()</code>. Consider
+register the dependency with <a class="xref" href="Lensophy.Extension.ServiceCollectionExtension.html#Lensophy_Extension_ServiceCollectionExtension_AddLensophy_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_">AddLensophy(IServiceCollection, string)</a> extension, unless
+you know how to use <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a> properly.
+</p>
+<p>For curiosity, even when wrapped in a <code>using</code> scope, you may not have control over when the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> is
+disposed, potentially leading to
+<a href="https://learn.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">more instances</a>
+than the Garbage Collector can release, resulting in a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.socketexception">SocketException</a> issue.</p>
 </div>
 
   <h4 class="section">Exceptions</h4>
@@ -271,7 +265,7 @@ are null or empty.</p>
           <a href="https://github.com/raphaelmoreira/lensophy/blob/main/src/Lensophy/LensophyService.cs/#L7" class="edit-link">Edit this page</a>
         </div>
 
-        
+
       </div>
 
       <div class="affix">
@@ -280,7 +274,7 @@ are null or empty.</p>
     </main>
 
 
-    <footer class="border-top">
+    <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
           <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>

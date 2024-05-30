@@ -8,7 +8,7 @@ public static class ServiceCollectionExtension
     /// <summary>
     /// Adds the <see cref="LensophyService"/> and configure the binding for <see cref="HttpClient"/> through the <see cref="IHttpClientFactory"/>.
     /// </summary>
-    /// <param name="serviceCollection">The <see cref="IServiceCollection"/></param>
+    /// <param name="serviceCollection">The <see cref="IServiceCollection"/>.</param>
     /// <param name="secret">The OpenAI secret.</param>
     /// <exception cref="ArgumentNullException">If <c>serviceCollection</c> or <c>secret</c> are null or empty.</exception>
     public static void AddLensophy(this IServiceCollection serviceCollection, string secret)

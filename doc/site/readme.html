@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Updating the Documentation </title>
+      <title>Atualizando a documenta&#231;&#227;o </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Updating the Documentation ">
+      <meta name="title" content="Atualizando a documenta&#231;&#227;o ">
+      
       
       <link rel="icon" href="favicon.ico">
       <link rel="stylesheet" href="public/docfx.min.css">
@@ -27,19 +28,16 @@
       <meta name="loc:themeAuto" content="Auto">
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module">
-    import options from './public/main.js'
-    import { init } from './public/docfx.min.js'
-    init(options)
-  </script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
@@ -61,52 +59,113 @@
     </header>
 
     <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
-          </div>
-        </div>
-      </div>
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
 
           <nav id="breadcrumb"></nav>
         </div>
 
         <article data-uid="">
-<h1 id="updating-the-documentation">Updating the Documentation</h1>
+<h1 id="atualizando-a-documentação">Atualizando a documentação</h1>
 
-<p>After making changes to the <code>Lensophy</code> library, whether in the code or in its documentation, make sure to perform the
-<code>build</code> in <code>release</code>. This ensures that the <code>Lensophy.Doc.Lensophy.xml</code> is generated correctly.</p>
-<p>Next, assuming you are in the project's root folder, run the following command:</p>
-<pre><code>docfx tool/docfx_project/docfx.json --serve
+<p>Após efetuar mudanças na biblioteca <code>Lensophy</code>, seja no código ou em sua documentação, certifique-se de efetuar uma <code>build</code>
+em modo <code>release</code>. Isso garante que o arquivo <code>Lensophy.Doc.Lensophy.xml</code> seja atualizado e/ou gerado corretamente.</p>
+<h1 id="requisistos">Requisistos</h1>
+<p>Certifique-se de que o DocFx esteja instalado em seu ambiente como uma ferramenta global. Para isso, efetue o seguinte comando:</p>
+<pre><code class="lang-batch">dotnet tool install docfx --global
 </code></pre>
-<p>This will compile and publish the updated version of the documentation website on <code>localhost</code>, so you can check if
-everything is in order. After the <b>commit/push</b>, the deployment will take care of the rest.</p>
-<p><i>Note: As soon as possible, I will automate this process.</i></p>
-<h1 id="new-documentation-project">New Documentation Project</h1>
-<p>This solution is set up to generate documentation for all libraries, although for now, I have chosen to generate
-documentation only for <code>Lensophy</code>. If you need to generate a completely new structure, follow these steps.</p>
-<p>Ensure you are using the latest version of DocFx:</p>
-<pre><code>dotnet tool update -g docfx
+<p>Caso já possua a ferramenta, aproveite para atualizá-la:</p>
+<pre><code class="lang-batch">dotnet tool update -g docfx
 </code></pre>
-<p>Create a new structure called &quot;docfx_project&quot; at the root. In the case of this project, I have chosen to place it
-within the &quot;tool&quot; directory.</p>
-<pre><code>docfx init --quiet
+<p>Em seguida, assumindo que você está na raiz do projeto, execute o seguinte comando:</p>
+<pre><code class="lang-batch">docfx tool/docfx_project/docfx.json --serve
 </code></pre>
-<p>Inside this folder, open the <code>docfx.json</code> file and configure the location of the projects in <code>metadata:src</code>. Finally,
-execute the following command and check the result:</p>
-<pre><code>docfx tool/docfx_project/docfx.json --serve
+<p>Isso irá compilar e publicar uma versão atualizada da documentação em <code>localhost:8080</code>, lhe permitindo verificar se tudo está
+conforme esperado. Após conferência, basta efetuar o <strong>commit/push</strong>, que o deploy se encarrega do resto.</p>
+<blockquote>
+<p>Nota: assim que possível, irei automatizar este processo.</p>
+</blockquote>
+<h1 id="criando-documentação-para-um-novo-projeto">Criando documentação para um novo projeto</h1>
+<p>Essa solução está configurada para gerar a documentação de todas as bibliotecas, contudo, optei por produzir apenas o conteúdo
+da <code>Lensophy</code>, que é o pacote NuGet efetivamente. Se você precisa criar uma estrutura totalmente nova, siga os passos à seguir:</p>
+<blockquote>
+<p>Nota: garanta que você atende aos <a href="#requisistos">Requisitos</a>.</p>
+</blockquote>
+<h2 id="iniciando-nova-estrutura">Iniciando nova estrutura</h2>
+<p>A estrutura deve estar na raiz e se chamar &quot;docfx_project&quot;. Neste projeto, optei por colocá-la numa pasta previamente criada,
+chamada &quot;tool&quot;. Sendo assim:</p>
+<pre><code class="lang-batch">cd tool
+docfx init
 </code></pre>
+<p>Em seguida, lhe será solicitado algumas informações:</p>
+<ul>
+<li><strong>Name</strong>: o nome da pasta onde o conteúdo gerado será armazenado (ex: site)</li>
+<li><strong>Generate .NET API documentation</strong>: geralmente, a opção é <code>y</code>, exceto se estiver apenas interessado em produzir artigos (sem código).</li>
+<li><strong>Markdown docs location</strong>: caso esteja lidando com código, informe a localização do arquivo <code>xml</code> de documentação.</li>
+<li><strong>Enable site search</strong>: se deseja a função de pesquisa em seu site.</li>
+<li><strong>Enable PDF</strong>: permite a gerar uma versão PDF do seu conteúdo.</li>
+</ul>
+<p>Esse conjunto de informações irá produzir o arquivo <code>tool/docfx.json</code>, o qual pode ser modificado a qualquer momento para atender
+outros cenários e configurações.</p>
+<p>A título de exemplo, para o <code>Lensophy</code>, a estrutura dedicada ao <code>csproj</code> ficou assim:</p>
+<pre><code class="lang-json">{
+  &quot;metadata&quot;: [
+    {
+      &quot;src&quot;: [
+        {
+          &quot;files&quot;: [
+            &quot;Lensophy/Lensophy.csproj&quot;
+          ],
+          &quot;src&quot;: &quot;../../src&quot;
+        }
+      ],
+      &quot;output&quot;: &quot;../../doc/site&quot;
+    }]
+}
+</code></pre>
+<p>Se estiver lidando apenas com artigos, talvez você queira remover algumas coisas. No geral, a estrutura criada será parecida
+com isso:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>LastWriteTime</th>
+<th>Length</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d-----</td>
+<td>30/05/2024     09:23</td>
+<td></td>
+<td>docs</td>
+</tr>
+<tr>
+<td>-a----</td>
+<td>30/05/2024     09:23</td>
+<td>501</td>
+<td>docfx.json</td>
+</tr>
+<tr>
+<td>-a----</td>
+<td>30/05/2024     09:23</td>
+<td>261</td>
+<td>index.md</td>
+</tr>
+<tr>
+<td>-a----</td>
+<td>30/05/2024     09:23</td>
+<td>27</td>
+<td>toc.yml</td>
+</tr>
+</tbody>
+</table>
+<p>Por fim, execute o comando abaixo para compilar e publicar:</p>
+<pre><code class="lang-batch">docfx tool/docfx_project/docfx.json --serve
+</code></pre>
+
 </article>
 
         <div class="contribution d-print-none">
@@ -114,7 +173,7 @@ execute the following command and check the result:</p>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        
+
       </div>
 
       <div class="affix">
@@ -123,7 +182,7 @@ execute the following command and check the result:</p>
     </main>
 
 
-    <footer class="border-top">
+    <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
           <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>

@@ -218,7 +218,7 @@
             <summary>
             Adds the <see cref="T:Lensophy.LensophyService"/> and configure the binding for <see cref="T:System.Net.Http.HttpClient"/> through the <see cref="T:System.Net.Http.IHttpClientFactory"/>.
             </summary>
-            <param name="serviceCollection">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/></param>
+            <param name="serviceCollection">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</param>
             <param name="secret">The OpenAI secret.</param>
             <exception cref="T:System.ArgumentNullException">If <c>serviceCollection</c> or <c>secret</c> are null or empty.</exception>
         </member>
