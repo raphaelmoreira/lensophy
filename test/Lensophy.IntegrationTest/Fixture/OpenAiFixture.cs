@@ -17,7 +17,7 @@ public record OpenAiFixture
     {
         ArgumentNullException.ThrowIfNull(_configuration);
 
-        var openAiConfigSecret = _configuration.GetSection("openaiconfigsecret").Value;
+        var openAiConfigSecret = _configuration.GetSection("OpenAiConfig:Secret").Value;
         var key = openAiConfigSecret ?? throw new Exception("OpenAI key not found!");
         
         var currentHttpClient = new DefaultHttpClientFactory().CreateClient();

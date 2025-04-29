@@ -58,7 +58,7 @@ public sealed class LensophyService
     {
         EnsureContract(contentAnalyse);
         
-        var moderationResponse = await IsHarmful(contentAnalyse).ConfigureAwait(false);
+        var moderationResponse = await IsHarmful(contentAnalyse);
         
         if(moderationResponse is null || moderationResponse.HasError)
         {
@@ -73,10 +73,10 @@ public sealed class LensophyService
         var data = contentAnalyse.ToPreparedPrompt().ToCompletionChatRequest();
         var content = new StringContent(data, Encoding.UTF8, ApplicationJsonMediaTypeRequest);
         var responseMessage = 
-            await _httpClient.PostAsync("chat/completions", content, cancellationToken).ConfigureAwait(false);
+            await _httpClient.PostAsync("chat/completions", content, cancellationToken);
         
         var responseContent = 
-            await responseMessage.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+            await responseMessage.Content.ReadAsStringAsync(cancellationToken);
 
         var response = JsonSerializer.Deserialize<CompletionChatResponse>(responseContent, _serializerOptions);
 
@@ -93,8 +93,8 @@ public sealed class LensophyService
     {
         var data = contentAnalyse.ToModerationRequest();
         var content = new StringContent(data, Encoding.UTF8, ApplicationJsonMediaTypeRequest);
-        var responseMessage = await _httpClient.PostAsync("moderations", content).ConfigureAwait(false);
-        var responseContent = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
+        var responseMessage = await _httpClient.PostAsync("moderations", content);
+        var responseContent = await responseMessage.Content.ReadAsStringAsync();
 
         var response = JsonSerializer.Deserialize<ModerationResponse>(responseContent, _serializerOptions);
 
@@ -108,7 +108,6 @@ public sealed class LensophyService
     /// <exception cref="ArgumentNullException">In case of <c>contentAnalyse</c> or <c>contentAnalyse.Message</c> are null or empty.</exception>
     private static void EnsureContract(ContentAnalyse contentAnalyse)
     {
-        ArgumentNullException.ThrowIfNull(contentAnalyse);
         ArgumentNullException.ThrowIfNull(contentAnalyse.Message);
     }
 }

@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup Label="Settings">
-        <TargetFramework>net7.0</TargetFramework>
-        <LangVersion>11</LangVersion>
+        <TargetFramework>net9.0</TargetFramework>
+        <LangVersion>13</LangVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Lensophy</PackageId>
         <Title>Lensophy - Respectful Communication</Title>
@@ -12,7 +12,7 @@
             This API provides developers the ability to enhance their comment systems (such as forums, blogs or websites) by analyzing, filtering and encouraging good behavior through suggested responses that guide towards a friendly perspective. 
             
             An OpenAI account is required to use it.</Description>
-        <Copyright>Copyright (c) Lensophy® 2023</Copyright>
+        <Copyright>Copyright (c) Lensophy® 2025</Copyright>
         <PackageProjectUrl>https://raphaelmoreira.github.io/lensophy</PackageProjectUrl>
         <RepositoryUrl>https://github.com/raphaelmoreira/lensophy</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
@@ -20,9 +20,9 @@
         <PackageReleaseNotes>Provides a service for message analysis, returning a gentle suggestion if the content is offensive in any way.</PackageReleaseNotes>
         <Company>Moreira | Solutions Architect</Company>
         <Product>Lensophy</Product>
-        <Version>1.0.0</Version>
-        <PackageVersion>1.0.0</PackageVersion>
-        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <Version>1.1.0</Version>
+        <PackageVersion>1.1.0</PackageVersion>
+        <AssemblyVersion>1.1.0</AssemblyVersion>
         <Nullable>enable</Nullable>
         <ImplicitUsings>false</ImplicitUsings>
         <PackageIcon>icon.jpg</PackageIcon>
@@ -73,6 +73,6 @@
         </EmbeddedResource>
 
         <Reference Include="Microsoft.Net.Http.Headers" />
-        <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.4" />
     </ItemGroup>
 </Project>

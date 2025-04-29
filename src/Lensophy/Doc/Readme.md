@@ -6,13 +6,14 @@ An [OpenAI account](https://platform.openai.com/signup) is required to use it
 
 # Getting Started
 Installing the package with the last version.
-```
-dotnet add package Lensophy --version 1.0.0
+
+```ps
+dotnet add package Lensophy --version 1.1.0
 ```
 
 In your `appSettings.json`, add the following configuration:
 
-```
+```json
 {
   "OpenAiConfig": {
     "Secret": "your OpenAi secret"
@@ -20,20 +21,27 @@ In your `appSettings.json`, add the following configuration:
 }
 ```
 
+Or by running this command:
+
+```ps
+dotnet user-secrets set "OpenAiConfig:Secret" "your OpenAi secret"
+```
+
 In `Program.cs`, perform the following registration:
 
-```
+```csharp
 var builder = WebApplication.CreateBuilder(args);
 
 ...
 //code hidden for brevity.
 
-var secret = builder.Configuration.GetSection("openaiconfig:secret").Value;
+var secret = builder.Configuration.GetSection("OpenAiConfig:secret").Value;
 builder.Services.AddLensophy(secret);
 ```
 
 In the `SampleController` (or where you need it), inject the dependency:
-```
+
+```csharp
 [ApiController]
 [Route("[controller]")]
 public class SampleController : ControllerBase
@@ -46,11 +54,11 @@ public class SampleController : ControllerBase
 
 Call the `AnalyseAsync` routine at the desired place.
 
-```
+```csharp
 [HttpPost(Name = "Analyse")]
 public async Task<ContentAnalysed> Analyse([FromBody]ContentAnalyse contentToAnalyse)
 {
-    var contentAnalysed = await _lensophyService.AnalyseAsync(contentToAnalyse).ConfigureAwait(false);
+    var contentAnalysed = await _lensophyService.AnalyseAsync(contentToAnalyse);
     return contentAnalysed;
 }
 ```

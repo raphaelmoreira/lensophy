@@ -15,7 +15,7 @@ public class SampleController : ControllerBase
     public async Task<ContentAnalysed> Analyse([FromBody]ContentAnalyse contentToAnalyse, CancellationToken cancellationToken)
     {
         var contentAnalysed = 
-            await _lensophyService.AnalyseAsync(contentToAnalyse, cancellationToken).ConfigureAwait(false);
+            await _lensophyService.AnalyseAsync(contentToAnalyse, cancellationToken);
         return contentAnalysed;
     }
 }
