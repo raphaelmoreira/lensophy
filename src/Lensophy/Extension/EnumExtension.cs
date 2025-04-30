@@ -27,11 +27,8 @@ internal static class EnumExtension
     /// </remarks>
     internal static string GetDescription(this Enum value)
     {
-        if (value is null)
-        {
-            throw new ArgumentNullException(nameof(value));
-        }
-        
+        ArgumentNullException.ThrowIfNull(value);
+
         var attributeExist = value
             .GetType()
             .GetField(value.ToString())?
