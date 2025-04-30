@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  
   deploy:
     environment:
       name: github-pages
@@ -31,18 +31,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: my-artifact
-          path: ./doc/site
+          path: './doc/site'
+          
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # Upload entire repository
           path: './doc/site'
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
