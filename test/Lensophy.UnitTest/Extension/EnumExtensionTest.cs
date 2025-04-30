@@ -22,6 +22,21 @@ public class EnumExtensionTest
     
     [Fact]
     [Trait("Extension", "GetDescription")]
+    public void Extension_Enum_GetDescription_ShouldBe_Description()
+    {
+        //arranges
+        const Philosophers philosophersWithDescription = Philosophers.SiddharthaGautama;
+        var philosophersWithDescriptionExpected = philosophersWithDescription.GetDescription();
+
+        //act
+        var philosophersDescription = philosophersWithDescription.GetDescription();
+
+        //assert
+        philosophersDescription.Should().Be(philosophersWithDescriptionExpected);
+    }
+    
+    [Fact]
+    [Trait("Extension", "GetDescription")]
     public void Extension_Enum_GetDescription_ShouldBe_DefaultDescription()
     {
         //arranges
