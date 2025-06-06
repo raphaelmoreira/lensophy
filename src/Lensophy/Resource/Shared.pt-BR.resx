@@ -47,4 +47,40 @@
     <data name="ServiceDidNotRespondAsExpected" xml:space="preserve">
         <value>Serviço não respondeu como esperado.</value>
     </data>
+    <data name="OpenAiUnauthorized" xml:space="preserve">
+        <value>OpenAI API request failed: Unauthorized. Please check your API key.</value>
+    </data>
+    <data name="OpenAiTooManyRequests" xml:space="preserve">
+        <value>OpenAI API request failed: Too many requests. Please try again later or check your API plan.</value>
+    </data>
+    <data name="OpenAiInternalServerError" xml:space="preserve">
+        <value>OpenAI API request failed: Internal Server Error. Please try again later.</value>
+    </data>
+    <data name="OpenAiGenericError" xml:space="preserve">
+        <value>OpenAI API request failed with status code {0}. Details: {1}</value>
+    </data>
+    <data name="ModerationOpenAiUnauthorized" xml:space="preserve">
+        <value>OpenAI Moderation API request failed: Unauthorized. Please check your API key.</value>
+    </data>
+    <data name="ModerationOpenAiTooManyRequests" xml:space="preserve">
+        <value>OpenAI Moderation API request failed: Too many requests. Please try again later or check your API plan.</value>
+    </data>
+    <data name="ModerationOpenAiInternalServerError" xml:space="preserve">
+        <value>OpenAI Moderation API request failed: Internal Server Error. Please try again later.</value>
+    </data>
+    <data name="ModerationOpenAiGenericError" xml:space="preserve">
+        <value>OpenAI Moderation API request failed with status code {0}. Details: {1}</value>
+    </data>
+    <data name="MessageCannotBeNull" xml:space="preserve">
+        <value>A mensagem não pode ser nula.</value>
+    </data>
+    <data name="MessageCannotBeEmpty" xml:space="preserve">
+        <value>A mensagem não pode estar vazia ou consistir apenas em caracteres de espaço em branco.</value>
+    </data>
+    <data name="MessageTooLong" xml:space="preserve">
+        <value>A mensagem não pode exceder {0} caracteres.</value>
+    </data>
+    <data name="ContextTooLong" xml:space="preserve">
+        <value>O contexto não pode exceder {0} caracteres.</value>
+    </data>
 </root>

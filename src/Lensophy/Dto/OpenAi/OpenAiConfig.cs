@@ -3,9 +3,17 @@ namespace Lensophy.Dto.OpenAi;
 /// <summary>
 /// It provides an OpenAI Api configuration class as expected by Lensophy.
 /// </summary>
-internal sealed class OpenAiConfig
+public sealed class OpenAiConfig
 {
-    internal readonly string Key;
+    /// <summary>
+    /// Gets your OpenAI API key.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>Important:</b> It is strongly recommended to store API keys securely, for example, using environment
+    /// variables, Azure Key Vault, or other secret management services, especially in production environments.
+    /// Avoid hardcoding keys directly in the source code.</para>
+    /// </remarks>
+    public string Key { get; }
     
     /// <summary>
     /// Initializes a new instance of the <see cref="OpenAiConfig"/>.
@@ -16,6 +24,9 @@ internal sealed class OpenAiConfig
     /// <para><b>Important:</b> Lensophy never stores or shares the <see cref="Key"/> outside of its context. Its use
     /// is solely for the purpose of making Api calls.</para>
     /// <para>Do not share your key with others, or expose it in the browser or other client-side code.</para>
+    /// <para><b>Security Note:</b> It is strongly recommended to store API keys securely,
+    /// for example, using environment variables, Azure Key Vault, or other secret management services,
+    /// especially in production environments. Avoid hardcoding keys directly in the source code.</para>
     /// </remarks>
     /// <exception cref="ArgumentNullException">In case the sent key is null or empty.</exception>
     public OpenAiConfig(string key)

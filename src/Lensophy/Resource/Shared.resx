@@ -54,4 +54,40 @@
     <data name="ServiceDidNotRespondAsExpected" xml:space="preserve">
         <value>Service did not respond as expected.</value>
     </data>
+    <data name="OpenAiUnauthorized" xml:space="preserve">
+        <value>OpenAI API request failed: Unauthorized. Please check your API key.</value>
+    </data>
+    <data name="OpenAiTooManyRequests" xml:space="preserve">
+        <value>OpenAI API request failed: Too many requests. Please try again later or check your API plan.</value>
+    </data>
+    <data name="OpenAiInternalServerError" xml:space="preserve">
+        <value>OpenAI API request failed: Internal Server Error. Please try again later.</value>
+    </data>
+    <data name="OpenAiGenericError" xml:space="preserve">
+        <value>OpenAI API request failed with status code {0}. Details: {1}</value>
+    </data>
+    <data name="ModerationOpenAiUnauthorized" xml:space="preserve">
+        <value>OpenAI Moderation API request failed: Unauthorized. Please check your API key.</value>
+    </data>
+    <data name="ModerationOpenAiTooManyRequests" xml:space="preserve">
+        <value>OpenAI Moderation API request failed: Too many requests. Please try again later or check your API plan.</value>
+    </data>
+    <data name="ModerationOpenAiInternalServerError" xml:space="preserve">
+        <value>OpenAI Moderation API request failed: Internal Server Error. Please try again later.</value>
+    </data>
+    <data name="ModerationOpenAiGenericError" xml:space="preserve">
+        <value>OpenAI Moderation API request failed with status code {0}. Details: {1}</value>
+    </data>
+    <data name="MessageCannotBeNull" xml:space="preserve">
+        <value>Message cannot be null.</value>
+    </data>
+    <data name="MessageCannotBeEmpty" xml:space="preserve">
+        <value>Message cannot be empty or consist only of white-space characters.</value>
+    </data>
+    <data name="MessageTooLong" xml:space="preserve">
+        <value>Message cannot exceed {0} characters.</value>
+    </data>
+    <data name="ContextTooLong" xml:space="preserve">
+        <value>Context cannot exceed {0} characters.</value>
+    </data>
 </root>
